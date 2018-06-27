@@ -1,0 +1,86 @@
+<!--pages/person/user/user.wxml-->
+
+<view class='container'>
+  <view class='group-list'>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>小区</text>
+
+        <picker class='picker-select' mode='selector' range='{{housePicker}}' bindchange='bindHouseChange'>
+          <view>
+            <text class='picker-text'>{{houseValue}}</text>
+            <image class='picker-pic' src='../../image/turn.png'></image>
+          </view>
+        </picker>
+
+      </view>
+      <view class='group-cont-list'>
+        <text>门牌号</text>
+
+        <picker class='picker-select' mode='selector' range='{{doorPicker}}' bindchange='bindDoorChange'>
+          <view>
+            <text class='picker-text'>{{doorValue}}</text>
+            <image class='picker-pic' src='../../image/turn.png'></image>
+          </view>
+        </picker>
+
+      </view>
+    </view>
+  </view>
+  <view class='group-list'>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>户主姓名</text>
+        <view>
+          <text class='picker-text'>{{userDetail.customName}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list'>
+        <text>户主性别</text>
+        <view>
+          <text class='picker-text'>{{userDetail.sex}}</text>
+        </view>
+      </view>
+
+      <view class='group-cont-list' wx:if='{{userDetail.age}}'>
+        <text>户主年龄</text>
+        <view>
+          <text class='picker-text'>{{userDetail.age}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list' wx:if='{{userDetail.education}}'>
+        <text>教育程度</text>
+        <view>
+          <text class='picker-text'>{{userDetail.education}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list' wx:if='{{userDetail.occupation}}'>
+        <text>从事行业</text>
+        <view>
+          <text class='picker-text'>{{userDetail.occupation}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list' wx:if='{{userDetail.otherTraffic}}'>
+        <text>交通工具</text>
+        <view>
+          <text class='picker-text'>{{userDetail.otherTraffic}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list' wx:if='{{areaValue}}'>
+        <text>庭院面积</text>
+        <view>
+          <text class='picker-text'>{{areaValue}}平方米</text>
+        </view>
+      </view>
+      <!--
+      <view class='group-cont-list'>
+        <text>别墅面积</text>
+        <view>
+          <text class='picker-text'>别墅面积</text>
+          <image class='picker-pic' src='../../image/turn.png'></image>
+        </view>
+      </view>
+      -->
+    </view>
+  </view>
+</view>

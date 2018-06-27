@@ -1,0 +1,71 @@
+/* pages/myorder/myorder.wxss */
+
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #F0F0F0;  
+}
+
+.history{
+  float: left;
+  width: 100%;
+  margin: 16rpx 1%;
+  margin-top: 4rpx;
+}
+.order_middle{
+  background: #F0F0F0;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.order_img{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 10rpx
+}
+
+.order_goods_name{
+  font-size: 28rpx;
+}
+.order_title{
+  height: 80rpx;
+  background-color: #FFF;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.order_title_text{
+  font-size: 28rpx;
+  color: #000;
+  margin-left: 20rpx
+}
+
+.order_bottom{
+  height: 80rpx;
+  background-color: #FFF;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.order_sum{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.order_sum_price{
+  color:#BE3837;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+
+.sum_text{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}

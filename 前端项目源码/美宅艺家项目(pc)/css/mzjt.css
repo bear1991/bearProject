@@ -1,0 +1,70 @@
+/* 主体 */
+.main>.contentWrap{
+    margin-bottom: 36px;
+    padding: 24px 0;
+    background: #E9E9E9;
+}
+.main>.contentWrap>.content{
+    padding: 24px 0;
+}
+
+
+/* 分页 */
+.pageNav{
+    height: auto;
+    background: transparent;
+}
+.pagination{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.pagination>li{
+    padding: 0 1%;
+}
+.pagination>li>a{
+    background: #D6AC3C;
+    color: #FFF;
+}
+.pagination .turn{
+    padding: 0;
+}
+.pagination img{
+    height: 34px;
+    cursor: pointer;
+}
+
+
+
+.picShow{
+    padding: 24px 0 16px;
+}
+
+
+/* 视频列表 */
+.videoList>li{
+    width: 48%;
+    margin: 16px 1% 8px;
+}
+.videoList>li>p{
+    margin: 8px 0;
+}
+.videoList>li>.video{
+    height: 220px;
+}
+
+
+
+.modal-dialog.modal-lg{
+    margin-top: 100px;
+}
+.modal-content{
+    width: 90%;
+    min-width: 360px;
+    margin: auto;
+    padding: 12px;
+}
+.modal-body{
+    min-height: 360px;
+}

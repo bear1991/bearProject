@@ -1,0 +1,24 @@
+<!--pages/preview/preview.wxml-->
+<view class='preview-wrap'>
+
+  <!-- 单张图片预览 -->
+  <!--<image wx:if='{{viewPicUrls.length == 1}}' class='preview' src='{{viewPicUrls[0]}}' mode='aspectFit'></image>-->
+
+  <!-- scroll-view：滚动显示多张图片预览 -->
+  <!--
+  <scroll-view wx:else class="preview-scroll" scroll-x scroll-into-view='list{{viewPicIndex}}'>
+    <image wx:for='{{viewPicUrls}}' wx:key='*this' id='list{{index}}' class='preview' src='{{item}}' mode='aspectFit' ></image>
+  </scroll-view>
+  -->
+
+  <!-- swiper：轮播显示多张图片预览 -->
+  <!--<swiper wx:else class="preview-scroll" current='{{viewPicIndex}}'>-->
+  <swiper class="preview-scroll" current='{{viewPicIndex}}'>
+    <block wx:for='{{viewPicUrls}}' wx:key='*this'>
+      <swiper-item>
+        <image class="preview" src='{{item}}' mode='aspectFit'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>

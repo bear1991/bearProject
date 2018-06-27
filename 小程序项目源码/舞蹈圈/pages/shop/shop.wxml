@@ -1,0 +1,41 @@
+<!--pages/shop/shop.wxml-->
+<!-- <text>pages/shop/shop.wxml</text> -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container">
+<view class="list-top">
+        <view class="label">商城</view>
+        <view class="toShoppingCar" bindtap="shoppingCarCatchtap">{{carTitle}}</view>
+    </view>
+  <view class="left">
+    <scroll-view class="lfScrollWrap" scroll-x="{{true}}">
+      <!-- <view class="lfScroll {{!goodsTypeId?'typeActive':''}}" catchtap="requestHotGoodsData">热门商品</view> -->
+      <view class="lfScroll {{goodsTypeId==item.term_id?'typeActive':''}}" wx:for="{{goodsTypeData}}" wx:key="term_id" catchtap="requestTypeGoodsData" data-termid="{{item.term_id}}" data-index="{{index}}">{{item.name}}</view>
+    </scroll-view>
+  </view>
+
+  <view class="right">
+    <view class="lfScrollWrapContent" scroll-y bindscrolltolower="goodsMoreBindscrolltolower">
+      <view class="listWrap" wx:if="{{goodsListData.length}}">
+        <view class="list">  
+          <view class="cont">
+            <view scroll-x="{{true}}" class="latestActWrap">
+              <view class="latestAct" wx:for="{{goodsListData}}" wx:for-index="index" wx:key="id" catchtap="detailCatchtap" data-detail="{{item}}"> 
+                <image mode="widthFix" src="{{common.delPicture(item.smeta).thumb}}"></image>
+                <view class="actIntro">
+                  <!-- <view>{{common.subGoodsName(item.name)}}</view> -->
+                  <view>{{item.name}}</view>
+                  <view>
+                    <text>￥{{item.price}}</text>
+                    <image mode="aspectFill" src="../../images/shop/ic_tab_find.png" data-goodsid="{{item.id}}" data-price="{{item.price}}" data-index="{{index}}" catchtap='addCarCatchtap'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

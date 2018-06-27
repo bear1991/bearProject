@@ -1,0 +1,19 @@
+<!--pages/register/register.wxml-->
+<!-- <text>pages/register/register.wxml</text> -->
+
+<view class="container">
+  <view class="phoneNum">
+    <input type="text" placeholder="请输入注册手机号" bindinput="inputBindinput" data-type="mobile"></input>
+  </view>
+  <view class="password">
+    <input type="text" placeholder="请输入注册密码" bindinput="inputBindinput" data-type="password"></input>
+  </view>
+  <view class="code">
+    <input type="number" placeholder="请输入短信验证码" bindinput="inputBindinput" data-type="verificationCode"></input>
+    <button catchtap="codeCatchtap">{{codeText}}</button>
+  </view>
+  <view class="register">
+    <button catchtap="registerCatchtap">注 册</button>
+  </view>
+</view>
+

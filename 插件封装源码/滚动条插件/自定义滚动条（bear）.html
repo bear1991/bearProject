@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>自定义滚动条</title>
+  <style type="text/css">
+  *{
+	margin:0;
+	padding:0;}
+  html{     /*让背景图片填满窗口*/
+	height:100%;}
+  body{
+	height:100%;
+	background:url('images/bg.jpg') no-repeat 0 0/cover;}
+  #wrap{
+	position:fixed;
+	bottom:20px;
+	left:60px;
+	width:600px;
+	height:400px;
+	background:rgba(60,31,13,0.7);
+	border:1px solid #cb986d;
+	overflow:hidden;}
+  #wrap #cont{
+	position:absolute;
+	top:10px;
+	left:20px;
+	width:540px;
+	font:14px/22px 'Microsoft Yahei';
+	color:#CEB39B;
+	text-indent:28px;
+	-webkit-user-select:none;     /*禁止选中、复制等*/
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;}
+  #wrap #cont img{
+	margin:12px 20px;}
+  #wrap #scroll{
+	position:absolute;
+	top:40px;
+	right:6px;
+	width:16px;
+	height:320px;
+	background:url('images/scroll_bar.png') no-repeat;}
+  #wrap #scroll p{
+	position:absolute;
+	top:0px;
+	right:-5px;
+	width:26px;
+	height:12px;
+	background:url('images/scroll.png') no-repeat;}   
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+    <!--内容区域-->
+	<div id="cont">
+		<p>四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉，四魂之玉。</p>
+		<p>四魂之玉四魂之玉，四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉。</p>
+		<div class="pic">
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+		</div>
+		<p>四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。</p>
+		<p>四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。</p>
+		<div class="pic">
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+		</div>
+		<p>四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。</p>
+		<p>四魂之玉四魂之玉四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉。</p>
+		<div class="pic">
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+		</div>
+		<p>四魂之玉四魂之玉，四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉四魂之玉。四魂之玉四魂之玉四魂之玉四魂之玉。</p>
+	</div>
+	<!--滚动条-->
+	<div id="scroll">
+		<p id="btn"></p>
+	</div>
+ <script type="text/javascript">
+ (function(){
+	var oWrap = document.getElementById('wrap');
+	var oCont = document.getElementById('cont');
+	var oScroll = document.getElementById('scroll');
+	var oBtn = document.getElementById('btn');
+
+	oBtn.onmousedown=function(ev){    //ev：用来获取鼠标有关的属性
+		ev = ev||window.event;     //event事件浏览器兼容处理
+		//ev.client：获取鼠标Y坐标值  oBtn.offsetTop：按钮当前相对于定位父元素的top值
+		var mY = ev.clientY-oBtn.offsetTop;     
+		document.onmousemove=function(ev){
+			var mV = ev.clientY-mY;
+			var btnMax = oScroll.offsetHeight-oBtn.offsetHeight;
+			//限制按钮y轴方向位置
+			if(mV<0){
+				mV = 0;
+				}else if(mV>btnMax){
+					mV = btnMax;
+					}
+			oBtn.style.top=mV+'px';
+			var score = mV/btnMax;     //获取按钮移动比例
+			var contV = score*(oCont.clientHeight-oWrap.clientHeight+20);
+			oCont.style.top=-contV+10+'px';
+			}
+		}
+	
+	//当鼠标离开时，解绑鼠标移动-抬起事件
+	document.onmouseup=function(){    
+		document.onmousemove=null;
+		document.onmouseup=null;
+		return false;
+		}
+	})();
+ </script>
+ </div>
+ </body>
+</html>

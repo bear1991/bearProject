@@ -1,0 +1,8 @@
+<!--pages/actlist/actlist.wxml-->
+<!-- <text>pages/actlist/actlist.wxml</text> -->
+
+<import src="../../templates/matactlist/matactlist.wxml" />   <!-- 引入比赛活动列表模板 -->
+
+
+<!-- 比赛活动列表模板 -->
+<template is="matactlist" data="{{actListData}}"/>

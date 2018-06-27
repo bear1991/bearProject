@@ -1,0 +1,26 @@
+<!--pages/myorder/myorder.wxml-->
+<!-- <text>pages/myorder/myorder.wxml</text> -->
+<wxs src="../common.wxs" module="common" />
+<view class="container">
+    <block wx:for="{{myOrder}}" wx:key="actPic" >
+      <view class="history" catchtap="orderDetail" data-index="{{index}}">
+        <view class='order_title'>
+          <text class='order_title_text'>{{item.order_id}}</text>
+        </view>
+        <view class='order_middle'>
+          <image class='order_img' wx:if="{{item.data!=undefined&&item.data.length>0}}" src="{{item.data[0].pic}}"></image>
+          <image class='order_img' wx:if="{{item.data!=undefined&&item.data.length>1}}" src="{{item.data[1].pic}}"></image>
+          <image class='order_img' wx:if="{{item.data!=undefined&&item.data.length>2}}" src="{{item.data[2].pic}}"></image>
+          <image class='order_img' wx:if="{{item.data!=undefined&&item.data.length>3}}" src="{{item.data[3].pic}}"></image>
+          <view class='order_goods_name' wx:if="{{item.data!=undefined&&item.data.length==1}}">{{item.data[0].title}}</view>
+        </view>
+        <view class='order_bottom'>
+          <view class='order_sum'>
+            <view class='sum_text'>共{{common.sumOrder(item)}}件商品</view>
+            <view class='sum_text'>订单金额:</view>
+            <view class='order_sum_price'>￥{{item.total_money}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+</view>

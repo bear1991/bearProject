@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>精选套餐</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" />
+    <!-- <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" /> -->
+
+
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/jxtc.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="index" class="bgw">
+    <!-- logo、注册、登录 -->
+    <header class="clearfix">
+        <div class="header-wrap col-sm-8 col-sm-offset-2 dis-f">
+            <div class="header-left dis-f">
+                <img src="./images/index/logotext.png" alt="">
+                <div class="cur">
+                    <img src="./images/index/location.png" alt="">
+                    <span>上海</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="reg-login clearfix">
+                    <li class="fl">我有美宅/样板房征集</li>
+                    <li class="fr"><span>注册</span>/<span>登录</span></li>
+                </ul>
+                <div class="search pr fh">
+                    <input class="w100 h100 size12" type="text" placeholder="搜索品牌/单品/风格">
+                    <img class="pa cur" src="./images/index/searchicon.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="clearfix">
+        <ul class="col-sm-10 col-sm-offset-1 dis-f h100">
+            <li class="h100">
+                <span class="pr cur" type="index">首页</span>
+            </li>
+            <li class="pr h100">
+                <span class="pr cur" type="zzgy">住宅公寓</span>
+                <ul class="menu dis-n pa w100 bgw tc cur">
+                    <li><span>看看人家</span></li>
+                    <li><span>美美咱家</span></li>
+                    <li><span>就近逛逛</span></li>
+                    <li><span>美宅特色</span></li>
+                </ul>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="dzbs">大宅别墅</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mskz">民宿客栈</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mztx">美宅天下</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur">登堂入室</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="xmzx">小美在线</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mzyj">美宅艺家</span>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- 主体 -->
+    <section class="main clearfix">
+        <section class="header col-sm-8 col-sm-offset-2 size18 bn">
+            <span class="pr fw">美宅艺家</span>
+            <span class="fw">>></span>
+            <span class="currentColor">精选套餐</span>
+        </section>
+
+
+        <section class="contentWrap col-sm-12 clearfix">
+            <section class="content col-sm-8 col-sm-offset-2 bgw">
+                <img class="dis-b w100" src="./images/index/banner.png" alt="" srcset="">
+                <section class="graybg"></section>
+                
+                <ul class="navListWrap dis-f tc fw size16">
+                    <li>
+                        <span class="navActive pr cur">现代美式套餐</span>
+                    </li>
+                    <li>
+                        <span class="pr cur">新中式套餐</span>
+                    </li>
+                </ul>
+
+
+                <!-- 套餐分类 -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tc" role="tablist" id="myTabs">
+                    <li role="presentation" class="fr">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="fw">经济型</a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="fw">高档型</a>
+                    </li>
+                    <li role="presentation" class="fr">
+                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="fw">豪华型</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content bn">
+                        <div role="tabpanel" class="tab-pane h100 fya" id="home">经济型</div>
+                    <div role="tabpanel" class="tab-pane active h100 fya" id="profile">
+                        <img class="dis-b w100" src="./images/index/banner.png" alt="" srcset="">
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane h100 fya" id="messages">豪华型</div>
+                </div>
+
+            </section>
+
+            <section class="contentOther col-sm-12 clearfix">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h4 class="tc fw">美宅艺家推荐组合</h4>
+                    <ul class="combinationListWrap bgw">
+                        <li>
+                            <div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="form-field-checkbox" type="checkbox" class="ace" />
+                                        <span class="lbl">轻奢桌椅组合1</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="combinationWrap col-xs-9">
+                                    <div class="combination clearfix">
+                                        <div class="col-xs-9 clearfix">
+                                            <img class="dis-b col-xs-3" src="./images/index/pic.jpg" alt="">
+                                            <div class="col-xs-9 pro-info">
+                                                <h6 class="fw">商品11</h6>
+                                                <ul class="size12">
+                                                    <li>备注说明</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">规格：</span>
+                                                        <div class="dis-f">
+                                                            <span>规格1</span>
+                                                            <span>规格2</span>
+                                                            <span>规格3</span>
+                                                            <span>规格4</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 tc size12">单价：200.00元</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <p class="tc"><input type="text" class="input-mini" id="spinner0"/></p>
+                                    <p class="tc size12">总价：1000元</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="form-field-checkbox" type="checkbox" class="ace" />
+                                        <span class="lbl">轻奢桌椅组合2</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="combinationWrap col-xs-9">
+                                    <div class="combination clearfix">
+                                        <div class="col-xs-9 clearfix">
+                                            <img class="dis-b col-xs-3" src="./images/zxal/list.png" alt="">
+                                            <div class="col-xs-9 pro-info">
+                                                <h6 class="fw">商品21</h6>
+                                                <ul class="size12">
+                                                    <li>备注说明</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">规格：</span>
+                                                        <div class="dis-f">
+                                                            <span>规格1</span>
+                                                            <span>规格2</span>
+                                                            <span>规格3</span>
+                                                            <span>规格4</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 tc size12">单价：200.00元</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <p class="tc"><input type="text" class="input-mini" id="spinner1"/></p>
+                                    <p class="tc size12">总价：1000元</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tr">
+                            <span>所有套餐总价：2000元</span>
+                            <button class="btn btn-primary join-shopcar">加入购物车</button>
+                        </li>
+                    </ul>
+
+                    <h4 class="tc fw">经典搭配</h4>
+                    <ul class="classic dis-f">
+                        <li class="dis-f fh">
+                            <img class="dis-b w100 h100" src="./images/zxal/list.png" alt="">
+                        </li>
+                        <li class="dis-f fh">
+                            <img class="dis-b w100 h100" src="./images/index/jg.jpg" alt="">
+                        </li>
+                        <li class="dis-f fh">
+                            <img class="dis-b w100 h100" src="./images/index/pic.jpg" alt="">
+                        </li>
+                        <li class="dis-f fh">
+                            <img class="dis-b h100 h100" src="./images/zxal/list.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section class="footer graybg col-sm-8 col-sm-offset-2"></section>
+    </section>
+
+
+
+    <!-- 联系我们、地址 -->
+    <footer class="clearfix" id="mzyj">
+        <ul class="clearfix">
+            <li class="fl w50 dis-f">
+                <img src="./images/index/code.png" alt="">
+                <div class="dis-b">
+                    <img src="./images/index/logotext1.png" alt="" srcset="">
+                    <h5>扫描二维码了解更多</h5>
+                </div>
+            </li>
+            <li class="fl w50 dis-f">
+                <h5>联系我们</h5>
+                <h5>400-7676-399 ( 9:00-18:00 )</h5>
+            </li>
+        </ul>
+        <div class="address col-sm-8 col-sm-offset-2 tc">
+            <p>上海市闵行区申长路588号虹桥绿谷B座606</p>
+            <p>免责声明 Copyright &copy; 2018 美宅艺家 版权所有 沪ICP备 138000号</p>
+        </div>
+    </footer>
+
+
+    <!-- <script src="assets/js/ace-extra.min.js"></script> -->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- <script src="assets/js/typeahead-bs2.min.js"></script> -->
+
+    <!-- <script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.sparkline.min.js"></script> -->
+
+    <script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+    
+    <script src="assets/js/ace-elements.min.js"></script>
+	<script src="assets/js/ace.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/jxtc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* 主体 */
+.main>.contentWrap{
+    margin-bottom: 36px;
+    padding: 24px 0;
+    background: #E9E9E9;
+}
+
+.content{
+    padding: 18px 0 8px;
+}
+
+
+.picShow{
+    padding: 24px 0 16px;
+}
+
+
+.home{
+    top: 0;
+    left: 0;
+}
+.home>button{
+    margin: 4px 0;
+    padding: 6px 20px 2px;
+    background: #D6AC3C;
+    color: #FFF
+}
+.homeCont{
+    height: 46%;
+    margin: 24% 0 3%;
+    padding: 20px 0;
+    background: #D6AC3C;
+}
+.homeLf>ul{
+    margin: 2%;
+}
+.homeLf>ul>li{
+    margin: 5% 0;
+}
+.homeLf>ul>li>img{
+    width: 6%;
+    margin: 2% 1%;
+}
+.homeLf>ul>li>input{
+    width: 88%;
+    height: 24px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    border-radius:inherit;
+    color: #FFF;
+    box-shadow: none;
+}
+.homeLf>ul>li>input::-webkit-input-placeholder{
+    color: #FFF;   
+}
+.homeLf>ul>li>input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color: #FFF;   
+}
+.homeLf>ul>li>input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color: #FFF;   
+}
+.homeLf>ul>li>input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color: #FFF;   
+}
+.homeLf>ul>li>input[type="text"]:focus{
+    border:none;
+    border-bottom: 1px solid #FFF;
+    box-shadow: none;
+}
+.homeLf>ul>li>span{
+    top: 4px;
+    right: 12px;
+    color: #FFF;
+}
+.homeLf>ul>li:last-child{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.homeLf>ul>li>button{
+    margin: 4px 0;
+    padding: 4px 10px 2px;
+}
+.homeLf>ul>li>button:nth-child(2){
+    margin: 4px 8%;
+}
+.homeLf>ul>li>button.other{
+    background: #D6AC3C;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+.homeRt{
+    border-left: 1px solid rgba(225,225,225,0.8);
+    color: #FFF;
+}
+.homeRt>p{
+    margin: 18px 0 4px 3%;
+}
+.homeRt>ul>li{
+    width: 30%;
+    margin: 1% 0 1% 3%;
+    padding: 4px 0;
+    border: 1px solid #FFF;
+}
+
+
+.modal-dialog.modal-lg{
+    margin-top: 100px;
+}
+.modal-content{
+    width: 90%;
+    min-width: 360px;
+    margin: auto;
+    padding: 12px;
+}
+
+
+
+.carousel-inner>.item{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+}
+.carousel-inner>.item>img{
+    width: 100%;
+    height: 100%;
+}

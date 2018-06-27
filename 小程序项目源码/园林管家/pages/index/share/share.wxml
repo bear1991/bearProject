@@ -1,0 +1,27 @@
+<!--pages/index/share/share.wxml-->
+<view class='container'>
+  <view class='search-wrap'>
+    <view class='search'>
+      <input class='text' bindinput='bindSearchInput' value='{{inputVal}}'></input>
+      <icon type='search' size='22' color='green' catchtap='catchSearchTap'></icon>
+    </view>
+  </view>
+
+  <view class='share-list-wrap'>
+    <view wx:for='{{requestContent}}' wx:key='content' class='type-list' catchtap='catchShareDetailTap' data-shareDetail='{{item}}'>
+      <view class='type-lf'>
+        <view class='share-intro'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='share-person-time'>
+          <text class='share-person'>{{item.createUserName}}</text>
+          <text class='share-time'>{{item.createTime}}</text>
+        </view>
+      </view>
+      <view wx:if='{{item.img}}' class='type-rt' catchtap='catchPreviewTap' data-picUrl='{{item.img}}'>
+        <image mode='aspectFill' class='share-pic' src='{{item.img}}'></image>
+      </view>
+    </view>
+  </view>
+
+</view>

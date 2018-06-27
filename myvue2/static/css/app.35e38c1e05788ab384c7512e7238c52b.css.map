@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/App.vue"],"names":[],"mappings":"AACA,qDACE,aAAe","file":"static/css/app.35e38c1e05788ab384c7512e7238c52b.css","sourcesContent":["\n.tab .tab-item a.router-link-active[data-v-46d5ec2c] {\n  color: #f01414;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/App.vue"],"sourceRoot":""}

@@ -1,0 +1,50 @@
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+
+	
+	.container{
+		height: 92%;
+		background: #F4F4F4;
+	}
+
+	.rcmd-list{
+		padding-bottom: 16px;
+	}
+	.rcmd-list>li{
+		margin-top: 24px;
+	}
+	.rcmd-list>li>img, .rcmd-list>li>p{
+		width: 90%;
+	}
+	.rcmd-list>li>p{
+		margin-top: 4px;
+	}
+
+	/* 精选 */
+	.special:before{
+		content: "精选";
+		position: absolute;
+		top: 0;
+		left: 5%;
+		width: 36px;
+		height: 18px;
+		background: #FC2826;
+		color: #FFF;
+		text-align: center;
+		line-height: 18px;
+		font-size: 12px;
+	}
+
+	

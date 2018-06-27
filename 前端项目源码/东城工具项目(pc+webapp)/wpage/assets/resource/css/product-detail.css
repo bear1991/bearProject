@@ -1,0 +1,179 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+
+
+	.container{
+		height: 84%;
+	}
+
+	.weui-panel__bd:last-child{
+		margin: 14px 0;
+	}
+
+	.weui-panel__bd .weui-media-box__bd{
+		line-height: 1.2;
+	}
+	.weui-media-box__title{
+		margin-bottom: 8px;
+		white-space: initial;
+		text-overflow: initial;
+	}
+	
+
+	.weui-media-box__desc>div{
+		margin-bottom: 8px;
+	}
+	.weui-media-box__desc>div:first-child{
+		color: #6E6E6E;
+	}
+
+	.weui-media-box_text>p{
+		line-height: 20px;
+	}
+	
+	.weui-media-box__desc>.price-add{
+		margin-bottom: 0;
+	}
+	.price-add>div:first-child{
+		line-height: 30px;
+		color: #E56F26;
+	}
+	.price-add>.weui-btn{
+		width: 40%;
+		background: #FF6500;
+		color: #FFF;
+		min-width: 136px;
+		padding: 0;
+		line-height: 2;
+	}
+	.price-add>.weui-btn>i{
+		margin-right: 8px;
+	}
+
+	table tr td{
+		padding: 8px 0;
+		border: 1px solid #F9F9F9;
+		color: #676767;
+	}
+
+	.weui-media-box:before,
+	.weui-media-box:after{
+		display: none;
+	}
+
+
+
+	/* 购物车弹窗 */
+	#iosActionsheet{
+		bottom: 8%;
+	}
+	#androidActionsheet>.weui-actionsheet{
+		width: 90%;
+		background: #FFF;
+		padding: 10px;
+	}
+	.actionsheet-header{
+		margin-bottom: 16px;
+	}
+	.weui-icon-cancel{
+		top: 0;
+		right: 0px;
+		color: #000;
+	}
+	.actionsheet-cont>li{
+		float: left;
+		width: 30%;
+		margin: 10px 1%;
+		font-size: 12px;
+		text-align: center;
+	}
+	.weui-actionsheet__title{
+		height: 30px;
+		text-align: right;
+		font-size: 12px;
+		color: #E05C5E;
+	}
+	.weui-actionsheet__title:before{
+		display: none;
+	}
+	.weui-actionsheet__menu{
+		padding-bottom: 20px;
+	}
+	.weui-actionsheet__menu>.page__bd.page__bd_spacing{
+		padding: 4px 12px 8px;
+	}
+	.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:first-child>div:first-child{
+		flex: 3;
+	}
+	.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:first-child>div:last-child{
+		flex: 2;
+	}
+	.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:last-child{
+		margin-top: 6px;
+		font-size: 14px;
+	}
+	.weui-flex__item>.placeholder>img{
+		width: 24px;
+		height: 24px;
+	}
+	.weui-flex__item>.placeholder>span{
+		margin: 0 8px;
+	}
+	.num-action{
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+
+
+	footer{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		bottom: 0;
+		z-index: 5001;
+		width: 100%;
+		height: 8%;
+	}
+	footer>div:first-child{
+		justify-content: center;
+		align-items: center;
+		width: 75%;
+		background: #434343;
+		color: #FFF;
+	}
+	.shop-car{
+		top: -20px;
+		left: 20px;
+		width: 50px;
+		height: 50px;
+		background: #FECF50;
+		line-height: 50px;
+	}
+	.shop-car>img{
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+	}
+	footer>div:last-child{
+		justify-content: center;
+		align-items: center;
+		width: 25%; 
+		background: #FFCF2D;
+	}

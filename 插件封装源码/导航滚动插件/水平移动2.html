@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+    <style>
+		/* 顶部左右滚动菜单样式 */
+		/*
+        #wrap{
+            position: relative;
+            overflow: hidden;
+        }
+
+        #tabNav{
+            display: none; 
+			/* display: flex; *\/
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width:10%;
+            height: 35px;
+            margin: 0;
+            border-bottom: 1px solid #c5d0dc;
+        }
+        #tabNav>li{
+            flex: 1;
+            height: 100%;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            color: #438eb9;
+        }
+
+        #contWrap{
+            width: 90%;
+            overflow: hidden;
+        }
+        #contWrap, #myTab{
+            height: 100%;
+        }
+        #myTab{
+            transition: 0.4s;
+        }
+        #wrap:after,
+        #myTab:after{
+            content: '';
+            display: block;
+            clear:both;
+        }
+        #myTab>li{
+            float: left;
+            height:100%;
+        }
+		*/
+		
+
+
+		/* 顶部左右滚动菜单样式 */
+        #wrap{
+            position: relative;
+            overflow: hidden;
+			width: 600px;
+			height: 35px;
+			border: 1px solid #c5d0dc;
+        }
+
+        #tabNav{
+            display: none;
+            /* display: flex; */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width:10%;
+            height: 35px;
+            margin: 0;
+        }
+        #tabNav>li{
+            flex: 1;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            color: #438eb9;
+			line-height: 35px;
+			list-style: none;
+			cursor: pointer;
+        }
+
+        #contWrap{
+            width: 90%;
+            overflow: hidden;
+        }
+        #contWrap, #myTab{
+            height: 100%;
+        }
+        #myTab{
+            margin: 0;
+			padding: 0;
+			list-style: none;
+			transition: 0.4s;
+        }
+		#myTab>li{
+			height: 100%;
+			padding: 0 12px;
+			background: #f9f9f9;
+			border: 1px solid #c5d0dc;
+			line-height: 35px;
+			cursor: pointer;
+		}
+		#myTab>li>a{
+			color: #999;
+			text-decoration: none;
+		}
+        #wrap:after,
+        #myTab:after{
+            content: '';
+            display: block;
+            clear:both;
+        }
+        #myTab>li{
+            float: left;
+            height:100%;
+        }
+	</style>
+
+ </head>
+ <body>
+	<!-- <div id="wrap">
+		<div id="contWrap">
+			<ul class="nav nav-tabs" id="myTab" style="height:34px;">
+				<li class="active">
+					<a data-toggle="tab" href="">
+						<i class="green icon-home bigger-110"></i>
+						Home
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+		<ul id="tabNav">
+			<li><i class="fas fa-angle-double-left"></i></li>
+			<li><i class="fas fa-angle-double-right"></i></li>
+		</ul>
+	</div> -->
+
+
+	<div id="wrap">
+		<div id="contWrap">
+			<ul class="nav nav-tabs" id="myTab">
+				<li class="active">
+					<a href="#!">Home</a>
+				</li>
+			</ul>
+		</div>
+
+		<ul id="tabNav">
+			<li>&lt;&lt;</li>
+			<li>&gt;&gt;</li>
+		</ul>
+	</div>
+	<br>
+	<ul id="nav-list">
+		<li><a href="#!">bear1</a></li>
+		<li><a href="#!">bear2</a></li>
+		<li><a href="#!">bear3</a></li>
+		<li><a href="#!">bear4</a></li>
+		<li><a href="#!">bear5</a></li>
+	</ul>
+
+	<script>
+		var oTab = document.getElementById('tabNav'),
+			oLeft = oTab.children[0],
+			oRight = oTab.children[1],
+			oContWrap = document.getElementById('contWrap'),
+			oCont = document.getElementById('myTab'),
+			// oAdd = document.getElementById('add'),
+			oCwWidth = oContWrap.clientWidth,
+			aContChild = oCont.children,
+			numIndex = 0;    // 保存右侧边界子项序列
+
+
+		// 新增子项
+		var aNavListA = document.querySelectorAll('#nav-list>li a');
+		var timer = '';
+		Array.from(aNavListA).forEach(function(item,index){
+			if(item.className.indexOf('dropdown-toggle')==-1){
+				item.addEventListener('click', function () {
+					timer = setTimeout(function(){
+						addChild(item);
+					}, 120);
+				})
+			}
+		});
+
+		// 子项添加到oCont中
+		function addChild(item){
+			// 创建随机宽度的子项
+			var oLi = document.createElement('li');
+			var oA = document.createElement('a');
+			oA.innerHTML = item.innerHTML + 1;
+			oLi.append(oA);
+			oCont.append(oLi);
+
+			// 为每次新添加li注册移除事件
+			oLi.addEventListener('click', function(){
+				this.parentNode.removeChild(this);
+				removeChild();
+			});
+
+
+			timer = '';
+			var totleWidth = 0;
+			for(var i=0;i<aContChild.length;i++){
+				totleWidth += aContChild[i].clientWidth+2;
+			}
+			// oCont宽度超出oContWrap宽度时，自动更新oCont宽度和左外边距，并更新右侧临界序列
+			if(totleWidth > oCwWidth){
+				oCont.style.width = totleWidth + 'px';
+				oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+
+				numIndex = aContChild.length-1;
+
+				// 当子项总宽超出外层边框宽度时，显示左右切换键
+				if(!oTab.style.display || oTab.style.display=='none'){
+					oTab.style.display = 'flex';
+				}
+			}
+			console.log(numIndex);
+		}
+
+		// 移除子项
+		function removeChild(){
+			// 重新确定右侧边界子项序列
+			var contMgLf = parseInt(oCont.style.marginLeft);
+			var totleWidth = 0;
+			for(var i=0;i<aContChild.length;i++){
+				totleWidth += aContChild[i].clientWidth+2;
+				// oCont宽度仍然大于oCont左外边距与oContWrap宽度之和时，获取右侧临界序列
+				if(totleWidth >= -contMgLf+oCwWidth){
+					numIndex = i;
+					console.log(numIndex);
+					return;
+				}
+			}
+
+			// oCont宽度小于oCont左外边距与oContWrap宽度之和时
+			if(totleWidth <= -contMgLf+oCwWidth){
+				if(totleWidth>oCwWidth){	// oCont宽度大于oContWrap宽度时
+					numIndex = aContChild.length-1;
+					oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+				}else{		// oCont宽度小于oContWrap宽度时
+					numIndex = 0;
+					oCont.style.marginLeft = '0px';
+
+					oTab.style.display = 'none';    // 隐藏左右切换按键
+				}
+				console.log(numIndex);
+			}
+
+		}
+
+
+		// 左点击
+		oLeft.addEventListener('click',function(){
+			if(aContChild.length){
+				var contMgLf = parseInt(oCont.style.marginLeft) || 0;
+				contMgLf += aContChild[numIndex].clientWidth+2;
+				if(contMgLf>0){    // 到达左边界
+					contMgLf = 0;
+				}else{		// 未到达左边界
+					numIndex--;
+				}
+				oCont.style.marginLeft = contMgLf + 'px';
+			}
+			console.log(numIndex);
+		});
+
+		// 右点击
+		oRight.addEventListener('click',function(){
+			if(numIndex<aContChild.length-1 && numIndex){		// 当前没有到达最后子项序列时
+				numIndex++;
+
+				var totleWidth = 0;
+				for(var i=0;i<=numIndex;i++){
+					totleWidth += aContChild[i].clientWidth+2;
+				}
+
+				oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+			}
+			console.log(numIndex);
+		});
+	
+
+
+
+		/**************** 顶部菜单左右切换start *******************/
+		/*
+		var oTab = document.getElementById('tabNav'),
+			oLeft = oTab.children[0],
+			oRight = oTab.children[1],
+			oContWrap = document.getElementById('contWrap'),
+			oCont = document.getElementById('myTab'),
+			// oAdd = document.getElementById('add'),
+			oCwWidth = oContWrap.clientWidth,
+			aContChild = oCont.children,
+			numIndex = 0;    // 保存右侧边界子项序列
+
+
+		// 新增子项
+		var aNavListA = document.querySelectorAll('#nav-list>li a');
+		var timer = '';
+		Array.from(aNavListA).forEach(function(item,index){
+			if(item.className.indexOf('dropdown-toggle')==-1){
+				item.addEventListener('click', function () {
+					timer = setTimeout(addChild, 120);
+				})
+			}
+		});
+
+		// 子项添加到oCont中
+		function addChild(){
+			timer = '';
+			var totleWidth = 0;
+			for(var i=0;i<aContChild.length;i++){
+				totleWidth += aContChild[i].clientWidth+2;
+			}
+			// oCont宽度超出oContWrap宽度时，自动更新oCont宽度和左外边距，并更新右侧临界序列
+			if(totleWidth > oCwWidth){
+				oCont.style.width = totleWidth + 'px';
+				oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+
+				numIndex = aContChild.length-1;
+
+				// 当子项总宽超出外层边框宽度时，显示左右切换键
+				if(!oTab.style.display || oTab.style.display=='none'){
+					oTab.style.display = 'flex';
+				}
+			}
+			// console.log(numIndex);
+		}
+
+		// 移除子项
+		function removeChild(This){
+			// 重新确定右侧边界子项序列
+			var contMgLf = parseInt(oCont.style.marginLeft);
+			var totleWidth = 0;
+			for(var i=0;i<aContChild.length;i++){
+				totleWidth += aContChild[i].clientWidth+2;
+				// oCont宽度仍然大于oCont左外边距与oContWrap宽度之和时，获取右侧临界序列
+				if(totleWidth >= -contMgLf+oCwWidth){
+					numIndex = i;
+					console.log(numIndex);
+					return;
+				}
+			}
+
+			// oCont宽度小于oCont左外边距与oContWrap宽度之和时
+			if(totleWidth <= -contMgLf+oCwWidth){
+				if(totleWidth>oCwWidth){	// oCont宽度大于oContWrap宽度时
+					numIndex = aContChild.length-1;
+					oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+				}else{		// oCont宽度小于oContWrap宽度时
+					numIndex = 0;
+					oCont.style.marginLeft = '0px';
+
+					oTab.style.display = 'none';    // 隐藏左右切换按键
+				}
+				console.log(numIndex);
+			}
+
+		}
+
+		// 左点击
+		oLeft.addEventListener('click',function(){
+			if(aContChild.length){
+				var contMgLf = parseInt(oCont.style.marginLeft) || 0;
+				contMgLf += aContChild[numIndex].clientWidth+2;
+				if(contMgLf>0){    // 到达左边界
+					contMgLf = 0;
+				}else{		// 未到达左边界
+					numIndex--;
+				}
+				oCont.style.marginLeft = contMgLf + 'px';
+			}
+			// console.log(numIndex);
+		});
+
+		// 右点击
+		oRight.addEventListener('click',function(){
+			if(numIndex<aContChild.length-1 && numIndex){		// 当前没有到达最后子项序列时
+				numIndex++;
+
+				var totleWidth = 0;
+				for(var i=0;i<=numIndex;i++){
+					totleWidth += aContChild[i].clientWidth+2;
+				}
+
+				oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+			}
+			// console.log(numIndex);
+		});
+		*/
+		/**************** 顶部菜单左右切换end *******************/
+			
+	</script>
+
+ </body>
+</html>

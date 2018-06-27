@@ -1,0 +1,58 @@
+<!--pages/person/person.wxml-->
+
+<view class='dispalyWait' wx:if='{{displayWaitPage}}'>
+  <view>加载中......</view>
+  <!-- <view>若加载不出，请退出重进</view> -->
+</view>
+<view class='dispalyWait' wx:if='{{exitPage}}'>{{waitMessage}}</view> 
+
+
+<view class='container' wx:if='{{showIndexPage}}'>
+  
+<!--<view class='container'>-->
+
+  <block wx:if='{{loginState}}'>
+    <view class='list person' catchtap='catchAccountTap'>
+      <view class='list-cont'>
+        <view class='person-pic'>
+          <image src='{{avatar}}'></image>
+        </view>
+        <view class='person-nameid'>
+          <text class='person-name'>{{memberName||customName}}</text>
+        </view>
+      </view>
+      <view class='list-icon'>
+        <image src='../image/turn.png'></image>
+      </view>
+    </view>
+    <view class='list infor' catchtap='catchUserTap'>
+      <view class='list-cont'>
+        <image class='inforabout-icon' src='../image/setting.png'></image>
+        <text class='inforabout-text'>住户信息管理</text>
+      </view>
+      <view class='list-icon'>
+        <image src='../image/turn.png'></image>
+      </view>
+    </view>
+    <view class='list about' catchtap='catchAboutTap'>
+      <view class='list-cont'>
+        <image class='inforabout-icon' src='../image/about.png'></image>
+        <text class='inforabout-text'>关于</text>
+      </view>
+      <view class='list-icon'>
+        <image src='../image/turn.png'></image>
+      </view>
+    </view>
+    <!--
+    <view class='list exit' catchtap='catchExitTap'>
+      <button type='primary'>退出</button>
+    </view>
+    -->
+
+  </block>
+
+  <view wx:else class='list login' catchtap='catchLoginTap'>
+    <text>请绑定手机号</text>
+  </view>
+
+</view>

@@ -1,0 +1,45 @@
+<!--pages/index/back/backdetail/backdetail.wxml-->
+
+<view class='container'>
+  <view class='type-list'>
+    <view class='type-lf'>
+      <text>合同项目</text>
+    </view>
+
+    <picker class='picker-select type-rt' mode='selector' range='{{contractList}}' bindchange='bindContractSelectChange'>
+      <view wx:if='{{!contractValue}}'>
+        <text class='picker-text'>请选择</text>
+        <image class='picker-pic' src='../../../image/turn.png'></image>
+      </view>
+      <view wx:else>
+        <text class='picker-text novertical'>{{contractValue}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class='back-list-wrap'>
+    <view class='back-list'>
+      <textarea placeholder='请输入评论或反馈意见......' maxlength='-1' bindinput='bindBackContTap'></textarea>
+    </view>
+    
+    <!-- 上传图片展示 -->
+    <view class='show-pic' wx:if='{{showPic}}'>
+      <scroll-view scroll-x='true'>
+        <view class='scroll-pic' wx:for='{{picPath}}' wx:key='*this' catchlongpress='catchLongImagePress' data-deleteIndex='{{index}}' catchtap='catchPreviewTap' data-picUrl='{{item}}'>
+          <image mode='aspectFill' src='{{item}}'></image>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class='back-upload'>
+      <image src='../../../image/upload.jpg' catchtap='catchAddPicTap'></image>
+      <text class='picType'>(格式：jpg/png/gif)</text> 
+    </view>
+  </view>
+  
+  <view class='back-submit' catchtap='catchBackSubmitTap'>
+    <button type='primary'>提交</button>
+  </view>
+
+</view>
+

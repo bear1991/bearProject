@@ -1,0 +1,93 @@
+#message{
+    background: #F5F5F5;
+}
+
+.weui-navbar{
+    z-index: inherit;
+}
+.weui-navbar:after,
+.weui-navbar__item:after{
+    display: none;
+}            
+
+.weui-navbar__item,
+.weui-navbar__item.weui-bar__item_on{
+    background: #FFF;
+}
+
+.weui-bar__item_on{
+    color: #DB742C;
+}
+.weui-bar__item_on>.line{
+    display: block;
+}
+
+.line{
+    bottom: -2px;
+    left: 15%;
+    width: 20%;
+    height: 2px;
+    background: #DB742C;
+    transition: 0.4s;
+}
+
+.active{
+    display: block;
+}
+
+.weui-tab__panel>div{
+    margin-top: 14px; 
+    padding: 0 18px;
+    background: #FFF;
+}
+
+.reMsg, .seMsg{
+    padding: 12px 0;
+    border-bottom: 1px solid #EEE;
+}
+
+.reMsg>.weui-flex:nth-of-type(1),
+.reMsg>.weui-flex:nth-of-type(2){
+    color: #686868;
+    line-height: 30px;
+}
+
+.seMsg>.weui-flex:nth-of-type(2){
+    color: #686868;
+    line-height: 30px;
+}
+.seMsg>.weui-flex:nth-of-type(3){
+    color: #686868;
+}
+
+.unread{
+    color: #EE5551;
+}
+.inread{
+    color: #AFAFAF;
+}
+
+.editBtn{
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+}
+
+.weui-skin_android .weui-actionsheet{
+    width: 90%;
+    padding: 8px 18px 18px;
+    background: #FFF;
+    border-radius: 4px;
+}
+
+.weui-icon-cancel:before{
+    margin: 0;
+}
+
+.actionsheet-cont>p{
+    line-height: 30px;
+}
+.actionsheet-cont>div{
+    max-height: 200px;
+    margin-top: 12px;
+}

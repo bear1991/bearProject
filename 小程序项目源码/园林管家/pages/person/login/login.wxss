@@ -1,0 +1,36 @@
+/* pages/person/login/login.wxss */
+.container{
+  padding-top: 24rpx;
+}
+
+.login-infor{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80rpx;
+  padding: 20rpx 0;
+  background: #FFF;
+  border-bottom: 1rpx solid #DDD;
+}
+.login-infor>text{
+  margin: 0 20rpx 0 40rpx;
+  font-size: 36rpx; 
+  line-height: 80rpx;
+}
+.login-infor>input{
+  width: 540rpx;
+  height: 80rpx;
+}
+.login-submit{
+  width: 100%;
+  padding: 20rpx 0;
+  background: #FFF;
+}
+.login-submit>button{
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 42rpx;
+}

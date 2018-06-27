@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/activity/activity",
+    "pages/actdetail/actdetail",
+    "pages/matdetail/matdetail",
+    "pages/moment/moment",
+    "pages/publish/publish",
+    "pages/my/my",
+    "pages/register/register",
+    "pages/attention/attention",
+    "pages/actlist/actlist",
+    "pages/fans/fans",
+    "pages/topic/topic",
+    "pages/shop/shop",
+    "pages/goodsdetail/goodsdetail",
+    "pages/template-cart/template-cart",
+    "pages/shoppingcar/shoppingcar",
+    "pages/myorder/myorder",
+    "pages/myaddress/myaddress",
+    "pages/orderdetail/orderdetail",
+    "pages/addaddress/addaddress",
+    "pages/orderconfirm/orderconfirm",
+    "pages/addresslist/addresslist",
+    "pages/userdetail/userdetail",
+    "pages/newaddaddress/newaddaddress"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "root-app",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "selectedColor": "#0A0A0A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/tab/index2.png",
+        "selectedIconPath": "./images/tab/index1.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "./images/tab/activity2.png",
+        "selectedIconPath": "./images/tab/activity1.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "./images/tab/shop2.png",
+        "selectedIconPath": "./images/tab/shop1.png"
+      },
+      {
+        "pagePath": "pages/moment/moment",
+        "text": "圈子",
+        "iconPath": "./images/tab/moment2.png",
+        "selectedIconPath": "./images/tab/moment1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/tab/my2.png",
+        "selectedIconPath": "./images/tab/my1.png"
+      }
+    ]
+  },
+  "debuge": true
+}

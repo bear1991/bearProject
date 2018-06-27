@@ -1,0 +1,45 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+	
+
+	.container{
+		height: 92%;
+	}
+	.codeSuccess{
+		margin: 14px 0;
+		padding: 16px 0;
+	}
+	.weui-icon-success{
+		margin: -6px 8px 0 0;
+		font-size: 30px;
+	}
+	.weui-icon-success+span{
+		font-size: 22px;
+	}
+	
+	.weui-form-preview{
+		margin-bottom: 14px;
+	}
+	.weui-form-preview__hd:first-child{
+		padding: 16px 15px;
+	}
+   .weui-form-preview__hd em.weui-form-preview__value{
+		font-size: 16px;
+		line-height: 1.2em;
+	}

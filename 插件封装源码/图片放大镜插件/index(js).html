@@ -1,0 +1,229 @@
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+	<title>商城图片放大镜特效</title>
+	<meta charset="utf-8">
+	<meta name="Author" content="bear">
+	<style type='text/css'>
+	*{ margin:0; padding:0;}
+	li{
+		list-style:none;
+	}
+	#wrap{
+		width:400px;
+		height:500px;
+		margin:40px;
+		border:1px solid #888;
+		}
+	#wrap #box{
+		position:relative;
+		width:400px;
+		height:400px;
+		}
+	#wrap #box #cover{
+		width:180px;
+		height:180px;
+		background-image:url(img/cover.png);
+		position:absolute;
+		top:0;
+		left:0;
+		cursor:move;
+		display:none;
+		}
+	#wrap #box #display{
+		width:400px;
+		height:400px;
+		position:absolute;
+		top:0;
+		right:-410px;
+		background:#ffffcc;
+		display:none;
+		background-image:url(img/1.jpg);
+		}
+	#wrap #list{
+		height:54px;
+		margin:23px 0;
+		}
+	#wrap #list:after{
+		content:'';
+		display:block;
+		clear:both;}
+	#wrap #list li{
+		float:left;
+		width:50px;
+		height:50px;
+		margin:0 10px;
+		border:2px solid #FFF;
+		cursor:pointer;
+		}
+	#wrap #list li.border{
+		border:2px solid #ff9900;
+		}
+	</style>
+	</head>
+	<body>
+	<div id="wrap">
+		<div id="box">
+			<img src="img/1.jpg" alt="">
+			<div id="cover"></div>
+			<div id="display"></div>
+		</div>
+		<ul id="list">
+			<li class='border'><img src="img/1.jpg" alt=""></li>
+			<li><img src="img/2.jpg" alt=""></li>
+			<li><img src="img/3.jpg" alt=""></li>
+			<li><img src="img/4.jpg" alt=""></li>
+			<li><img src="img/5.jpg" alt=""></li>
+		</ul>
+	</div>	
+	<script type="text/javascript">
+	window.onload = function(){
+		var oWrap = document.getElementById('wrap');
+		var oBox = document.getElementById('box');
+		var oPic = oBox.children[0];
+		var oCover = document.getElementById('cover');
+		var oDisplay= document.getElementById('display');
+		var oList = document.getElementById('list');
+		var aLi = oList.querySelectorAll('li');
+		var aImg = oList.querySelectorAll('img');
+		var index = 0;
+		var aLiLength = aLi.length;
+
+		//初始化oPic图片尺寸
+		picSize(oPic,aLi[index].children[0].width,aLi[index].children[0].height,400);
+
+		//设置list图片尺寸
+		for(var i=0;i<aLiLength;i++){
+			picSize(aImg[i],aImg[i].width,aImg[i].height,50);
+			}
+
+		for(var i=0;i<aLiLength;i++){
+			aLi[i].index = i;
+			aLi[i].onclick = function(){
+				aLi[index].className = '';
+				this.className = 'border';
+				var src = this.children[0].src;
+				oPic.src = src;
+				index = this.index;
+
+				//设置oPic图片尺寸
+				picSize(oPic,aLi[index].children[0].width,aLi[index].children[0].height,400);
+				}
+			}
+		
+		//当鼠标移入oPic
+		oPic.onmouseenter = function(ev){
+			ev = ev || window.event;
+			//获取鼠标移入oPic后的位置
+			var smTop = ev.clientY;
+			var smLeft = ev.clientX;
+
+			oCover.style.display = 'block';
+			//当pic不是大图时，cover变为小尺寸
+			if(parseFloat(oPic.style.width)<400||parseFloat(oPic.style.height)<400){
+				oCover.style.width = '120px';
+				oCover.style.height = '120px';
+				}else{
+					oCover.style.width = '180px';
+					oCover.style.height = '180px';
+					}
+
+			var covTop = smTop - oBox.offsetTop - oCover.clientHeight/2;
+			var covLeft = smLeft - oBox.offsetLeft - oCover.clientWidth/2;
+			oCover.style.top = covTop + 'px';
+			oCover.style.left = covLeft + 'px';
+
+			//第一种在鼠标移入pic时就使display显示
+			oDisplay.style.display = 'block';
+			oDisplay.style.background = 'url("' + oPic.src + '") no-repeat';
+			//算出cover在pic上的水平和垂直方向长度比例
+			var propX = oCover.clientWidth/parseFloat(oPic.style.width);
+			var propY = oCover.clientHeight/parseFloat(oPic.style.height);
+			//console.log(propX + '---' + propY);
+
+			//disPlay设置背景大小
+			var disPicW = 400/propX;
+			var disPicH = 400/propY;
+			oDisplay.style.backgroundSize = disPicW + 'px ' + disPicH + 'PX';
+			
+			/*
+			//获取cover在pic上水平和垂直方法定位的偏移量比例
+			var propT =  (parseFloat(oCover.style.top)-parseFloat(oPic.style.marginTop))/parseFloat(oPic.style.height);
+			var propL =  (parseFloat(oCover.style.left)-parseFloat(oPic.style.marginLeft))/parseFloat(oPic.style.width);
+			//console.log(propT + '---' + propL);
+
+			var disPicL = -propL*disPicW;
+			var disPicT = -propT*disPicH;
+			oDisplay.style.backgroundPosition = disPicL + 'px ' + disPicT + 'px';
+			*/
+			picPosition(oCover,oPic,disPicW,disPicH,oDisplay);
+			
+			//移动鼠标
+			document.onmousemove = function(ev){
+				ev = ev || window.event;
+				//获取鼠标移动后位置
+				var emTop = ev.clientY;
+				var emLeft = ev.clientX;
+				var mTop = covTop + emTop - smTop;
+				var mLeft = covLeft + emLeft - smLeft;
+				
+				//限制cover运动范围
+				mTop = Math.max(parseFloat(oPic.style.marginTop),mTop);
+				mTop = Math.min(parseFloat(oPic.style.marginTop)+oPic.clientHeight-oCover.clientHeight,mTop);
+				mLeft = Math.max(parseFloat(oPic.style.marginLeft),mLeft);
+				mLeft = Math.min(parseFloat(oPic.style.marginLeft)+oPic.clientWidth-oCover.clientWidth,mLeft);
+				
+				oCover.style.top =  mTop + 'px';
+				oCover.style.left = mLeft + 'px';
+				
+				/*
+				//获取cover在pic上水平和垂直方法定位的偏移量比例
+				propT =  (parseFloat(oCover.style.top)-parseFloat(oPic.style.marginTop))/parseFloat(oPic.style.height);
+				propL =  (parseFloat(oCover.style.left)-parseFloat(oPic.style.marginLeft))/parseFloat(oPic.style.width);
+				//console.log(propT + '---' + propL);
+
+				disPicL = -propL*disPicW;
+				disPicT = -propT*disPicH;
+				oDisplay.style.backgroundPosition = disPicL + 'px ' + disPicT + 'px';
+				*/
+				picPosition(oCover,oPic,disPicW,disPicH,oDisplay);
+				}
+			}
+
+		//当鼠标移出oPic
+		oCover.onmouseleave = function(){
+			oCover.style.display = 'none';
+			oDisplay.style.display = 'none';
+			}
+		
+		//pic和list图片尺寸及位置
+		function picSize(obj,pWidth,pHeight,bSize){
+			if(pWidth >= pHeight){
+				pHeight = pHeight/pWidth*bSize;
+				pWidth = bSize;
+				obj.style.margin = (bSize-pHeight)/2 + 'px 0';
+				}else{
+					pWidth = pWidth/pHeight*bSize;
+					pHeight = bSize;
+					obj.style.margin = '0 ' + (bSize-pWidth)/2 + 'px';
+					}
+			obj.style.width = pWidth + 'px';
+			obj.style.height = pHeight + 'px';
+			}
+
+		//设置display背景位置
+		function picPosition(oCover,oPic,disPicW,disPicH,oDisplay){
+			//获取cover在pic上水平和垂直方法定位的偏移量比例
+			propT =  (parseFloat(oCover.style.top)-parseFloat(oPic.style.marginTop))/parseFloat(oPic.style.height);
+			propL =  (parseFloat(oCover.style.left)-parseFloat(oPic.style.marginLeft))/parseFloat(oPic.style.width);
+			//console.log(propT + '---' + propL);
+
+			disPicL = -propL*disPicW;
+			disPicT = -propT*disPicH;
+			oDisplay.style.backgroundPosition = disPicL + 'px ' + disPicT + 'px';
+			}
+		}
+	
+	</script>
+	</body>
+	</html>

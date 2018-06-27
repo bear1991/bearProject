@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  
+  <style type="text/css">
+  *{
+	margin:0;
+	padding:0;
+  }
+  ul li{
+	list-style:none;
+  }
+
+
+  .wrap{
+	display:none;
+	position:absolute;
+	left:0;
+	width:200px;
+	box-shadow:0 0 6px #BBB; 
+	-moz-user-select: none; 
+	-webkit-user-select: none;
+	-ms-user-select: none; 
+	-khtml-user-select: none; 
+	user-select: none;
+  }
+  .wrap:after,.wrap .w-tp ul.w-tp-time:after{
+	content:"";
+	display:block;
+	clear:both;
+  }
+  .wrap .w-tp{
+	position:relative;
+	height:60px;
+	background:#417EE8;
+	color:#C2D1F6;
+	overflow:hidden;
+  }
+  .wrap .w-cont{
+  }
+  .wrap .w-tp ul.w-tp-time{
+	width:100px;
+	height:40px;
+	margin:10px auto 0;
+  }
+  .wrap .w-tp ul.w-tp-time>li{
+	float:left;
+	width:20px;
+	height:100%;
+	text-align:center;
+	line-height:40px;
+	font-size:30px;
+  }
+  .wrap .w-tp ul.w-tp-time>li.num{
+	width:40px;
+	cursor:pointer;
+  }
+  .wrap .w-tp ul.w-tp-ma{
+	position:absolute;
+	bottom:10px;
+	right:20px;
+  }
+  .wrap .w-tp ul.w-tp-ma>li{
+	margin-top:2px;
+	font-size:12px;
+	line-height:18px;
+	cursor:pointer;
+  }
+  .active{
+	color:#FFF;
+  }
+  .bgActive{
+	background:#417EE8;
+  }
+
+  .wrap .w-cont ul.clock{
+	position:relative;
+	width:180px;
+	height:180px;
+	margin:10px auto;
+	background:#EDEDED;
+	border-radius:50%;
+	overflow:hidden;
+  }
+  .wrap .w-cont ul.clock>li{
+	position:absolute;
+	top:0;
+	left:0;
+	width:180px;
+	height:180px;
+  }
+  .wrap .w-cont ul.clock>li.circle-line{
+	width:20px;
+	height:80px;
+	transform-origin:center 80px;
+  }
+  .wrap .w-cont ul.clock>li.circle-line>.circle{
+	width:20px;
+	height:20px;
+	margin:0 auto;
+	background:#417EE8;
+	border-radius:50%;
+	overflow:hidden;
+  }
+  .wrap .w-cont ul.clock>li.circle-line>.circle>.sm-circle{
+	width:10px;
+	height:10px;
+	margin:5px auto;
+	border-radius:50%;
+	background:#FFF;
+  }
+  .wrap .w-cont ul.clock>li.circle-line>.line{
+	width:2px;
+	height:60px;
+	margin:auto;
+	background:#417EE8;
+  }
+  .wrap .w-cont ul.clock>li>ul.number{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:24px;
+	height:24px;
+	margin:-12px 0 0 -12px;
+  }
+  .wrap .w-cont ul.clock>li>ul.number>li{
+	position:absolute;
+	top:0;
+	left:0;
+	width:24px;
+	height:24px;
+	border-radius:50%;
+	text-align:center;
+	line-height:24px;
+	font-size:14px;
+	color:#5F5F5F;
+  }
+  .wrap .w-cont ul.clock>li:nth-child(2)>ul.number>li{
+	cursor:pointer;
+  }
+  .wrap .w-cont ul.clock>li:last-child{
+	cursor:pointer;
+  }
+  .wrap .w-bt{
+	 float:right;
+	 width:160px;
+	 text-align:center;
+  }
+  .wrap .w-bt>span{
+	display:inline-block;
+	margin:0 10px;
+	color:#4782E9;
+	font-size:14px;
+	cursor:pointer;
+  }
+
+  #timeCont{
+	position:relative;
+	width:200px;
+	height:40px;
+	margin:0 auto;
+	line-height:40px;
+	text-align:center;
+  }
+
+  </style>
+ </head>
+ <body>
+  <div id="timeCont">
+	<input type="text" value=""/>
+ 
+	<div class="wrap" onselectstart="return false;">
+		<div class="w-tp">
+			<ul class="w-tp-time">
+				<li class="num"><span>00</span></li>
+				<li>:</li>
+				<li class="num"><span>00</span></li>
+			</ul>
+			<ul class="w-tp-ma">
+				<li><span>AM</span></li>
+				<li><span>PM</span></li>
+			</ul>
+		</div>
+		<div class="w-cont">
+			<ul class="clock">
+				<li class="circle-line">
+					<div class="circle">
+						<div class="sm-circle"></div>
+					</div>
+					<div class="line"></div>
+				</li>
+				<li>
+					<ul class="number">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>11</li>
+						<li>12</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="number">
+						<li>5</li>
+						<li>10</li>
+						<li>15</li>
+						<li>20</li>
+						<li>25</li>
+						<li>30</li>
+						<li>35</li>
+						<li>40</li>
+						<li>45</li>
+						<li>50</li>
+						<li>55</li>
+						<li>00</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="w-bt">
+				<span>确认</span>
+				<span>取消</span>
+			</div>
+		</div>	
+	</div>
+
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+	var onOff = '',		  //保存AM或PM状态
+		hourCont = '',
+		minuteCont = '',
+		circleHour = '',
+		hour = '',
+		minute = '',
+		pointX = 0,
+		pointY = 0,
+		moveState = false;
+
+	$(document).click(function(){
+		$(this).find(".wrap").fadeOut();
+	});
+
+	$("#timeCont>input").unbind('click').click(function(e){
+		e.stopPropagation();
+		if($(this).val()==''){
+			//获取当前时间
+			var date = new Date(),
+			hour = date.getHours(),
+			minute = date.getMinutes();
+		}else{
+			var valComponent = $(this).val().split(" "),
+				vcNum = valComponent[0].split(":");
+
+			if(valComponent[1] == "下午"){
+				hour = Number(vcNum[0]) + 12;
+			}else if(valComponent[1] == "上午"){
+				hour = Number(vcNum[0]);
+			}
+			minute = Number(vcNum[1]);
+
+			// console.log(hour,minute);
+		}
+		$(".wrap").fadeIn();
+		timePlay(hour,minute);
+	});
+	
+	$('#timeCont>.wrap').click(function(e){
+		e.stopPropagation();
+	});
+
+
+    function timePlay(hour,minute){
+		//获取初始的表盘中心的offset值
+		var cPointX = $(".wrap .w-cont ul.clock>li>ul.number").eq(0).offset().left+15;
+		var cPointY = $(".wrap .w-cont ul.clock>li>ul.number").eq(0).offset().top+15;
+		
+		if(cPointX == 15){
+			cPointX = pointX;
+			cPointY = pointY;
+		}
+		pointX = cPointX;
+		pointY = cPointY;
+
+	
+		//初始化头部小时及区分AM和PM
+		if(hour <= 12){    //AM
+			$(".wrap .w-tp ul.w-tp-ma>li").eq(0).addClass("active").siblings().removeClass("active");
+			if(hour<10){
+				hourCont = "0"+hour;
+			}else{
+				hourCont = hour;
+			}
+			onOff = "AM";
+		}else if(hour > 12){    //PM
+			$(".wrap .w-tp ul.w-tp-ma>li").eq(1).addClass("active").siblings().removeClass("active");
+			if(hour < 22){
+				hourCont = "0"+(hour-12);
+			}else{
+				hourCont = hour-12;
+			}
+			onOff = "PM";
+		}
+
+		//初始化头部分钟数
+		if(minute < 10){
+			minuteCont = "0"+minute;
+		}else{
+			minuteCont = minute;
+		}
+		$(".wrap .w-tp ul.w-tp-time>li").eq(0).children().html(hourCont)
+		.click(function(){      //点击头部时数
+			$(this).parent().addClass('active').siblings().removeClass('active');
+			$(".wrap .w-cont ul.clock>li:nth-child(2)").fadeIn().next().fadeOut();
+			$(".wrap .w-cont ul.clock>li.circle-line>.circle").css("opacity","0");
+			$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ hourCont*30 +"deg)");	
+		
+		});
+		$(".wrap .w-tp ul.w-tp-time>li").eq(2).children().html(minuteCont)
+		.click(function(){     //点击头部分数
+			$(this).parent().addClass('active').siblings().removeClass('active');
+			$(".wrap .w-cont ul.clock>li:nth-child(2)").fadeOut();
+			var minClock = $(".wrap .w-cont ul.clock>li:nth-child(3)");
+			//切换表盘到分刻度
+			minClock.fadeIn();
+			if(!(minuteCont%5)){
+				$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ minuteCont*6 +"deg)");
+				minClock.find("ul.number>li").eq(minuteCont/5-1).addClass("bgActive").css("color","#FFF")
+				.siblings().removeClass("bgActive").css("color","#5F5F5F");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","0");
+			}else{
+				$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ minuteCont*6 +"deg)");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","1");
+				minClock.children("li").removeClass("bgActive").css("color","#5F5F5F");
+			}
+
+		});
+
+		//初始化头部时间显示样式
+		$(".wrap .w-tp ul.w-tp-time>li").eq(0).addClass("active").siblings().removeClass("active");
+		$(".wrap .w-cont ul.clock>li").eq(1).show().next().hide();
+
+		//初始化表盘刻度
+		$(".wrap .w-cont ul.clock>li").each(function(){
+			$(this).find("ul.number>li").each(function(i){
+				$(this).css("transform","rotate("+ (i+1)*30 +"deg) translateY(-70px) rotate("+ -(i+1)*30 +"deg)");
+			});
+		});
+
+		//初始化当前时的圆圈背景
+		if(hour == 0){
+			circleHour = 0;
+		}else{
+			circleHour = (hour-1)%12;
+		}
+		$(".wrap .w-cont ul.clock>li").eq(1).find("ul.number>li").eq(circleHour).addClass("bgActive").css("color","#FFF")
+		.siblings().removeClass("bgActive").css("color","#5F5F5F");
+		$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ (circleHour+1)*30 +"deg)")
+		.children(".circle").css("opacity","0");
+		
+		//点击切换AM和PM
+		$(".wrap .w-tp ul.w-tp-ma>li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			$(this).parent().prev().children().eq(0).addClass("active").siblings().removeClass("active");
+			if($(this).index()){
+				onOff = 'PM';
+			}else{
+				onOff = 'AM';
+			}
+			$(".wrap .w-cont ul.clock>li:nth-child(2)").fadeIn().next().fadeOut();
+			$(".wrap .w-cont ul.clock>li.circle-line>.circle").css("opacity","0");
+			$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ hourCont*30 +"deg)");
+		});
+
+		//点击小时刻度
+		$(".wrap .w-cont ul.clock>li:nth-child(2)>ul.number>li").unbind("click").click(function(){	
+			hour = $(this).html();
+			if(hour<10){
+				hourCont = "0"+hour;
+			}else{
+				hourCont = hour;
+			}
+			$(".wrap .w-tp ul.w-tp-time>li").eq(0).children().html(hourCont);
+			$(".wrap .w-tp ul.w-tp-time>li").eq(2).addClass("active").parent().children().first().removeClass("active");
+
+			$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ hourCont*30 +"deg)");
+			$(this).addClass("bgActive").css("color","#FFF").siblings().removeClass("bgActive").css("color","#5F5F5F");
+
+			$(this).parents("li").eq(0).fadeOut();
+			var minClock = $(this).parents("li").eq(0).next();
+			//切换表盘到分刻度
+			minClock.fadeIn();
+
+			if(!(minuteCont%5)){
+				$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ minuteCont*6 +"deg)");
+				minClock.find("ul.number>li").eq(minuteCont/5-1).addClass("bgActive").css("color","#FFF")
+				.siblings().removeClass("bgActive").css("color","#5F5F5F");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","0");
+			}else{
+				$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ minuteCont*6 +"deg)");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","1");
+				minClock.children("li").removeClass("bgActive").css("color","#5F5F5F");
+			}
+		});	
+
+		//点击分钟刻度
+		$(".wrap .w-cont ul.clock>li:nth-child(3)").unbind('mousedown').mousedown(function(e){
+			moveState = true;
+			/*
+			var sPageX = e.pageX,
+				sPageY = e.pageY;
+			var lengthX = sPageX-cPointX,
+				lengthY = sPageY-cPointY;
+
+			var deg = 180 - Math.atan2(lengthX,lengthY)*180/Math.PI;
+
+			if((deg%30<=3) || (deg%30)>27){
+				if(deg%30 <= 3){
+					deg = parseInt(deg/30)*30;
+				}else if(deg%30 > 27){
+					deg = (parseInt(deg/30)+1)*30;
+				}
+				minuteCont = deg/30*5;
+
+				$(this).find("ul.number>li").eq(parseInt(deg/30)-1).addClass("bgActive").css("color","#FFF")
+				.siblings().removeClass("bgActive").css("color","#5F5F5F");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","0");
+			}else{
+				if(deg%6 <= 3){
+					deg = parseInt(deg/6)*6;
+				}else if(deg%6 > 3){
+					deg = (parseInt(deg/6)+1)*6;
+				}
+				minuteCont = deg/6;
+
+				$(this).find("ul.number>li").removeClass("bgActive").css("color","#5F5F5F");
+				$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","1");
+			}
+			$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ deg +"deg)");
+			if(minuteCont<10){
+				minuteCont = "0"+minuteCont;
+			}
+			$(".wrap .w-tp ul.w-tp-time>li").eq(2).children().html(minuteCont);
+			*/
+			moveClock($(this),e,cPointX,cPointY);
+		})
+		.mouseup(function(){
+			moveState = false;
+			this.onmousemove = null;
+		});
+
+
+		//在分刻度盘上移动
+		$(".wrap .w-cont ul.clock>li:nth-child(3)").unbind('mousemove').mousemove(function(e){
+			if(moveState){
+				/*
+				var ePageX = e.pageX,
+					ePageY = e.pageY;
+
+				var lengthX = ePageX-cPointX,
+					lengthY = ePageY-cPointY;
+
+				var deg = 180 - Math.atan2(lengthX,lengthY)*180/Math.PI;
+
+				if((deg%30<=3) || (deg%30)>27){
+					if(deg%30 <= 3){
+						deg = parseInt(deg/30)*30;
+					}else if(deg%30 > 27){
+						deg = (parseInt(deg/30)+1)*30;
+					}
+					minuteCont = deg/30*5;
+
+					$(this).find("ul.number>li").eq(parseInt(deg/30)-1).addClass("bgActive").css("color","#FFF")
+					.siblings().removeClass("bgActive").css("color","#5F5F5F");
+					$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","0");
+				}else{
+					if(deg%6 <= 3){
+						deg = parseInt(deg/6)*6;
+					}else if(deg%6 > 3){
+						deg = (parseInt(deg/6)+1)*6;
+					}
+					minuteCont = deg/6;
+
+					$(this).find("ul.number>li").removeClass("bgActive").css("color","#5F5F5F");
+					$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","1");
+				}
+				$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ deg +"deg)");
+				if(minuteCont<10){
+					minuteCont = "0"+minuteCont;
+				}
+				$(".wrap .w-tp ul.w-tp-time>li").eq(2).children().html(minuteCont);
+				*/
+
+				moveClock($(this),e,cPointX,cPointY);
+			}
+		});
+
+
+		//底部确定按钮
+		$(".wrap .w-bt>span").eq(0).click(function(){
+			var val = $(".wrap .w-tp ul.w-tp-time>li").eq(0).children().html()+":"+$(".wrap .w-tp ul.w-tp-time>li").eq(2).children().html();
+			if(onOff == 'AM'){
+				val += " 上午";
+			}else if(onOff == 'PM'){
+				val += " 下午";
+			}
+			$("#timeCont>input").val(val);
+			$(".wrap").hide();
+			
+			if(onOff == "PM"){
+				hour = Number(hour)+12;
+			}
+			minute = Number(minuteCont);
+			//console.log(hour,minute);
+
+		});
+
+		//底部取消按钮
+		$(".wrap .w-bt>span").eq(1).click(function(){
+			$(".wrap").hide();
+		
+		});
+	}
+
+	// 鼠标在分刻度盘上旋转移动
+	function moveClock(obj,e,cPointX,cPointY){
+		var sPageX = e.pageX,
+			sPageY = e.pageY;
+		var lengthX = sPageX-cPointX,
+			lengthY = sPageY-cPointY;
+
+		var deg = 180 - Math.atan2(lengthX,lengthY)*180/Math.PI;
+
+		if((deg%30<=3) || (deg%30)>27){
+			if(deg%30 <= 3){
+				deg = parseInt(deg/30)*30;
+			}else if(deg%30 > 27){
+				deg = (parseInt(deg/30)+1)*30;
+			}
+			minuteCont = deg/30*5;
+
+			obj.find("ul.number>li").eq(parseInt(deg/30)-1).addClass("bgActive").css("color","#FFF")
+			.siblings().removeClass("bgActive").css("color","#5F5F5F");
+			$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","0");
+		}else{
+			if(deg%6 <= 3){
+				deg = parseInt(deg/6)*6;
+			}else if(deg%6 > 3){
+				deg = (parseInt(deg/6)+1)*6;
+			}
+			minuteCont = deg/6;
+
+			obj.find("ul.number>li").removeClass("bgActive").css("color","#5F5F5F");
+			$(".wrap .w-cont ul.clock>li.circle-line").children(".circle").css("opacity","1");
+		}
+		$(".wrap .w-cont ul.clock>li.circle-line").css("transform","translateX(80px) translateY(10px) rotate("+ deg +"deg)");
+		if(minuteCont<10){
+			minuteCont = "0"+minuteCont;
+		}
+		$(".wrap .w-tp ul.w-tp-time>li").eq(2).children().html(minuteCont);
+	}
+  </script>
+
+ </body>
+</html>

@@ -1,0 +1,72 @@
+/* 框架公共部分 */
+#navbar-container .navbar-brand{
+    padding-left: 0;
+}
+#navbar-container .navbar-brand img{
+    height: 25px;
+}
+.header-type{
+    height: 16px;
+    margin: 0 4px;
+}
+
+.money-count{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.money-count>div{
+    color: #616161;
+}
+.money-count>button{
+    line-height: 0.4;
+    background: #F68A4A !important;
+    border-color: #F68A4A;
+}
+.btn:hover, .btn-default:hover{
+    background: #F68A4A !important;
+    border-color: #F68A4A;
+}
+
+.dropdown-navbar{
+    width: 280px;
+}
+.dropdown-navbar .msg-photo{
+    max-width: 50px;
+}
+.dropdown-navbar .msg-body{
+    max-width: 200px;
+}
+.dropdown-navbar>li.info-list>a{
+    padding: 6px 0;
+}
+.info-list li{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.user-info{
+    white-space: normal;
+}
+
+.nav-list>li>a{
+    padding-left: 10px; 
+}
+
+.sider-icon{
+    margin-right: 4px;
+}
+
+.content-header{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #EEE;
+    color: #90C16E;
+}
+.content-header>h3{
+    margin-top: 6px;
+}

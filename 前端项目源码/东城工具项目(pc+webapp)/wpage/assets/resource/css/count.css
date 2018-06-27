@@ -1,0 +1,103 @@
+html, body{
+    background: #F5F5F5;
+}
+
+header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    background: #EEC434;
+}
+header>i:first-child{
+    margin-left: 5%
+}
+header>i:last-child{
+    margin-right: 5%; 
+}
+
+.container{
+    height: 84%;
+}
+.count-list>div{
+    margin-top: 14px;
+}
+.count-list .weui-media-box__hd{
+    width: 100px;
+    height: 100px;
+}
+
+a.weui-media-box{
+    padding-bottom: 8px;
+}
+
+
+a.weui-media-box.weui-media-box_appmsg:active{
+	background: #FFF;
+}
+
+.weui-media-box_appmsg .weui-media-box__bd{
+    align-self: flex-start;
+}
+.weui-media-box_appmsg .weui-media-box__bd>h4{
+    margin-bottom: 4px;
+}
+.count-list .weui-media-box__title{                
+    line-height: 1.4;
+    white-space: initial;
+    text-overflow: initial;
+}
+
+.weui-media-box__desc>div:last-child{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px; 
+}
+
+.page__bd.page__bd_spacing{
+    padding: 0 12px 12px;
+}
+
+
+footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    z-index: 5001;
+    height: 8%;
+    box-shadow: 0 0 2px #DDD;
+}
+footer>div>div{
+    align-items: center;
+}
+footer>div:first-child{
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    margin-left: 4px;
+}
+footer>div:first-child>div:last-child{
+    width: 120%;
+    margin-left: -12%;
+    transform: scaleX(0.8);
+}
+footer>div:last-child{
+    width: 28%; 
+    background: #FFCF2D;
+}
+footer>div:last-child>div{
+    justify-content: center;
+}
+footer>div:last-child>div:last-child>span{
+    color: #444;
+}
+
+
+.weui-dialog__bd{
+    color: #353535;
+}
+.weui-dialog__btn_primary{
+    color: #787878;
+}

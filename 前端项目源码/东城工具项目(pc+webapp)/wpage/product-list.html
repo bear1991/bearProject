@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>整机</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">    <!-- 字体图标样式 -->
+        
+		<link rel="stylesheet" href="./assets/resource/css/product-list.css">
+    </head>
+    <body class="h100">
+        <header class="dis-f">
+            <i class="fas fa-chevron-left size20"></i>
+            <span class="size18">整机</span>
+            <i class="fas fa-home size20"></i>
+        </header>
+
+        <section class="container fya">
+            <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="输入您想搜索的产品" required/>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="pro-list-wrap pr bgw">
+                <div class="pro-list h100 fh">
+                    <ul class="h100">
+                        <li class="fl size14 tc active">电动直流机</li>
+                        <li class="fl size14 tc">交流电动工具</li>
+						<li class="fl size14 tc">气动工具</li>
+                        <li class="fl size14 tc">汽油园林工具</li>
+                        <li class="fl size14 tc">电动直流机</li>
+                        <li class="fl size14 tc">交流电动工具</li>
+                        <li class="fl size14 tc">气动工具</li>
+                        <li class="fl size14 tc">汽油园林工具</li>
+                    </ul>
+                </div>
+                <i id="turnRt" class="fas fa-caret-right pa"></i>
+            </div>
+
+            <div class="pro-list-wrap bgw clearfix">
+                <div class="fr" id="showAndroidActionSheet">
+                    <i class="fas fa-align-justify"></i>
+                    <span>分类</span>
+                </div>
+            </div>
+
+            <div class="weui-panel__bd bgw">
+                <h4>充电式起子电钻</h4>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb" src="./assets/images/bear.jpg" alt="">
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">DCJZ05-10(a型)9.6V充电式单速起子电钻</h4>
+                        <div class="weui-media-box__desc size14">
+                            <div>1.7Ah大容量电池，低噪声...</div>
+                            <div>订货编号：00301110021</div>
+                            <div class="price-add clearfix">
+                                <span>￥105.00</span>
+                                <img class="priceAdd fr" src="./assets/images/add.png" alt="">
+                                <span class="priceNum fr dis-n">0</span>
+                                <img class="priceReduce fr dis-n" src="./assets/images/reduce.png" alt="">
+                            </div>
+                        </div> 
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="./assets/images/bear.jpg" alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">DCJZ05-10(a型)9.6V充电式单速起子电钻</h4>
+                            <div class="weui-media-box__desc size14">
+                                <div>1.7Ah大容量电池，低噪声...</div>
+                                <div>订货编号：00301110021</div>
+                                <div class="price-add clearfix">
+                                    <span>￥105.00</span>
+                                    <img class="priceAdd fr" src="./assets/images/add.png" alt="">
+                                    <span class="priceNum fr dis-n">1</span>
+                                    <img class="priceReduce fr dis-n" src="./assets/images/reduce.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+ 
+        </section> 
+
+        <!-- 底部购物车 -->
+        <footer class="dis-f pa w100">
+            <div class="dis-f h100 pr">
+                <div class="shop-car pa br tc" id="showIOSActionSheet">
+                    <img class="vm" src="./assets/images/shopcar.png" alt="">
+                    <span class="weui-badge" style="position: absolute;top: -.3em;right: -.2em;">3</span>
+                </div>
+                <span>￥38291.00</span>
+            </div>
+            <div class="dis-f h100">结算</div>
+        </footer>
+
+        <!-- 分类弹窗 -->
+        <div class="weui-skin_android" id="androidActionsheet" style="display: none">
+            <div class="weui-mask"></div>
+            <div class="weui-actionsheet">
+                <div class="actionsheet-header pr tc">
+                    <h4>产品分类</h4>
+                    <i class="weui-icon-cancel pa"></i>
+                </div>
+                <ul class="actionsheet-cont clearfix">
+                   <li class="fl size12">全部产品</li>
+                   <li class="fl size12">充电式起子电钻</li>
+                   <li class="fl size12">充电式起子机</li>
+                   <li class="fl size12">吸尘器</li>
+                   <li class="fl size12">充电式吹风机</li>
+                   <li class="fl size12">充电式起子机</li>
+                   <li class="fl size12">吸尘器</li>
+                   <li class="fl size12">充电式起子机</li>
+                   <li class="fl size12">吸尘器</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 购物车弹窗 -->
+        <div>
+            <div class="weui-mask" id="iosMask" style="display: none"></div>
+            <div class="weui-actionsheet" id="iosActionsheet">
+                <div class="weui-actionsheet__title">
+                    <p class="weui-actionsheet__title-text tr size12">提示：可修改数量</p>
+                </div>
+                <div class="weui-actionsheet__menu">
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">DCJZ05-10(a型)9.6V充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">100</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">45</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                合计：<span class="total">145</span>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">0</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">15</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                合计：<span class="total">15</span>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">DCJZ05-10(a型)9.6V充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">60</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">0</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr ">
+                                合计：<span class="total">60</span>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/zepto.min.js"></script>
+        <script type="text/javascript" src="./assets/resource/js/product-list.js"></script>
+
+    </body>
+</html>

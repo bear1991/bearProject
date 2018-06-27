@@ -1,0 +1,18 @@
+<!--templates/search/search.wxml-->
+<!-- <text>templates/search/search.wxml</text> -->
+
+<!-- 搜索查询模板 -->
+<template name="search">
+  <view class="header">
+    <view class='inputWrap'>
+      <icon type="search" size="18" catchtap="searchActList"/>
+      <input placeholder="收视频、追话剧、找视频" placeholder-style="color:#BBB;font-size:28rpx;" bindinput="changeBindinput" bindconfirm="searchActList"></input>
+    </view>
+    <view>
+      <image src="../../images/activity/photo.png"></image>    <!-- 上传视频 -->
+    </view>
+    <view>
+      <image src="../../images/activity/add.png"></image>   <!-- 上传文件 -->
+    </view>
+  </view>
+</template>

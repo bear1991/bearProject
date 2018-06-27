@@ -1,0 +1,152 @@
+/* pages/activity/activity.wxss */
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background: #191A2C;
+  color: #CCC;
+  font-size: 28rpx;
+}
+.header>text{
+  padding: 10rpx 24rpx;
+}
+.header>.center{
+  padding: 10rpx 0;
+}
+
+.header>.active{
+  font-size: 32rpx;
+  color: #FFF;
+}
+
+.middle{
+  height: 2%;
+}
+
+.content{
+  width: 100%;
+  height: 88%;
+}
+
+.listWrap{
+  height: 100%;
+}
+.list{
+  position: relative;
+  height: 300rpx;
+  margin-bottom: 32rpx;
+}
+.list>image{
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+.listInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20rpx;
+  right: 4rpx;
+  width: 360rpx;
+  height: 50rpx;
+}
+.listInfo>view{
+  width: 320rpx;
+  height: 100%;
+  margin: 0 10rpx;
+  background: rgba(0,0,0,.6);
+  border-radius: 25rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #FFF;
+}
+.listInfo>view>image{
+  width: 30rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.noCont{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.noCont>image{
+  display: block;
+  height: 320rpx;
+  margin: 80rpx auto 60rpx;
+}
+.noCont>.intro{
+  color: #888888;
+  font-size: 32rpx;
+  text-align: center;
+}
+.noCont>.intro>view{
+  margin-top: 8rpx;
+}
+.noCont>.backIndex{
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+  width: 100%;
+}
+.noCont>.backIndex>button{
+  width: 240rpx;
+  height: 80rpx;
+  margin: auto;
+  background: #FCDB10;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+}
+
+.team_root{
+  height: 100rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.team_item{
+  display: flex;
+  color: #FFF;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+  flex-direction: column
+}
+.team_line{
+  width: 100%;
+  border-width: 0 0 4rpx 0;  
+  border-color: #FFF;  
+  border-style: solid;
+  padding-bottom: 20rpx
+}
+
+.history{
+  float: left;
+  width: 100%;
+  margin: 16rpx 1%;
+}
+
+.historyImg{
+  width: 100%;
+  height: 220rpx;
+  justify-content: center
+}
+.historyTitle{
+  font-size: 24rpx;
+  color: #FFF;
+}
+
+.term_text{
+  font-size: 28rpx;
+}

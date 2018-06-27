@@ -1,0 +1,99 @@
+[{
+  "title":"南通的第一件驰名商标是（）",
+  "ret":"1",
+  "retlist":[
+      {"reid":"1","recont":"","retype":"p"},
+      {"reid":"2","recont":"","retype":"p"},
+      {"reid":"3","recont":"","retype":"p"},
+      {"reid":"4","recont":"","retype":"p"}
+    
+  ]
+},{
+  "title":"下列属于南通老商标的是（）",
+  "ret":"1",
+  "retlist":[
+      {"reid":"1","recont":"","retype":"p"},
+      {"reid":"2","recont":"","retype":"p"},
+      {"reid":"3","recont":"","retype":"p"},
+      {"reid":"4","recont":"","retype":"p"}
+    
+  ]
+},{
+  "title":"南通目前有（）件中国驰名商标",
+  "ret":"2",
+  "retlist":[
+      {"reid":"1","recont":"65","retype":"t"},
+      {"reid":"2","recont":"66","retype":"t"},
+      {"reid":"3","recont":"67","retype":"t"},
+      {"reid":"4","recont":"68","retype":"t"}
+    
+  ]
+},{
+  "title":"每年的5月10日是中国品牌日。（）",
+  "ret":"1",
+  "retlist":[
+       {"reid":"1","recont":"正确","retype":"t"},
+       {"reid":"2","recont":"错误","retype":"t"}
+    
+  ]
+},{
+  "title":"商标注册的有效期为（）年",
+  "ret":"2",
+  "retlist":[
+      {"reid":"1","recont":"5","retype":"t"},
+      {"reid":"2","recont":"10","retype":"t"},
+      {"reid":"3","recont":"15","retype":"t"},
+      {"reid":"4","recont":"20","retype":"t"}
+    
+  ]
+},{
+  "title":"下列主体中，不能申请集体商标的是（）",
+  "ret":"3",
+  "retlist":[
+      {"reid":"1","recont":"团体","retype":"t"},
+      {"reid":"2","recont":"协会","retype":"t"},
+      {"reid":"3","recont":"自然人","retype":"t"}
+    
+  ]
+},{
+  "title":"下列哪项不属于知识产权调整对象（）",
+  "ret":"3",
+  "retlist":[
+      {"reid":"1","recont":"商标","retype":"t"},
+      {"reid":"2","recont":"专利","retype":"t"},
+      {"reid":"3","recont":"姓名","retype":"t"}
+    
+  ]
+},{
+  "title":"下列不属于地理标志商标的是（）",
+  "ret":"4",
+  "retlist":[
+      {"reid":"1","recont":"","retype":"p"},
+      {"reid":"2","recont":"","retype":"p"},
+      {"reid":"3","recont":"","retype":"p"},
+      {"reid":"4","recont":"","retype":"p"}
+    
+  ]
+},{
+  "title":"下列可以作为商标注册和使用的是（）",
+  "ret":"3",
+  "retlist":[
+      {"reid":"1","recont":"五星红旗","retype":"t"},
+      {"reid":"2","recont":"中国","retype":"t"},
+      {"reid":"3","recont":"濠河","retype":"t"},
+      {"reid":"4","recont":"人民大会堂","retype":"t"}
+    
+  ]
+},{
+  "title":"对侵犯注册商标专用权的行为，工商行政管理部门有权依法查处。()",
+  "ret":"1",
+  "retlist":[
+      {"reid":"1","recont":"正确","retype":"t"},
+      {"reid":"2","recont":"错误","retype":"t"}
+    
+  ]
+}
+
+
+
+]

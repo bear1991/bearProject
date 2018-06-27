@@ -1,0 +1,29 @@
+<!--pages/index/feedback/feedback.wxml-->
+
+<view class='container'>
+
+  <view class='back-list-wrap'>
+    <view class='back-list' wx:for='{{requestContent}}' wx:key='id'> 
+      <view class='back-id'>合同编号：{{item.contractCode}}</view>
+      <view class='back-cont'>
+        <text>“{{item.content}}”</text>
+      </view>
+      <view class='task-pic-list'>
+      
+        <image wx:for='{{item.attachmentList}}' wx:for-item='picItem' wx:for-index='picIndex' wx:key='id' mode='aspectFill' class='task-pic' src='{{linkIp}}{{picItem.fileLink}}' catchtap='catchPreviewTap' data-picIndex='{{picIndex}}' data-picUrl='{{linkIp}}{{picItem.fileLink}}' data-picList='{{item.attachmentList}}'></image>
+
+      </view>
+      <view class='back-time'>
+        <text>{{item.createTime}}</text>
+      </view>
+      <view wx:if='{{item.replayList.length != 0}}' class='back-response'>
+        <text wx:for='{{item.replayList}}' wx:key='*this' wx:for-item='replayItem'>管家回复：{{replayItem.content}}</text>
+      </view>
+    </view>
+  </view>  
+
+  <view class='addBackdetail' catchtap='catchBackDetailTap'>
+    <image src='../../image/button.png'></image>
+  </view>
+  
+</view>

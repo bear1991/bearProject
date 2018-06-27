@@ -1,0 +1,43 @@
+<!--pages/index/appoint/appointdetail/appointdetail.wxml-->
+<view class='container'>
+  <view class='group-list'>
+    <view class='group-title'>
+      <text>基本信息</text>
+    </view>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>预约分类</text>
+        <text>{{appointDetail.bespeakType}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>预约项目</text>
+        <text>{{appointDetail.content}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>预约服务时间</text>
+        <text>{{appointDetail.bespeakTime}}</text>
+      </view>
+    </view>
+  </view>
+ 
+  <view class='group-list'>
+    <view class='group-title'>
+      <text>联系信息</text>
+    </view>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>户主姓名</text>
+        <text>{{userDetailInfor.customName}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>联系电话</text>
+        <text>{{userDetailInfor.phone}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>家庭地址</text>
+        <text>{{towerList[0].address}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,26 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i{
+		margin-left: 5%;
+	}
+	header>span{
+		margin-right: 40%;
+	}
+
+	.weui-cells{
+		margin-top: 14px;
+	}
+
+	.head_sculpture{
+		width: 16%;
+		height: 16%;
+	}

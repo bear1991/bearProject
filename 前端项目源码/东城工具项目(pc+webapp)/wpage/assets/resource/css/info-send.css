@@ -1,0 +1,78 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	.weui-flex:last-child{
+		height: 60%;
+	}
+	.weui-cells{
+		width: 90%;
+		margin: 16px auto 0;
+	}
+	
+	.weui-cell_select-before{
+		padding-right: 0;
+	}
+	.weui-cell_select-before .weui-cell__hd:before{
+		border-width: 0 2px 2px 0;
+	}
+	.weui-cell_select-before .weui-cell__hd:after{
+		display: none;
+	}
+	.weui-btn:after{
+		border: none;
+	}
+
+	#showPicker{
+		background: transparent;
+	}
+	 #showPicker, .weui-input, .weui-textarea{
+		color: #999;
+	}
+	.weui-cell.content{
+		padding: 0 15px;
+	}
+	.weui-textarea{
+		padding-top: 10px;
+	}
+
+	.knowBtn{
+		bottom: 0;
+		left: 0;
+		color: #999;
+	}
+	.knowBtn>div>span{
+		color: #E74D50;
+	}
+	.knowBtn>.weui-btn{
+		width: 94%;
+		margin: 8px auto 16px;
+		background: #EEC434;
+	}
+
+
+	/* 收件人列表样式 */
+	#receicer-list{
+		top: 0;
+		left: 0;
+		z-index: 99;
+	}
+	#receicer-list .cancel{
+		padding: 10px 18px 4px;
+	}
+	#receicer-list .cancel>img{
+	   width: 30px;
+	}
+
+	#receicer-list .weui-cells{
+		width: 98%;
+	}
+	#receicer-list .weui-cells__title{
+		margin: 0;
+		padding: .4em 20px .4em 30px;
+		background: #F5F5F5;
+		color: #333333;
+	}
+	#receicer-list .weui-cells__title>.weui-agree__checkbox{
+		margin-top: 6px;
+	}

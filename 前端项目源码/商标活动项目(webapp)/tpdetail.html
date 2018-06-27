@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票详情</title>
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .container{
+            background: url('./images/dati/bg.png') no-repeat left top/100% 100%;
+        }
+        
+        .header{
+            width: 76%;
+            margin: 48px auto 24px;
+            background: #740002;
+            border-radius: 12px;
+            color: #FFF;
+        }
+
+        .cont{
+            margin: 0 16px;
+        }
+        .cont>div{
+            min-height: 100%;
+        }
+        .cont>div>.logo{
+            height: 100px;
+            margin-top: 36px;
+        }
+        .article{
+            margin: 36px 0 30px 0;
+            padding: 0 20px;
+            color: #6C143C;
+            text-indent: 32px;
+        }
+        .article+p{
+            margin: 20px 0 40px 0;
+            color: #6C143C;
+        }
+        .btn{
+            padding-bottom: 16px;
+        }
+        .btn>span{
+            margin-right: 20px ;
+            padding: 2px 20px;
+            background: #6C143C;
+            border-radius: 4px; 
+            color: #FFF;
+        }
+        
+        .power{
+            left: 0;
+            bottom: 0;
+            width: 46%;
+        }
+        
+    </style>
+</head>
+<body class="h100">
+    
+    <div class="container h100 fh">
+        <div class="header tc size14">投票倒计时：10天10小时23分钟</div>
+        
+        <div class="cont bgw fya tc">
+            <div class="pr">
+                <img class="logo" src="./images/tpdetail/logo.png" alt="">
+                <div class="title tc fw">江苏斯得福纺织股份有限公司</div>
+                <div class="article fw tj">
+                    中国驰名商标中国驰名商标中国驰名商标中国驰名商标，中国驰名商标中国驰名商标中国驰名商标中国驰名商标，中国驰名商标.
+                </div>
+                <p class="size20 tc"><span class="fw">XXXX</span>票</p>
+
+                <div class="btn tr fw">
+                    <span>投票</span>
+                </div>
+
+                <img class="power pa" src="./images/tpdetail/solgan.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        heightChange.call($('.cont'), 88);
+
+        function heightChange(other){
+            this.height(this.parent().height() - this.prev().height() - other);
+        }
+    </script>
+</body>
+</html>

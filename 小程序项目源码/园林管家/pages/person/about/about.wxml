@@ -1,0 +1,11 @@
+<!--pages/person/about/about.wxml-->
+<view class='container'>
+  <view class='about'>
+    <view class='about-title'>
+      <text>庭院大管家简介</text>
+    </view>
+    <view class='about-content'>
+      <text>庭院大管家简介......</text>
+    </view>
+  </view>
+</view>

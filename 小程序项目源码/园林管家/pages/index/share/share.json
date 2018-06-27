@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "资讯列表",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
+}

@@ -1,0 +1,70 @@
+<!--pages/moment/moment.wxml-->
+<!-- <text>pages/moment/moment.wxml</text> -->
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container">
+  <scroll-view class="scrollView" scroll-y bindscrolltolower="momentListMore">
+    <view class="scroll" wx:for="{{topicListData}}" wx:key="id">
+      <view class="momentPerson">
+        <image mode="aspectFill" src="{{item.avatar}}" catchtap='toDetail' data-index="{{index}}"></image>
+      </view>
+      <view class="momentWrap">
+        <view class="header">
+          <view>{{item.user_nicename}}</view>
+          <view>{{common.changeTab(item.content)}}</view> 
+          <!-- <view><template is="wxParse" data="{{wxParseData:article.nodes}}"/></view> -->
+        </view>
+        <view class="cont" wx:if="{{item.azSofAttachmentList.length}}">
+          <view class="{{itemItem.type}}" wx:for="{{item.azSofAttachmentList}}" wx:key="id" wx:for-item="itemItem" wx:for-index="indexIndex">
+            <image wx:if="{{itemItem.type == 0}}" mode="aspectFill" src="{{itemItem.url}}" catchtap="showCatchtap" data-list="{{item.azSofAttachmentList}}" data-index="{{indexIndex}}" data-url="{{itemItem.url}}"></image>
+            <!-- <video wx:if="{{itemItem.type == 1}}" controls="{{false}}" objectFit="fill" src="{{itemItem.url}}"></video> -->
+          </view>
+        </view>
+        <view class="time">
+          <text>{{item.create_time1}}</text>
+          <view class="zanMoment">  
+            <view catchtap="supportCatchtap" data-index="{{item.id}}" data-islike="{{item.islike}}">
+              <image mode="aspectFill" src="../../images/moment/{{item.islike?'ic_support_r':'ic_support'}}.png"></image>
+              <text>{{item.islike?"已赞":"点赞"}}</text>
+            </view>
+            <view catchtap="addCommentCatchtap" data-index="{{item.id}}">
+              <image mode="aspectFill" src="../../images/moment/ic_comment.png"></image>
+              <text>评论</text>
+            </view> 
+          </view>
+        </view>
+        <view class="zanList" wx-if="{{item.azLikes.length}}">
+          <image mode="widthFix" src="../../images/moment/ic_attention.png"></image>
+          <text wx:for="{{item.azLikes}}" wx:key="id" wx:for-item="itemItem">{{itemItem.user_nicename}} </text>
+        </view>
+        <view class="commentList" wx-if="{{item.azReplyList.length}}">
+          <view wx:for="{{item.azReplyList}}" wx:key="id" wx:for-item="itemItem">
+            {{itemItem.user_nicename}}：{{itemItem.content}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <image mode="widthFix" class="addMoment" src="../../images/moment/add_moment.png" catchtap="publishCatchtap"></image>
+
+  <view class="maskWrap" hidden="{{addMomentStatus}}" catchtap="removeMaskCatchtap">
+    <input type="text" placeholder="请输入评论内容" catchtap="bubbleCatchtap" bindinput="contCatchtap" bindconfirm="finishBindconfirm"></input>
+    <button catchtap="finishBindconfirm">确认</button>
+  </view>
+
+  <view class="picBanner" hidden="{{picShow}}">
+    <!-- 单张预览 -->
+    <image class="slide-image" mode="aspectFit" src="{{picUrl}}" catchtap="hideCatchtap"></image>
+
+    <!-- 轮播预览 -->
+    <!-- <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(225,225,225,0.6)" indicator-active-color="#FFFFFF" current="{{pictureListData.current}}">
+      <swiper-item class="swiperItem" wx:for="{{pictureListData.pictureList}}" wx:key="*this" catchtap="hideCatchtap">
+        <image class="slide-image" mode="aspectFit" src="{{item}}"/>
+      </swiper-item>
+    </swiper> -->
+  </view> 
+</view>

@@ -1,0 +1,50 @@
+/* 首页中间内容部分 */
+#index-tab{
+    margin-top: 12px;
+}
+
+#type-list{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #EEE;
+}
+#type-list>li{
+    float: left;
+    padding: 4px 16px 4px;
+    color: #7C7C7C;
+}
+#type-list>li.active{
+    color: #6CA1C0;
+}
+
+#index-tab .tab-content{
+    padding: 16px 0;
+}
+.nav-tabs>li>a{
+    padding: 8px 16px;
+}
+
+
+#tab-content-list>ul>li{
+    padding: 10px;
+    border-bottom: 1px solid #EEE;
+}
+
+#tab-content-list>ul>li .pro-info>ul{
+    margin: 16px 0;
+}
+#tab-content-list>ul>li .pro-info>ul>li{
+    padding: 0 0 6px;
+    color: #787878;
+}
+#tab-content-list>ul>li .pro-info>p{
+    color: #787878;
+}
+
+#tab-content-list>ul>li>div:last-child{
+    margin-top: 16px; 
+}
+#tab-content-list>ul>li>div:last-child .join-shopcar{
+    margin-bottom: 16px;
+    padding: 2px 15px;
+    font-size: 12px;
+}

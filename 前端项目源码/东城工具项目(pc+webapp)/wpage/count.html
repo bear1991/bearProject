@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>结算</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">    <!-- 字体图标样式 -->
+        <link rel="stylesheet" href="./assets/resource/css/count.css">     
+   
+    </head>
+    <body class="h100">
+        <header class="dis-f">
+            <i class="fas fa-chevron-left size20"></i>
+            <span class="size18">结算</span>
+            <i class="fas fa-home size20"></i>
+        </header>
+        <section class="container dis-f fya">
+           <div class="count-list w100">
+                <div class="weui-panel__bd bgw">
+                    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="./assets/images/goods.png" alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">DCJZ05-10(a型)9.6V充电式单速起子电钻</h4>
+                            <div class="weui-media-box__desc">
+                                <div>订货编号：23000.00元</div>
+                                <div class="dis-f">
+                                    <div class="count-price" style="color:#DC772F;">￥105.00</div>
+                                    <i class="fas fa-trash-alt showIOSDialog" style="color:#191919;font-size:14px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">订单数量</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">955</div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">分销商</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">45</div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color:#787878;">x1000</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                小计：<span style="color:#DC772F;">￥105000.00</span>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-panel__bd bgw">
+                    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="./assets/images/goods.png" alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">DCJZ05-10(a型)9.6V充电式单速起子电钻</h4>
+                            <div class="weui-media-box__desc">
+                                <div>订货编号：23000.00元</div>
+                                <div class="dis-f">
+                                    <div class="count-price" style="color:#DC772F;">￥105.00</div>
+                                    <i class="fas fa-trash-alt showIOSDialog" style="color:#191919;font-size:14px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">订单数量</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">955</div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">分销商</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">45</div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color:#787878;">x1000</div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                小计：<span style="color:#DC772F;">￥105000.00</span>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+
+        <footer class="dis-f w100">
+            <div class="h100 bgw">
+               <div class="dis-f h50 size14">合计：<span style="color:#DC772F;">210000.00</span></div>
+               <div class="dis-f h50" style="color:#787878;font-size:12px;">账户欠款:140000.00 已用额度:10万 授信额度:30万</div>
+            </div>
+            <div class="h100">
+                <div class="dis-f h50 size14">确认下单</div>
+                <div class="dis-f h50 size12"><span>补款</span>:50000.00</div>
+            </div>
+        </footer>
+
+        <!-- 结算删除弹窗 -->
+        <div id="dialogs">
+            <div class="js_dialog" id="iosDialog" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__hd"><strong class="weui-dialog__title"></strong></div>
+                    <div class="weui-dialog__bd size20">确认删除此订单吗？</div>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" status="cancel">取消</a>
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" status="sure">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="./assets/js/zepto.min.js"></script>
+        <script src="./assets/resource/js/count.js"></script>
+
+    </body>
+</html>

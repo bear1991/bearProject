@@ -1,0 +1,159 @@
+/* 主体 */
+.main>.contentWrap{
+    margin-bottom: 36px;
+    padding: 24px 0;
+}
+
+
+
+.content{
+    padding-bottom: 36px; 
+}
+.content>img{
+    margin-bottom: 8px;
+}
+
+
+.navListWrap{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+}
+.navListWrap>li{
+    flex: 1;
+}
+.navListWrap>li>span{
+    color: #333;
+}
+.navListWrap>li>.navActive:after{
+    height: 3px;
+    background: #333;
+}
+
+
+#myTabs{
+    margin-bottom: 12px;
+    border-bottom: none;
+}
+#myTabs li{
+    width: 33%;
+}
+#myTabs li:nth-child(2){
+    margin: 0 0.5%;
+}
+#myTabs li>a{
+    margin-right: 0;
+    padding: 4px 15px;
+    border: 2px solid #DDB95A;
+    border-radius: 4px;
+    color: #DDB95A;
+}
+#myTabs li.active>a{
+    background: #DDB95A;
+    color: #FFF;
+}
+
+.tab-content{
+    min-height: 240px;
+    padding: 0;
+}
+
+
+
+.classic{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.classic>li{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 160px;
+    margin: 0 1.2%;
+}
+.classic>li:first-child{
+    margin-left: 0;
+}
+.classic>li:last-child{
+    margin-right: 0;
+}
+
+
+
+.contentOther{
+    padding: 0 0 36px;
+    background: #E9E9E9;
+}
+.contentOther>div>h4{
+    margin: 36px 0 24px;
+}
+
+
+.combinationListWrap{
+    margin: 0 0 10px 0;
+    padding: 16px;
+}
+.combinationListWrap>li{
+    padding: 4px 12px;
+    border-bottom: 1px solid #E9E9E9;
+}
+.combinationListWrap>li>div:last-child{
+    padding: 4px 0;
+}
+.combinationListWrap>li:last-child{
+    border-bottom: none;
+}
+.combinationListWrap label{
+    padding-left: 0;
+}
+input[type=checkbox].ace+.lbl::before{
+    margin-right: 8px;
+}
+.combinationListWrap h6{
+    margin: 4px 0; 
+}
+.combinationListWrap p{
+    margin-bottom: 0;
+}
+.combinationWrap{
+    padding: 0;
+}
+.combination{
+    padding: 4px 0;
+}
+.combination>div{
+    padding: 0;
+}
+.combination img{
+    height: 60px;
+    padding: 0 8px;
+}
+
+.pro-info>ul{
+    margin-left: 0;
+}
+.pro-info>ul>li>span{
+    line-height: 24px;
+}
+.pro-info div{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pro-info div>span{
+    margin: 0 2px;
+    padding: 2px;
+    border: 1px solid #EEE;
+}
+
+
+.join-shopcar{
+    margin: 8px 0 0 36px;
+    background: #DDB95A;
+    line-height: 0.8;
+}

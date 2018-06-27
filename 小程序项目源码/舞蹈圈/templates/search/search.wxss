@@ -1,0 +1,42 @@
+/* templates/search/search.wxss */
+
+/* 搜索模板样式 */
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120rpx;
+  min-height: 120rpx;
+}
+.inputWrap{
+  position: relative;
+  /* width: 70%; */
+  width: 90%;
+  margin: 0 5%;
+  background: rgba(225,225,225,.4);
+  border-radius: 60rpx;
+}
+.inputWrap>icon{
+  position: absolute;
+  top: 16rpx;
+  right: 28rpx;
+}
+.inputWrap>input{
+  height: 68rpx;
+  padding: 0 80rpx 0 28rpx; 
+  color: #BBB;
+  font-size: 28rpx;
+}
+
+.inputWrap~view{
+  display: none;
+  width: 8%;
+  margin: 0 2% 0 0;
+  text-align: center;
+  line-height: 20rpx;
+}
+.header>view>image{
+  width: 56rpx;
+  height: 50rpx;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票列表</title>
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .cont{
+            min-height: 580px;
+            background: url('./images/dati/bg.png') no-repeat left top/100% 100%;
+        }
+        
+
+        .cont>div:first-child{
+            margin: 48px 0 24px;
+        }
+
+        .title{
+            width: 84%;
+            height: 16%;
+            min-height: 100px;
+            margin: auto;
+            padding: 30px 0 10px;
+            background: url('./images/dati/juanzhou.png') no-repeat center center/100% 100%;
+            color: #6C143C;
+            letter-spacing: 4px;
+        }  
+        .title>p{
+            padding-left: 4px;
+        }
+        .title>p:last-child{
+            padding-left: 12px;
+            letter-spacing: 14px;
+        } 
+
+        .actTime{
+            margin: 10px 0 0;
+            color: #6C143C;
+            line-height: 16px;
+        }
+        
+        
+        .main{
+            margin: 0 12px;
+            padding-top: 20px;
+        }
+        .header{
+            bottom: -36px;
+            left: 12%;
+            z-index: 99;
+            width: 76%;
+            padding: 2px 0;
+            background: #6C143C;
+            border-radius: 12px;
+            color: #FFF;
+        }   
+
+        .ticket>li{
+            width: 50%;
+            color: #6C143C;
+        }
+        
+        .search{
+            width: 60%;
+            height: 30px;
+            margin: 12px auto;
+            background: #6C143C;
+            border-radius: 10px;
+        }
+        .search>img{
+            top: 5px;
+            left: 4px;
+            width: 20px;
+        }
+        .search>input{
+            width: 100%;
+            height: 100%;
+            background: #6C143C;
+            border: none;
+            border-radius: 10px;
+            text-indent: 32px;
+            color: #FFF;
+        }
+
+        .search>input::-webkit-input-placeholder,
+        .search>input::-moz-placeholder,
+        .search>input:-moz-placeholder,
+        .search>input::-ms-input-placeholder{ 
+            color: #FFF;
+        } 
+
+        .companyList{
+            padding-bottom: 80px;
+            border-top: 1px solid #000;
+        }
+        .companyList>li{
+            width: 50%;
+        }
+        .companyList>.more{
+            width: 100%;
+        }
+        .companyList>li>p{
+            margin: 4px 8px;
+            height: 36px;
+            background: #F7BAC0;
+            line-height: 36px;
+        }
+        .companyList>li>.logo{
+            height: 120px;
+            line-height: 120px;
+        }
+        .companyList>li>.logo>img{
+            max-width: 120px;
+            max-height: 100px;
+        }
+        .companyList>li>div:last-child{
+            width: 40%;
+            margin: 8px auto 16px;
+            padding: 0 16px;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+     
+        
+        /* 底部切换样式 */
+        .barBtn{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            padding-top: 8px;
+        }
+        .barBtn>li{
+            flex: 1;
+        }
+        .barBtn>li>img{
+            height: 24px;
+        }
+        .barBtn>li>div{
+            margin-top: -4px;
+        }
+
+        /* 微信toast提示文件样式 */
+        .weui-toast_content{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="h100">
+    <div class="container h100">
+        <div class="cont fh pr h100">
+            <div class="pr">
+                <div class="title fw size22 tc">
+                    <p>2018年我最喜爱的</p>
+                    <p class="size26">南通十佳商标</p>
+                </div>
+            
+                <div class="actTime tc fw">
+                    <span>活动时间：<span>2018年4月23日-27日</span></span><br/>
+                    <span class="size12 fw">以下排名按商标名称字母排序，排名不分先后</span>
+                </div>
+
+                <div class="header pa tc size14">投票倒计时：10天10小时23分钟</div>
+            </div>
+
+            <div class="main bgw fya">            
+                <ul class="ticket clearfix size18 fw tc">
+                    <li class="fl">
+                        <p>报名人数</p>
+                        <p>XXXX</p>
+                    </li>
+                    <li class="fl">
+                        <p>累计投票</p>
+                        <p>XXXXXXXXXX</p>
+                    </li>
+                </ul>
+                
+                <div class="search pr">
+                    <img class="pa" src="./images/tplist/search.png" alt="">
+                    <input type="text" placeholder="请输入编号和名称">
+                </div>
+
+                <ul class="companyList clearfix">
+                    <li class="fl tc">
+                        <p><span>01号</span></p>
+                        <div class="logo">
+                            <img class="tc vm" src="./images/tplist/sdf.png" alt="">
+                        </div>
+                        <div class="cpn size12">江苏斯得福纺织股份有限公司</div>
+                        <div class="size14">XXXX票</div>
+                        <div class="fw">投票</div>
+                    </li>
+                    <li class="fl tc">
+                        <p><span>01号</span></p>
+                        <div class="logo">
+                            <img class="tc vm" src="./images/tplist/xy.png" alt="">
+                        </div>
+                        <div class="cpn size12">江苏斯得福纺织股份有限公司</div>
+                        <div class="size14">XXXX票</div>
+                        <div class="fw">投票</div>
+                    </li>
+                    <li class="fl tc">
+                        <p><span>01号</span></p>
+                        <div class="logo">
+                            <img class="tc vm" src="./images/tplist/hadm.png" alt="">
+                        </div>
+                        <div class="cpn size12">江苏斯得福纺织股份有限公司</div>
+                        <div class="size14">XXXX票</div>
+                        <div class="fw">投票</div>
+                    </li>
+                    <li class="more fl tc">没有更多了</li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 底部切换 -->
+    <ul class="barBtn dis-f pf tc bgw size14">
+        <li>
+            <img src="./images/tplist/one.png" alt="">
+            <div>首页</div>
+        </li>
+        <li>
+            <img src="./images/tplist/two.png" alt="">
+            <div>排行榜</div>
+        </li>
+        <li>
+            <img src="./images/tplist/three.png" alt="">
+            <div>抽奖说明</div>
+        </li>
+        <li>
+            <img src="./images/tplist/four.png" alt="">
+            <div>答题抽奖</div>
+        </li>
+    </ul>
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        heightChange.call($('.main'), 80);
+        window.onresize = heightChange.bind($('.main'), 80);
+
+        function heightChange(other){
+            this.height(this.parent().height() - this.prev().height() - other);
+        }
+    </script>
+</body>
+</html>

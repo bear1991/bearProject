@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/share/share",
+    "pages/index/share/sharedetail/sharedetail",
+    "pages/index/appoint/appoint",
+    "pages/index/appoint/appointdetail/appointdetail",
+    "pages/index/appoint/appointsubmit/appointsubmit",
+    "pages/index/back/back",
+    "pages/index/back/backdetail/backdetail",
+    "pages/index/contract/contract",
+    "pages/index/contract/contractdetail/contractdetail",
+    "pages/index/task/task",
+    "pages/index/task/taskdetail/taskdetail",
+    "pages/person/person",
+    "pages/person/login/login",
+    "pages/person/account/account",
+    "pages/person/user/user",
+    "pages/person/about/about",
+    "pages/preview/preview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "庭院大管家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#B1B1B1",
+    "selectedColor": "#5BB65C",
+    "background": "#FFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/image/index1.png",
+        "selectedIconPath": "pages/image/index2.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "pages/image/person1.png",
+        "selectedIconPath": "pages/image/person2.png"
+      }
+    ]
+  }
+}

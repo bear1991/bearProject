@@ -1,0 +1,80 @@
+// 转换图片地址字符串为json格式数据 
+var delPicture = function (str) {
+  return JSON.parse(str);
+}
+
+// 去除html中p标签
+var changeTab = function(content){
+  return content.replace('<p>', '').replace('</p>','');
+}
+
+
+// 判断文件是图片还是视频
+var judgePicVideo = function(path){
+  // console.log(path);
+  var picType = ['jpg', 'gif', 'png', 'JPEG'];
+  var videoType = ['mp4', 'avi', 'rmvb', '3gp', 'wmv'];
+  var fileType = path.substring(path.lastIndexOf('.')+1);
+  // console.log(fileType);
+  var typeName = '';
+  if(picType.indexOf(fileType) != -1){    // 判断是图片
+    typeName = 'picture';
+  }else if(videoType.indexOf(fileType) != -1){    // 判断是视频
+    typeName = 'video';
+  }
+  console.log(typeName);
+  return typeName;
+}
+
+
+// 截取商品标题
+var subGoodsName = function(goodsName){
+  return goodsName.substring(0,20)+'...';
+}
+/**
+ * 订单计算商品数量
+ */
+var sumOrder = function (order) {
+  var result = 0;
+  if(order.data!=undefined){
+    for(var i=0;i<order.data.length;i++){
+      var product = order.data[i];
+      result += product.num;
+    }
+  }
+  return result;
+}
+
+/**
+ * 
+ */
+var getOrderType = function(status){
+  if(status==0){
+    return "待付款";
+  }else if(status == 1){
+    return "待发货";
+  }else if(status == 2){
+    return "已完成";
+  }else if(status == 3){
+    return "已取消";
+  }
+  return "";
+}
+
+var getMobile = function(mobile){
+  if (mobile != undefined && mobile.length > 8) {
+    var ss = mobile.substring(0, 3) + "****" + mobile.substring(7);
+    return ss;
+  }
+  return '';
+}
+
+module.exports = {
+  delPicture: delPicture,
+  changeTab: changeTab,
+  judgePicVideo: judgePicVideo,
+  subGoodsName: subGoodsName,
+  sumOrder: sumOrder,
+  getOrderType: getOrderType,
+  getMobile:getMobile,
+};

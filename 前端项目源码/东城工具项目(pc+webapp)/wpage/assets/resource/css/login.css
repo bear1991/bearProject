@@ -1,0 +1,30 @@
+	
+.container{
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	background: url(../../images/login-bg.png) no-repeat top center/cover;
+}
+.container>.weui-flex{
+	width: 90%;
+}
+.container>.weui-flex:first-child{
+	left: 5%;
+	top: 10%;
+}
+.container>.weui-flex>img{
+	width: 32%;
+}
+.container>.weui-flex:nth-of-type(2){
+	top: 44%;
+	left: 5%;
+}
+.container>.weui-flex:last-child{
+	margin: 50% auto 5%;
+}
+.container>.weui-flex:last-child>a.weui-btn{
+	background: #EEC434;
+}
+.weui-cells:before{
+	display: none;
+}

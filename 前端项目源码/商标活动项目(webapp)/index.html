@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主图</title>
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .cont{
+            min-height: 580px;
+            background: url('./images/zhutu/bg.png') no-repeat left top/100% 100%;
+        }
+
+        .title{
+            width: 84%;
+            height: 16%;
+            min-height: 100px;
+            margin: 22% auto 0;
+            padding: 30px 0 10px;
+            background: url('./images/dati/juanzhou.png') no-repeat center center/100% 100%;
+            color: #6C143C;
+            letter-spacing: 4px;
+        }  
+        .title>p{
+            padding-left: 4px;
+        }
+        .title>p:last-child{
+            padding-left: 12px;
+            letter-spacing: 14px;
+        } 
+
+        .actTime{
+            margin: 30px 0 80px;
+            color: #6C143C;
+        }
+
+        .action>li{
+            width: 80px;
+            height: 28px;
+            margin: 28px auto;
+            background: #6C143C;
+            color: #FFF;
+            border-radius: 8px;
+            line-height: 28px; 
+        }
+        
+        .company{
+            right: 20px;
+            top: 50%;
+            width: 60px;
+            height: 220px;
+            color: #6C143C;
+        }
+        .company>li{
+            width: 20px;
+            height: 100%;
+            -webkit-writing-mode:vertical-lr;
+            writing-mode:tb-rl;
+            writing-mode:vertical-lr;
+        }
+
+
+        .intru{
+            width: 84%;
+            height: 40%;
+            margin: 40px auto 0;
+            background: url('./images/hdgz/shape.png') no-repeat center center/100% 100%;
+        }
+        .intru>img{
+            left: 30%;
+            width: 40%;
+            height: 30px;
+        }
+        .intru>img:first-child{
+            top: -14px;
+        }
+        .intru>img:last-child{
+            bottom: -50px;
+        }
+        .intru>p{
+            padding: 36px 20px 20px;
+            color: #6C143C;
+        }
+    </style>
+</head>
+<body class="h100">
+    <div class="container h100">
+        <div class="cont fh pr h100">
+
+            <div class="title fw size22 tc">
+                <p>2018年我最喜爱的</p>
+                <p class="size26">南通十佳商标</p>
+            </div>
+
+            
+            <div class="main">            
+                <div class="actTime tc fw">
+                    活动时间：<span>2018年4月23日-27日</span>
+                </div>
+
+                <ul class="action tc size14">
+                    <li>活动说明</li>
+                    <li>进入投票</li>
+                </ul>
+                
+                <ul class="company pa clearfix size12">
+                    <li class="fl">主办单位：</li>
+                    <li class="fl">南通市工商行政管理局</li>
+                    <li class="fl">南通市商标战略实施工作领导小组办公室</li>
+                </ul>
+            </div>
+
+
+            <div class="intru pr fw tj dis-n">
+                <img class="pa" src="./images/hdgz/intru.png" alt="">
+                <p>参与规格：活动期间，每人可参与一次投票，答题正确后参与抽奖游戏。答题错误分享后获得再一次答题的机会，答对者参与抽奖游戏。</p>
+                <img class="pa" src="./images/hdgz/back.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        $('.action>li').first().click(function(){
+            $('.main').hide();
+            $('.intru').show();
+        });
+        $('.intru>img:last-child').click(function(){
+            $('.intru').hide();
+            $('.main').show();
+        });
+    </script>
+</body>
+</html>

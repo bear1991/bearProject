@@ -1,0 +1,138 @@
+/* pages/shop/shop.wxss */
+
+.container{
+  /* position: relative; */
+  display: block;
+  background: #000;
+}
+.container:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.container>view{
+  /* height: 100%; */
+  background: #000;
+}
+ .left{
+  width: 100%;
+  height: 5%;
+  font-size: 28rpx; 
+  line-height: 55rpx;
+  color: gray;
+} 
+.lfScrollWrap{
+  /* height: 100vh; */
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+.lfScroll{
+  display: inline-block;
+  margin: 0 24rpx; 
+  height: 95%;
+  text-align: center;
+}
+
+.typeActive{
+  /* background: #EEE; */
+  color: white;
+  
+  border-width: 0 0 4rpx 0;  
+  border-color: white;  
+  border-style: solid; 
+}
+
+
+
+ .right{
+  /* float: left; */
+  width: 100%;
+  height: 95%;
+  /* margin-left: 3%;   */
+} 
+.lfScrollWrapContent{
+   height: 100%; 
+}
+
+
+.listWrap{
+  min-height: 100vh;
+  background: #000;
+}
+.latestActWrap:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.latestAct{
+  float: left;
+  width: 48%;
+  height: 100%;
+  margin: 16rpx 1%;
+  background: #000;
+}
+.latestAct>image{
+  display: block;
+  width: 100%;
+  height: 240rpx;
+}
+.latestAct>.actIntro{
+  margin: 20rpx 0 0;
+  font-size: 28rpx;
+}
+.latestAct>.actIntro>view{
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; */
+  padding: 0 8rpx;
+  background: transparent;
+  text-align: left;
+  font-size: 24rpx;
+  color: white;
+  overflow: hidden;
+  /* white-space: nowrap; 
+  text-overflow: ellipsis; */
+}
+.latestAct>.actIntro>view:first-child{
+  height: 90rpx;
+}
+.latestAct>.actIntro>view:last-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+  line-height: 48rpx;
+  color: #FFD800;
+  font-size: 28rpx;
+}
+.latestAct>.actIntro>view:last-child>image{
+  width: 36rpx;
+  height: 30rpx;
+}
+
+.latestActWrap>.latestAct:last-child{
+  margin-right: 0;
+}
+.latestAct>image{
+  height: 280rpx;
+}
+.list-top{
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    align-items: center;
+}
+.list-top .label{
+    color: #fff;
+}
+.list-top .toShoppingCar{
+    color: #999;
+    height: 100%;
+}

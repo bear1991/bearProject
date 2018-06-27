@@ -1,0 +1,27 @@
+<!--pages/publish/publish.wxml-->
+<!-- <text>pages/publish/publish.wxml</text> -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="conatiner">
+  <view class="header">
+    <input class="placeStyle" placeholder-class="placeStyle" type="text" placeholder="添加补充内容" bindinput="momentBindinput"></input>
+  </view>
+  <view class="pictureWrap">
+    <block wx:for="{{tempFilePaths}}" wx:key="*this">
+      <view class="picUpload {{common.judgePicVideo(item)}}">
+        <image mode="aspectFill" src="{{item}}" wx:if="{{common.judgePicVideo(item) == 'picture'}}"></image>
+        <!-- <video controls="{{false}}" objectFit="fill" src="{{item}}"  wx:if="{{common.judgePicVideo(item) == 'video'}}"></video> -->
+        <image class="picDelete" src="../../images/moment/pic_del.png" data-index="{{index}}" catchtap="picdelCatchtap"></image>
+      </view>
+    </block> 
+
+    <!-- 上传图片 -->
+    <view class="picUpload">
+      <image mode="widthFix" src="../../images/moment/ic_addpic.png" catchtap="uploadCatchtap"></image>
+    </view>
+  </view>
+  <view class="submitWrap">
+    <button class="submit" catchtap="submitCatchtap">确认发布</button>
+  </view>
+</view>

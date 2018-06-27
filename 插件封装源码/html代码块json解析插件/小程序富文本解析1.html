@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>小程序富文本解析</title>
+ </head>
+ <body>
+
+	<div id="bear-wrap1">
+		桔梗<br/>
+		<div class='bear' style='width:200px;height:200px;background:gray;'>
+			<div>
+				<img src="./bear.jpg" alt="" style='display:block;width:100px;height:100px;' title='这是一张图片'>
+			</div>
+			<span style='font-size:20px;color:red;'>你好，bear</span>
+		</div>
+		戈薇
+		<span style='font-size:24px;color:green;'>世界</span>
+		<div>
+			<span style='font-size:24px;color:blue;'>大家</span>
+		</div>
+		犬夜叉
+	</div>
+
+	<div id="bear-wrap">
+		<li>
+			<a href=""><img src='./bear.jpg' alt="西门子洗碗机" width="250" height="188"/></a>
+			<h3><a href="">动画便利店X果壳网《西门子洗碗机》 by 动画便利店</a></h3>
+			<p><span>原创作品</span> - 影视 - Motion Graphic </p>
+			<p class='time'>3小时前上传</p>
+			<p><i>1284 </i> 人气/ <i>11</i> 评论 / <i>47</i> 推荐</p>
+		</li>
+	</div>
+
+
+  <script>
+    /*
+		思路：	--->：主线路      ===》每步主线路下的子线路(调用主线路方法处理)
+			函数a	
+			父元素innerHTML 
+						--->(for遍历，i=0)
+							文本  子元素节点1   剩余部分(子元素节点或子文本节点)
+									===》子元素节点1作为父元素
+										(递归调用函数a处理内部的子元素节点)
+													--->(for遍历，i=1)
+														文本  子元素节点2   剩余部分(子元素节点或子文本节点)
+																===》子元素节点1作为父元素
+																	(递归调用函数a处理内部的子元素节点)
+																			--->(for遍历，i=2)
+																				......
+	*/
+
+	
+	var str = document.getElementById('bear-wrap').innerHTML;
+    //console.log(str);
+
+    var oWrap = document.createElement('div');
+    oWrap.innerHTML = str;
+	//console.log(str);
+	//console.log(oWrap);
+		
+	/*
+	var oWrapChild = oWrap.children,
+		oWrapChildLength = oWrapChild.length;
+	for(var i=0;i<oWrapChildLength;i++){
+		//写法一：
+		//var oWrapChildNodeWrap = document.createElement('div');
+		//oWrap.appendChild(oWrapChildNodeWrap);
+		//oWrapChildNodeWrap.appendChild(oWrapChild[0]);     //注意每次appendChild后oWrap中子节点位置会变化
+		//console.log(oWrapChildNodeWrap);
+		
+		//写法二：
+		var oWrapChildNodeWrap = document.createElement('div');
+		oWrapChildNodeWrap.appendChild(oWrapChild[0]);     //注意每次appendChild后oWrap中子节点位置会变化
+		console.log(oWrapChildNodeWrap);
+	}
+	//console.log(oWrap);
+	*/
+	
+	var nodes = [];
+	var reg = /<[a-zA-Z0-9]+(\s*.*\s*)>.*<\/[a-zA-Z0-9]+>|<[a-zA-Z0-9]+(\s*.*\s*)\/>/;    //检测字符串中是否含有html标签(单标签或双标签)
+		
+	nodes = eachChild(oWrap,nodes);
+	function eachChild(oWrap,nodes){
+		var numList = 0;    //保存当前层级中的当前nodes数据中已经存在的成员个数(之前所有之和)    
+		var oWrapChild = oWrap.children,     //父节点.children只能获取到子元素节点，无法获取到子元素节点
+			oWrapChildLength = oWrapChild.length,
+			oWrapHtml = oWrap.innerHTML;
+
+		if(oWrapChildLength){    //存在子元素节点
+			for(var i=0;i<oWrapChildLength;i++){
+				var oWrapChildNodeWrap = document.createElement('div');
+				oWrapChildNodeWrap.appendChild(oWrapChild[0]);     //注意每次appendChild后oWrap中子节点位置会变化
+				//console.log(oWrapChildNodeWrap);
+
+				var oWrapChildNodeWrapHtml = oWrapChildNodeWrap.innerHTML;
+				//console.log(oWrapChildNodeWrapHtml);    //owrap的子元素节点
+			
+				var numListClone = numList;
+				var position = 0;    //保存当前元素节点在当前层级中的序列
+
+
+				//筛选文本节点(oWrapHtml:父元素下的全部字符串内容   oWrapChildNodeWrapHtml:当前的子节点内容及其子节点内容 )
+				var oWrapHtmlArr = oWrapHtml.split(oWrapChildNodeWrapHtml);
+				//console.log(oWrapHtmlArr);     //oWrapHtmlArr始终只有两个成员
+				//清除字符串首尾空格(保存换行)
+				oWrapHtmlArr[0] = oWrapHtmlArr[0].replace(/^\s*|\s$/g,'');  
+				oWrapHtmlArr[1] = oWrapHtmlArr[1].replace(/^\s*|\s$/g,'');  
+				
+				if(!oWrapHtmlArr[0].length && oWrapHtmlArr[1].length){    //第一个成员为空，说明只在后面有数据(需要省略成员一)
+					//判断oWrapChildNodeWrapHtml后面内容是否存在html标签
+					if( !reg.test(oWrapHtmlArr[1]) ){     //不存在html标签
+						var textObj = {
+							type: 'text',
+							text: oWrapHtmlArr[1]
+						};
+						console.log(oWrapHtmlArr[1]);
+						nodes[numList+1] = textObj;
+					}else{     //存在html标签时，保存在变量saveHtml中，用于下一轮筛选
+						oWrapHtml = oWrapHtmlArr[1]
+					}
+					numList += 1;
+				}else if(oWrapHtmlArr[0].length && !oWrapHtmlArr[1].length){    //第二个成员为空，说明前面有数据，并且一定为纯字符(需要省略成员二)
+					var textObj = {
+						type: 'text',
+						text: oWrapHtmlArr[0]
+					};
+					console.log(oWrapHtmlArr[0]);
+					nodes[numList] = textObj;
+					position = position+1;
+					numList += 1;
+				}else if(oWrapHtmlArr[0].length && oWrapHtmlArr[1].length){      //两个成员都有值
+					var textObj = {
+						type: 'text',
+						text: oWrapHtmlArr[0]    
+					};
+					console.log(oWrapHtmlArr[0]);
+					nodes[numList] = textObj;     //因为oWrapHtmlArr[0]一定是纯字符
+					//判断oWrapChildNodeWrapHtml后面内容是否存在html标签
+					if( !reg.test(oWrapHtmlArr[1]) ){     //不存在html标签
+						var textObj = {
+							type: 'text',
+							text: oWrapHtmlArr[1]
+						};
+						nodes[numList+2] = textObj;
+					}else{     //存在html标签时，保存在变量saveHtml中，用于下一轮筛选
+						oWrapHtml = oWrapHtmlArr[1]
+					}
+					position = position+1;
+					numList += 2;
+				}	
+	
+				
+				var oWrapChildNodeWrapChild = oWrapChildNodeWrap.children[0];       //用于下一轮调用eachChild方法传参
+				console.log(oWrapChildNodeWrapChild);	
+
+
+				//处理元素节点本身
+				oWrapChildNodeWrapHtml = oWrapChildNodeWrap.innerHTML;	   
+				console.log(oWrapChildNodeWrapHtml);       
+
+				var reg1 = /^(<([a-zA-Z0-9])+(\s+[a-zA-Z]+=(\'|\")(.|-|:|;)*(\'|\"))*\s*\/?>)/,
+					reg2 = /<\/[a-zA-Z0-9]+>$/;
+				//console.log(oWrapChildNodeWrapHtml.match(reg1));
+				if(oWrapChildNodeWrapHtml.match(reg2)){      //匹配闭合标签
+					oWrapChildNodeWrapHtml = oWrapChildNodeWrapHtml.match(reg1)[0] + oWrapChildNodeWrapHtml.match(reg2);
+				}else{      //匹配单标签
+					oWrapChildNodeWrapHtml = oWrapChildNodeWrapHtml.match(reg1)[0]
+				}
+				//console.log(oWrapChildNodeWrapHtml);
+				
+
+				//1、先获取元素节点的标签
+				var oWrapChildNodeWrapHtmlTagArr = oWrapChildNodeWrapHtml.match(/<[a-zA-Z0-9]+/);
+				//console.log(oWrapChildNodeWrapHtmlTagArr);
+				var name = oWrapChildNodeWrapHtmlTagArr[0].slice(1);
+				//2、再获取元素节点的所有属性
+				var oWrapChildNodeWrapHtmlAttrArr =  oWrapChildNodeWrapHtml.match(/[a-zA-Z]+=(\'|\")([a-zA-Z0-9]|-|:|;)*(\'|\")/g);
+
+				var attrs = {};
+				if(oWrapChildNodeWrapHtmlAttrArr){
+					oWrapChildNodeWrapHtmlAttrArr.forEach(function(item,index){
+						item = item.split('=');
+						attrs[item[0]] = item[1].replace(/\'|\"/g,'');     //清除标签属性值首尾空格 
+					});
+				}
+			
+				var nodeObj = {
+					type: 'node',
+					name: name,
+					attrs: attrs,
+					children: {}
+				};
+				nodes[numListClone+position] = nodeObj;
+				//3、最后通过递归获取元素节点的子节点的数据	
+				nodes[numListClone+position].children = eachChild(oWrapChildNodeWrapChild,nodes[numListClone+position].children)
+				//console.log('一个子元素结束');
+			}
+			return nodes;
+		}else if(oWrap.innerHTML){     //不存在子元素节点，但是存在子文本节点
+			var nodeObj = {
+				type: 'text',
+				text: oWrap.innerHTML
+			};
+			return nodeObj;
+		}else{     //子元素节点和子文本节点都不存在
+			return {};
+		}
+	}
+	
+	console.log(nodes);
+	
+
+  /*
+	var node = {
+		type: 'node',
+		name: '',
+		attrs: '',
+		style: ''
+	  };
+
+	var text = {
+		type: 'text',
+		text: ''
+	  };
+  
+	nodes: [{    nodes[0]
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: red;'
+      },
+      children: [{
+        type: 'text',
+        text: 'Hello&nbsp;World!'
+      },{
+		name: 'div',     node[0].children[0].children[0]
+		attrs: {
+		  class: 'div_class',
+		  style: 'line-height: 60px; color: red;'
+		},
+	  }]
+    }]
+
+  */
+  </script>
+ </body>
+</html>

@@ -1,0 +1,13 @@
+<!--pages/person/login/login.wxml-->
+<view class='container'>
+  
+  <view class='login-infor'>
+    <text>手机号：</text>
+    <input type='number' bindinput='bindUserOpenidInput' placeholder='请输入手机号' placeholder-style='font-size:34rpx;'></input>
+  </view>
+
+  <view class='login-submit'>
+    <button type='primary' catchtap='catchLoginsubmitTap'>绑定</button>
+  </view>
+
+</view>

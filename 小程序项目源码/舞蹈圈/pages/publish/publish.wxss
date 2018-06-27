@@ -1,0 +1,63 @@
+/* pages/publish/publish.wxss */
+
+.conatiner{
+  position: relative;
+  height: 100%;
+  background: #ECECEC;
+}
+
+.header{
+  padding: 12rpx 0;
+}
+.header>input{
+  padding: 12rpx 16rpx;
+  background: #FFF;
+}
+.placeStyle{
+  font-size: 28rpx;
+  color: #9E9E9E;
+}
+
+.pictureWrap{
+  padding: 16rpx 0;
+}
+.pictureWrap:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.pictureWrap>.picUpload{
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 160rpx;
+  padding: 12rpx 0;
+}
+.picUpload>image:first-child,
+.picUpload>video{
+  display: block;
+  width: 90%;
+  height: inherit;
+  margin: auto;
+}
+.picDelete{
+  position: absolute;
+  top: -4rpx;
+  right: -4rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.submitWrap{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20rpx 0;
+  width: 100%;
+  background: #ECECEC;
+}
+.submit{
+  width: 90%;
+  background: #0B196E;
+  color: #FFF;
+}

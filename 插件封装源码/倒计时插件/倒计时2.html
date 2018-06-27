@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+ </head>
+	<div id="bear"></div>
+ <body>
+  <script>
+  var oBear = document.getElementById("bear");
+  //var str = '01:01:10';
+  var str = '00:01:10';
+  var timeArr = str.split(':');
+	
+  /*
+  // 过程化写法
+  timeReduce(oBear,timeArr);
+  function timeReduce(obj,timeArr){
+	  var timer = setTimeout(function(){
+		if(timeArr[2] == '00'){
+			timeArr[2] = 59;
+			if(timeArr[1] == '00'){
+				if(timeArr[0] != '00'){
+					timeArr[1] = 59;
+					timeArr[0] = timeFormat(timeArr[0]);
+				}
+			}else{
+				timeArr[1] = timeFormat(timeArr[1]);
+			}
+		}else{
+			timeArr[2] = timeFormat(timeArr[2]);
+		}
+		clearTimeout(timer);
+		obj.innerHTML = timeArr.join(':');
+		timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?'':timeReduce(obj,timeArr);
+	  },1000);
+  }
+  function timeFormat(num){
+	num = num.length==2&&num[0]==0?num[1]:num;
+	num--;
+	num = num<10?'0'+num:num;
+	return num;
+  }
+  */
+  
+  
+  
+  /*
+  // 面向对象写法一
+  function TimeChange(){
+	this.timeReduce = (obj,timeArr) => {
+		var timer = setTimeout(() => {
+			if(timeArr[2] == '00'){
+				timeArr[2] = 59;
+				if(timeArr[1] == '00'){
+					if(timeArr[0] != '00'){
+						timeArr[1] = 59;
+						timeArr[0] = this.timeFormat(timeArr[0]);
+					}
+				}else{
+					timeArr[1] = this.timeFormat(timeArr[1]);
+				}
+			}else{
+				timeArr[2] = this.timeFormat(timeArr[2]);
+			}
+			clearTimeout(timer);
+			obj.innerHTML = timeArr.join(':');
+			timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?'':this.timeReduce(obj,timeArr);
+		},1000);
+	},
+	this.timeFormat = (num) => {
+		num = num.length==2&&num[0]==0?num[1]:num;
+		num--;
+		num = num<10?'0'+num:num;
+		return num;
+    }
+  }
+  var TimeLow = new TimeChange();
+  TimeLow.timeReduce(oBear,timeArr);
+  */
+
+
+  // 面向对象写法二
+  function TimeChange(){}
+  TimeChange.prototype = {
+	// 注意：此处不能使用箭头函数(初始时this为window对象，当实例化对象后，箭头函数写法不会使this指向变为实例化对象)
+	timeReduce: function(obj,timeArr){    
+		console.log(this)
+		var timer = setTimeout(() => {
+			console.log(this)
+			if(timeArr[2] == '00'){
+				timeArr[2] = 59;
+				if(timeArr[1] == '00'){
+					if(timeArr[0] != '00'){
+						timeArr[1] = 59;
+						timeArr[0] = this.timeFormat(timeArr[0]);
+					}
+				}else{
+					timeArr[1] = this.timeFormat(timeArr[1]);
+				}
+			}else{
+				timeArr[2] = this.timeFormat(timeArr[2]);
+			}
+			clearTimeout(timer);
+			obj.innerHTML = timeArr.join(':');
+			timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?'':this.timeReduce(obj,timeArr);
+		},1000);
+	},
+	timeFormat: function(num){    // 注意：此处不能使用箭头函数
+		num = num.length==2&&num[0]==0?num[1]:num;
+		num--;
+		num = num<10?'0'+num:num;
+		return num;
+    }
+  }
+  var TimeLow = new TimeChange();
+  TimeLow.timeReduce(oBear,timeArr);
+  </script>
+ </body>
+</html>

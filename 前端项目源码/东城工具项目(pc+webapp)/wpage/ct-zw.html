@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>个人中心-驻外</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">    <!-- 字体图标样式 -->
+        
+		<link rel="stylesheet" href="./assets/resource/css/ct-zw.css">
+    </head>
+    <body class="h100">
+        <section class="container h100">
+            <div class="page__bd page__bd_spacing h50">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <div class="placeholder pr tl">
+                            <i class="fas fa-envelope"></i>
+                            <span class="weui-badge" style="position: absolute;top: -.4em;left: 1.4em;">2</span>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder tr">设置</div>
+                    </div>
+                </div>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <div class="placeholder info dis-f">
+                            <img class="br" src="./assets/images/bear.jpg" alt="">
+                            <h3 class="size20">张亮</h3>
+                            <span class="size14">分销商</span>
+                            <span id="showIOSActionSheet" class="pr size14">南通机电驻外部</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="weui-grids bgw">
+                <a href="javascript:;" class="weui-grid w50">
+                    <div class="weui-grid__icon">
+                        <img class="mg" src="./assets/images/center1.png" alt="">
+                    </div>
+                    <p class="weui-grid__label f1">经销商订单</p>
+                </a>
+                <a href="javascript:;" class="weui-grid w50">
+                    <div class="weui-grid__icon">
+                        <img class="mg" src="./assets/images/center5.png" alt="">
+                    </div>
+                    <p class="weui-grid__label f1">分销商订单</p>
+                </a>
+                <a href="javascript:;" class="weui-grid w50">
+                    <div class="weui-grid__icon">
+                        <img class="mg" src="./assets/images/center6.png" alt="">
+                    </div>
+                    <p class="weui-grid__label f1">经销商返利</p>
+                </a>
+                <a href="javascript:;" class="weui-grid w50">
+                    <div class="weui-grid__icon">
+                        <img class="mg" src="./assets/images/center7.png" alt="">
+                    </div>
+                    <p class="weui-grid__label f1">分销商返利</p>
+                </a>
+            </div>
+                 
+        </section> 
+        
+        <div>
+            <div class="weui-mask" id="iosMask" style="display: none"></div>
+            <div class="weui-actionsheet" id="iosActionsheet">
+                <div class="weui-actionsheet__menu">
+                    <div class="weui-actionsheet__cell">如皋机电仁寿路店</div>
+                    <div class="weui-actionsheet__cell">如东机电专卖</div>
+                    <div class="weui-actionsheet__cell">南通机电专卖</div>
+                </div>
+                <div class="weui-actionsheet__action">
+                    <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/zepto.min.js"></script>
+        <script type="text/javascript" src="./assets/resource/js/ct-zw.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!--pages/index/share/sharecont/sharecont.wxml-->
+<import src="../../../../wxParse/wxParse.wxml"/>
+
+<view class='container'>
+  <view class='share-detail'>
+    <view class='detail-header'>
+      <view class='detail-header-tp'>
+        <text>{{shareDetail.title}}</text>
+      </view>
+      <view class='detail-header-bt'>
+        <view class='detail-header-bt-lf'>
+          <text>发布时间：</text>
+          <text>{{shareDetail.createTime}}</text>
+        </view>
+        <view class='detail-header-bt-rt'>
+          <text>{{shareDetail.createUserName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='detail-content'>
+      <!--<view>{{shareDetail.content}}</view>-->
+
+      <!-- wxParse模板展示资讯信息 -->
+      <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+
+    </view>
+  </view>
+
+  <!-- <web-view src="https://mp.weixin.qq.com/"></web-view> -->
+
+</view>

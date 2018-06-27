@@ -1,0 +1,32 @@
+/* pages/register/register.wxss */
+
+.container{
+  padding: 40rpx;
+}
+.container>view{
+  width: 100%;
+  margin: 20rpx;
+}
+.container input{
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #CCC;
+  border-radius: 20rpx;
+  color: #FFF;
+}
+
+.code{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.code>button{
+  min-width: 180rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  margin-left: 20rpx;
+  padding: 0 10rpx;
+  background: #FFF;
+  font-size: 32rpx;
+}
+

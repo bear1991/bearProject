@@ -1,0 +1,85 @@
+<!--pages/actdetail/actdetail.wxml-->
+<!-- <text>pages/actdetail/actdetail.wxml</text> -->
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<import src="../../templates/search/search.wxml" />   <!-- 引入搜索查询模板 -->
+<import src="../../templates/comment/comment.wxml" />    <!-- 引入评论列表模板 -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container" catchtap="cancelReplyComment">
+  <!-- 头部搜索、拍照、添加图片 -->
+  <!-- <template is="search" /> -->
+
+  <!-- 活动展图 -->
+  <view class="list">
+    <image src="{{common.delPicture(actDetailData.smeta).thumb}}"></image>
+    <view class="listInfo">
+      <view catchtap="activityCatchtap" data-index="{{actDetailData.id}}" data-islike="{{actDetailData.islike}}">
+        <image src="../../images/activity/{{actDetailData.islike==1?'yzan':'nzan'}}.png"></image>
+        <text>{{actDetailData.post_like}}</text>
+      </view>
+      <view>
+        <image src="../../images/activity/view.png"></image>
+        <text>{{actDetailData.post_hits}}</text>
+      </view>
+    </view>
+    <!-- <image class="picBack" src="../../images/activity/picBack.png" catchtap="backCatchtap"></image> -->
+  </view>
+
+  <!-- 活动菜单 -->
+  <!--
+  <view class="menu">
+    <text class="{{menuStatus[0]?'active':''}}" catchtap="menuCatchtap" data-index="0">活动详情</text>
+    <text>|</text>
+    <text class="{{menuStatus[1]?'active':''}}" catchtap="menuCatchtap" data-index="1">现场导览</text>
+    <text>|</text>
+    <text class="{{menuStatus[2]?'active':''}}" catchtap="menuCatchtap" data-index="2">活动回顾</text>
+  </view>
+  -->
+  <!-- 活动说明 -->
+  <view class="intro">
+    <view class="title"><text>{{actDetailData.post_title}}</text></view>
+    <view class="content">
+      <!-- <text>简介：{{actDetailData.post_keywords}}</text> -->
+
+      <!-- 富文本内容展示 -->
+      <view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+
+    </view>
+    <view class="time"><text>活动时间：{{actDetailData.start_date}}</text></view>
+    <!-- <view class="purchase"><button catchtap="attendCatchtap" data-index="{{actDetailData.id}}" data-flag="{{actDetailData.flag}}">{{actDetailData.flag==1?'已报名':'报名'}}</button></view> -->
+  </view>
+
+  <!-- 活动图片展示 -->
+  <!--
+  <view class="picShow">
+    <image src="../../images/activity/bisai.png"></image>
+  </view>
+  -->
+  <!-- 活动关联商品 -->
+  <view class="cont">
+        <view scroll-x="{{true}}" class="latestActWrap">
+          <view class="latestAct" wx:for="{{actDetailData.azGoodsList}}" wx:key="goods_id" catchtap="detailGoodCatchtap" data-detail="{{item}}">
+            <image mode="aspectFill" src="{{common.delPicture(item.smeta).thumb}}"></image>
+            <view class="actIntro">
+              <view>{{item.name}}</view>
+                <view class='goods_shoppingcart'>
+                  <view>￥{{item.price}}</view>
+                  <image class='goods_shoppingcart_img' src='../../images/shop/ic_tab_find.png' data-index="{{index}}" catchtap='addCarCatchtap' data-detail='{{item}}'></image>
+                </view>
+              </view>
+          </view>
+        </view>
+      </view> 
+  <!-- 评论列表 --> 
+  <template class='html' is="comment" data="{{...commentTemData}}"/>
+  
+  <view class='bottom_root'>
+    <button bindtap="fetchAddComment" class='bottom_button'>提交</button>
+    <input class='bottom_input' bindinput='inputChange' placeholder='{{placeholderText}}' value='{{content}}'></input>
+  </view>
+</view>

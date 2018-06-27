@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>答题</title>
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .cont{
+            min-height: 100%;
+            padding-top: 80px; 
+            background: url('./images/dati/bg.png') no-repeat left top/100% 100%;
+        }
+
+        .part{
+            width: 80%;
+            min-width: 280px;
+            margin: 0 auto 16px;
+            padding: 16px 0 24px;
+            background: url('./images/dati/juanzhou.png') no-repeat center/100% 100%;
+            color: #6C143C;
+        }
+        .question, .answer{
+            margin: 2px 30px 0;
+        }
+        .answer>li{
+            width: 50%;
+        }
+        .answer>li>img{
+            width: 12px;
+            margin: 0 10px 0 4px;
+        }
+        .answer>li>.picture{
+            height: 40px;
+            width: 60%; 
+        }
+
+        .turnAction{
+            margin: 24px 0;
+        }
+        .turnAction>a{
+            margin: 0 16px;
+            padding: 4px 20px;
+            background: #6C143C;
+            border-radius: 8px; 
+            color: #FFF;
+        }
+
+        .intru{
+            margin-bottom: 20px;
+            padding: 0 40px;
+            color: #6C143C;
+        }
+    </style>
+</head>
+<body class="h100">
+    <div class="container h100">
+        <div class="cont">
+            <div class="part fh">
+                <h2 class="tc">第一题</h2>
+                <p class="question size18 fw">南通的第一件驰名商标是（）</p>
+                <ul class="answer fw clearfix">
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="part fh">
+                <h2 class="tc">第二题</h2>
+                <p class="question size18 fw">南通的第一件驰名商标是（）</p>
+                <ul class="answer fw clearfix">
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <span>红山</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="part fh">
+                <h2 class="tc">第三题</h2>
+                <p class="question fw size18">南通的第一件驰名商标是（）</p>
+                <ul class="answer fw clearfix">
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <img class="picture" src="./images/dati/sdf.png" alt="">
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <img class="picture" src="./images/dati/tm.png" alt="">
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <img class="picture" src="./images/dati/xy.png" alt="">
+                    </li>
+                    <li class="fl">
+                        <img src="./images/dati/point.png" alt="">
+                        <img class="picture" src="./images/dati/hadm.png" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="turnAction tc">
+                <a href="#!">抢复活卡</a>
+                <a href="#!">进入抽奖</a>
+            </div>
+
+            <p class="intru fw size18">温馨提示：出现答题错误后，点击抢复活卡分享到朋友圈，即可获取再答一次题的机会哦！</p>
+        
+            <img width="38%" src="./images/dati/solgan.png" alt="">
+        </div>
+    </div>
+
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        $('.answer>li').click(function(){
+            $(this).children('img:first-child').attr('src', './images/dati/select.png').addClass('.active');
+            $(this).siblings().children('img:first-child').attr('src', './images/dati/point.png').removeClass('.active');            
+        });
+    </script>
+</body>
+</html>

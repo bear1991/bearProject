@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>Document</title>
+  <style>
+	#loadMoreWrap{
+		width: 340px;
+		height: 540px;
+		margin: 10px auto 0;
+		border: 1px solid red;
+		overflow: hidden;
+	}
+
+
+	#loadMore{
+		margin-top: -40px;
+	}
+
+	#loadMoreCont{
+		width: 100%;
+	}
+	#loadMoreCont>div{
+		height: 120px;
+		margin: 0 0 5px;
+		background: #888;
+		line-height: 80px;
+	}
+	#loadMoreCont>div:last-child{
+		margin-bottom: 0;
+	}
+
+	#refresh,
+	#more{
+		height: 40px;
+		background: red;
+		text-align: center;
+		line-height: 40px;
+		color: #FFF;
+	}
+
+  </style>
+ </head>
+ <body>
+  
+ <!--- touch 实现 下拉刷新、上拉加载  -->
+ <div id="loadMoreWrap">
+	<div id="loadMore">
+		<div id="refresh">
+			<span>刷新</span>
+		</div>
+		<div id="loadMoreCont">
+			<div>bear1</div>
+			<div>bear2</div>
+			<div>bear3</div>
+			<div>bear4</div>	
+			<div>bear5</div>
+			<div>bear6</div>
+			<div>bear7</div>
+			<div>bear8</div>	
+			<div>bear9</div>
+			<div>bear10</div>
+			<div>bear11</div>
+			<div>bear12</div>	
+		</div>
+		<div id="more">
+			<span>暂无更多数据</span>
+		</div>
+	</div>
+ </div>
+
+
+ <script src="./zepto.min.js"></script>
+ <script>
+	var oLoadMoreWrap = $("#loadMoreWrap"),
+		oLoadMore = $('#loadMore');
+
+	var sMgTp = -40;	// 保存初始marginTop值
+	var maxMgTp = 0;    // 保存最大margnTop(绝对值)
+	var nMgTp = 0;    // 保存当前marginTop值
+	
+	var sTime = 0;    // 保存触摸开始时间
+	var sTouchY = 0;	// 保存触摸开始位置
+	var positionY = 0;    // 保存每次触摸移动的距离
+	
+	var speedProp = 300;    // 保存触摸离开后，内容继续移动的摩擦系数
+
+
+	// 获取初始marginTop值
+	var sMarginTop = parseFloat(oLoadMore.css('margin-top'));
+	nMgTp = sMarginTop;
+
+	// 初始化more显示
+	if($('#loadMoreCont').height()>=$('#loadMoreWrap').height()){
+		$('#more').html('上拉加载更多数据')
+	}
+
+	
+	// 触摸开始
+	oLoadMoreWrap.on('touchstart', function(e){
+		sTime = new Date();    // 保存触摸开始时时间
+		sTouchY = e.changedTouches[0].pageY;
+
+		// 获取oLoadMore最大marginTop高度
+		maxMgTp = $(this).height() - oLoadMore.height() - 2;    // 2：边框宽度
+
+		oLoadMore.css('transition', 'none');
+		positionY = 0;   // 触摸开始保存每次移动距离的变量清0
+	});
+
+
+	// 触摸移动
+	oLoadMoreWrap.on('touchmove', function(e){
+		var eTouchY = e.changedTouches[0].pageY;
+		positionY = eTouchY - sTouchY;     // 获取每次移动的距离
+		nMgTp = sMarginTop + positionY;
+
+		// 限制上下移动边界
+		if(maxMgTp<=sMgTp*2){    // 内容高度超过外层高度
+			if(nMgTp >= 0){    // 下拉
+				nMgTp = 0;
+			}else if(nMgTp <= maxMgTp){    // 上拉
+				nMgTp = maxMgTp;
+			}
+		}else{		// 内容高度小于外层高度(可以刷新，但是不能加载)
+			if(positionY>0){    // 下拉
+				if(nMgTp >= 0){
+					nMgTp = 0;
+				}
+			}else{
+				nMgTp = sMarginTop;
+			}
+		}
+
+		if(nMgTp>sMgTp&&nMgTp<0 || nMgTp>maxMgTp&&nMgTp<maxMgTp-sMgTp){
+			console.log(1233);
+			oLoadMore.css('transition', '0.4s');
+		}
+
+
+		oLoadMore.css('marginTop', nMgTp+'px');
+	});
+
+
+	// 触摸离开
+	oLoadMoreWrap.on('touchend', function(){
+		var eTime = new Date();    // 保存触摸离开时时间
+		
+		if(maxMgTp<=sMgTp*2){    // 内容高度超过外层高度
+			if(nMgTp >= 0){    // 刷新
+				console.log('刷新数据');
+				nMgTp = sMgTp;
+				oLoadMore.css('transition', '0.8s 0.6s');
+			}else if(nMgTp <= maxMgTp){    // 加载
+				console.log('加载数据');
+				nMgTp = maxMgTp-sMgTp;
+				oLoadMore.css('transition', '0.8s 0.6s');
+			}else{
+				console.log('移动无刷新或加载');
+				if(positionY){    // 只有当存在触摸移动时，才会在触摸离开后能继续移动一段距离
+					// 确定未达边界时，触摸离开后内容继续滑动的速度
+					var speed = positionY/(eTime - sTime);
+					console.log(speed);
+
+					// 当速度足够时，才会在触摸离开后继续滚动一段距离，否则触摸移动多少即多少
+					if(Math.abs(speed)>=0.5){
+						nMgTp += speed*speedProp;
+						oLoadMore.css('transition', '0.6s ease-out');
+					}
+				}
+				
+				// 继续滑动后，达到边界时限制
+				if(nMgTp >= sMgTp){
+					nMgTp = sMgTp;
+				}else if(nMgTp <= maxMgTp-sMgTp){
+					nMgTp = maxMgTp-sMgTp;
+				}
+			}
+		}else{		// 内容高度小于外层高度(可以刷新)
+			if(nMgTp >= 0){    // 刷新
+				console.log('刷新数据');
+				nMgTp = sMgTp;
+				oLoadMore.css('transition', '0.8s 0.6s');
+			}
+		}
+		oLoadMore.css('margin-top', nMgTp+'px');
+		sMarginTop = nMgTp;
+	});
+	
+ </script>
+ </body>
+</html>

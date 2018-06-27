@@ -1,0 +1,18 @@
+<!--templates/matactlist/matactlist.wxml-->
+<!-- <text>templates/matactlist/matactlist.wxml</text> -->
+
+<wxs src="../../pages/common.wxs" module="common" />
+
+<template name="matactlist">
+  <view class="container">
+    <scroll-view class="listWrap" scroll-y bindscrolltolower="activityListMore" data-index="1">
+        <block wx:for="{{actListData}}" wx:key="id">
+          <view class="history" catchtap="activityCatchtap" data-index="{{item.id}}" data-type="{{item.term_id}}">
+            <image mode="aspectFill" class='img' src="{{common.delPicture(item.smeta).thumb}}"></image>
+            <text class='title'>{{item.post_title}}</text>
+          </view>
+        </block>
+      </scroll-view>
+  </view>
+</template>
+

@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>提交订单</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+		<!-- 样式文件 -->
+		<link rel="stylesheet" href="./assets/resource/css/public.css">
+		<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">   <!-- 字体图标 -->
+		<link rel="stylesheet" href="./assets/resource/css/common.css">
+		<link rel="stylesheet" href="./assets/resource/css/tj-dd.css">
+
+
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<img src="./assets/images/dc-icon3.png" alt="">
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="blue">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#" style="background:#6C57A6;">
+								<img class="header-type vm" src="./assets/images/note.png" alt="">
+								<span class="vm">网上下单</span>
+							</a>
+
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<img class="header-type vm" src="./assets/images/mdeal.png" alt="">
+								<span class="vm">财务管理</span>
+							</a>
+
+						</li>
+
+						<li class="green">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<img class="header-type vm" src="./assets/images/shopcar.png" alt="">
+								<span class="vm">购物车</span>
+								<span class="badge badge-success vm" style="top: 0;">5</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header tc">
+									查看全部 (5)
+								</li>
+
+								<li class="info-list">
+									<a href="#">
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<ul class="msg-body">
+											<li class="dis-f">
+												<span>DCJZ05-10(a型)9.6V充电式单速起子电钻</span>
+												<span style="color:#FE650C">￥289.00</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">分销商：50</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">x2000</span>
+												<span>合计：2500</span>
+											</li>
+										</ul>
+									</a>
+									<a href="#">
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<ul class="msg-body">
+											<li class="dis-f">
+												<span>DCJZ05-10(a型)9.6V充电式单速起子电钻</span>
+												<span style="color:#FE650C">￥289.00</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">分销商：50</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">x2000</span>
+												<span>合计：2500</span>
+											</li>
+										</ul>
+									</a>
+									<a href="#">
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<ul class="msg-body">
+											<li class="dis-f">
+												<span>DCJZ05-10(a型)9.6V充电式单速起子电钻</span>
+												<span style="color:#FE650C">￥289.00</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">分销商：50</span>
+											</li>
+											<li class="dis-f">
+												<span style="color:#BCBCBC;">x2000</span>
+												<span>合计：2500</span>
+											</li>
+										</ul>
+									</a>
+								</li>
+					
+								<li class="money-count dis-f">
+									<div>合计：<span class="fw" style="color:#FF660B;">29301.00元</span></div>
+									<button class="btn btn-default">结算</button>
+								</li>
+							</ul>
+
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">成都纪为贸易有限公司</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-signal"></i>
+							</button>
+
+							<button class="btn btn-info">
+								<i class="icon-pencil"></i>
+							</button>
+
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div>
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<img class="sider-icon vm" src="./assets/images/zj-0.png" alt="">
+								<span class="menu-text vm"> 整机 </span>
+							</a>
+
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/dj-0.png" alt="">
+								<span class="menu-text vm"> 转子定子 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/pj-0.png" alt="">
+								<span class="menu-text vm"> 配件 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/fj-0.png" alt="">
+								<span class="menu-text vm"> 附件 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/gg-0.png" alt="">
+								<span class="menu-text vm"> 广告产品 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/sd-0.png" alt="">
+								<span class="menu-text vm"> 手动工具 </span>
+							</a>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<img class="sider-icon vm" src="./assets/images/dd-1.png" alt="">
+								<span class="menu-text vm"> 我的订单 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="dd.html">
+										<i class="icon-double-angle-right"></i>
+										订单
+									</a>
+								</li>
+								<li class="active">
+									<a href="tj-dd.html">
+										<i class="icon-double-angle-right"></i>
+										提交订单
+									</a>
+								</li>
+								<li>
+									<a href="fh-info.html">
+										<i class="icon-double-angle-right"></i>
+										发货信息
+									</a>
+								</li>
+								<li>
+									<a href="cp-xq.html">
+										<i class="icon-double-angle-right"></i>
+										产品详情
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="fl-lb.html">
+								<img class="sider-icon vm" src="./assets/images/fl-0.png" alt="">
+								<span class="menu-text vm"> 我的返利 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img class="sider-icon vm" src="./assets/images/qt-0.png" alt="">
+								<span class="menu-text vm"> 其他 </span>
+							</a>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li><i class="icon-home home-icon"></i><a href="#">主页</a></li>
+							<li class="active">购物车</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<header class="content-header">
+							<h3>欢迎使用东成销售管理系统</h3>
+						</header>
+
+						<div id="tjdd" class="row">
+							<div class="col-sm-12">
+								<div class="dd-title clearfix">
+									<span class="col-sm-8 tc clearfix">
+										<span class="col-sm-10">商品信息</span>
+										<span class="col-sm-2">单价</span>
+									</span>
+									<span class="col-sm-2 tc">数量</span>
+									<span class="col-sm-2 tc">操作</span>
+								</div>
+								<ul class="dd-list">
+									<li>
+										<div class="dd-cont clearfix">
+											<div class="col-sm-8 clearfix">
+												<div class="col-sm-10 clearfix">
+													<img class="dis-b col-sm-3" src="./assets/images/goods.png" alt="">
+													<div class="col-sm-9 pro-info">
+														<h5 class="fw">DCJZ05-10(a型)9.6V充电式单速起子电钻</h5>
+														<ul>
+															<li>1.7Ah大容量电池，低噪声，长寿面马达</li>
+															<li>订货编号：00301110021</li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-sm-2 fw tc">￥200.00</div>
+											</div>
+											<div class="col-sm-2 tc">
+												<p><input type="text" class="input-mini" id="spinner0"/></p>
+												<p class="fw">分销商：500</p>
+												<p class="fw">合计：1000</p>
+											</div>
+											<div class="col-sm-2 tc cur" style="color:#D36859; font-size:16px;">
+												<i class="fas fa-trash-alt"></i>
+											</div>
+										</div>
+										<div class="dd-cont clearfix">
+											<div class="col-sm-8 clearfix">
+												<div class="col-sm-10 clearfix">
+													<img class="dis-b col-sm-3" src="./assets/images/goods.png" alt="">
+													<div class="col-sm-9 pro-info">
+														<h5 class="fw">DCJZ05-10(a型)9.6V充电式单速起子电钻</h5>
+														<ul>
+															<li>1.7Ah大容量电池，低噪声，长寿面马达</li>
+															<li>订货编号：00301110021</li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-sm-2 fw tc">￥200.00</div>
+											</div>
+											<div class="col-sm-2 tc">
+												<p><input type="text" class="input-mini" id="spinner1"/></p>
+												<p class="fw">分销商：500</p>
+												<p class="fw">合计：1000</p>
+											</div>
+											<div class="col-sm-2 tc cur" style="color:#D36859; font-size:16px;">
+												<i class="fas fa-trash-alt"></i>
+											</div>
+										</div>
+										<div class="dd-cont clearfix">
+											<div class="col-sm-8 clearfix">
+												<div class="col-sm-10 clearfix">
+													<img class="dis-b col-sm-3" src="./assets/images/goods.png" alt="">
+													<div class="col-sm-9 pro-info">
+														<h5 class="fw">DCJZ05-10(a型)9.6V充电式单速起子电钻</h5>
+														<ul>
+															<li>1.7Ah大容量电池，低噪声，长寿面马达</li>
+															<li>订货编号：00301110021</li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-sm-2 fw tc">￥200.00</div>
+											</div>
+											<div class="col-sm-2 tc">
+												<p><input type="text" class="input-mini" id="spinner2"/></p>
+												<p class="fw">分销商：500</p>
+												<p class="fw">合计：1000</p>
+											</div>
+											<div class="col-sm-2 tc cur" style="color:#D36859; font-size:16px;">
+												<i class="fas fa-trash-alt"></i>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div>
+									<div class="tr clearfix">
+										<div class="fr">
+											<button class="btn btn-primary join-shopcar">
+												<i class="icon-shopping-cart bigger-120"></i>
+												加入购物车
+											</button>
+										</div>
+										<div class="fr">
+											<h4>合计：<span class="fw" style="color:#FF4401;">￥34550.00</span></h4>
+											<div style="color:#787878;font-size:12px;">
+												<span>账户欠款：140000.00</span>
+												<span>授信额度：30万</span>
+											</div>
+										</div>
+									</div>
+									<div class="tr" style="color:#787878;font-size:12px;">(需汇款：<span style="color:#FFA93B;">1991.00</span>)</>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="icon-cog bigger-150"></i>
+					</div>
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; 选择皮肤</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> 固定导航条</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> 固定滑动条</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl">切换到左边</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+							<label class="lbl" for="ace-settings-add-container">
+								切换窄屏
+								<b></b>
+							</label>
+						</div>
+					</div>
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+
+		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+	
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<!-- js文件 -->
+		<script src="./assets/resource/js/common.js"></script>
+		<script src="./assets/resource/js/tj-dd.js"></script>
+		
+		
+	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
+

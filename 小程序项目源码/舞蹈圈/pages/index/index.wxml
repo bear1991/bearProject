@@ -1,0 +1,112 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+
+<import src="../../templates/search/search.wxml" />   <!-- 引入搜索查询模板 -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container">
+  <!-- 头部搜索、拍照、添加图片 -->
+  <!-- <template is="search" /> -->
+
+  <!-- 轮播 -->
+  <view class="banner">
+    <swiper indicator-dots="{{true}}" indicator-active-color="#FFF" autoplay circular="{{true}}"
+    interval="4000">
+      <swiper-item wx:for="{{bannerPicData}}" wx:key="slide_id">
+        <!-- <image class="swiperPic" src="{{linkIpUpload}}{{item.slide_pic}}"></image> -->
+        <image mode="aspectFill" class="swiperPic_banner" src="{{item.slide_pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 最新活动 -->
+  <view class="listWrap">
+    <view class="list">
+      <view class="title">
+        <text>最新活动</text>
+        <text catchtap="moreActCatchtap">更多</text>
+      </view>
+      <view class="cont">
+        <!-- <swiper indicator-dots="{{true}}" indicator-active-color="#FFF" autoplay circular="{{true}}"
+        interval="4000">
+          <swiper-item wx:for="{{lstActWrapData1}}" wx:key="id">
+            <image mode="aspectFill" class="swiperPic" src="{{common.delPicture(item.smeta).thumb}}" catchtap="actDetailCatchtap" data-matchid="{{item.id}}"></image>
+          </swiper-item>
+        </swiper> -->
+        <scroll-view class='scroll' scroll-x="true" scroll-y="false">
+          <view class="new_activity">
+          <view class='new_activity_item' wx:for="{{lstActWrapData1}}" wx:key="new_act_id">
+            <image mode="aspectFill" class="swiperPic" src="{{common.delPicture(item.smeta).thumb}}" catchtap="actDetailCatchtap" data-matchid="{{item.id}}"></image>
+            <view class='historyTitle'>{{item.post_title}}</view>
+          </view>
+          </view>
+        </scroll-view>
+      </view> 
+    </view>
+  </view>
+  
+  <!-- 最新比赛 -->
+  <!--
+  <view class="listWrap">
+    <view class="list">
+      <view class="title">
+        <text>最新比赛</text>
+        <text catchtap="moreActCatchtap">更多</text>
+      </view>
+      <view class="cont">
+        <swiper indicator-dots="{{true}}" indicator-active-color="#FFF" autoplay circular="{{true}}"
+        interval="4000">
+          <swiper-item wx:for="{{lstActWrapData2}}" wx:key="id">
+            <image class="swiperPic" src="{{common.delPicture(item.smeta).thumb}}" catchtap="matDetailCatchtap" data-matchid="{{item.id}}"></image>
+          </swiper-item>
+        </swiper>
+      </view> 
+    </view>
+  </view>
+  -->
+
+  <!-- 热门商品 -->
+  <view class="listWrap" wx:if="{{hotGoodsData.length}}">
+    <view class="list">
+      <view class="title">
+        <text>热门商品</text>
+        <!-- <text>更多</text> -->
+      </view>
+      <view class="cont">
+        <view scroll-x="{{true}}" class="latestActWrap">
+          <view class="latestAct" wx:for="{{hotGoodsData}}" wx:key="goods_id" catchtap="detailGoodCatchtap" data-detail="{{item}}">
+            <image mode="aspectFill" src="{{common.delPicture(item.smeta).thumb}}"></image>
+            <view class="actIntro">
+              <view>{{item.name}}</view>
+                <view class='goods_shoppingcart'>
+                  <view>￥{{item.price}}</view>
+                  <image class='goods_shoppingcart_img' src='../../images/shop/ic_tab_find.png' data-index="{{index}}" catchtap='addCarCatchtap'></image>
+                </view>
+              </view>
+          </view>
+        </view>
+      </view> 
+    </view>
+  </view>
+
+  <!-- 活动回顾 -->
+  <view class="listWrap" wx:if="{{historyAct.length}}">
+    <view class="list">
+      <view class="title">
+        <text>活动回顾</text>
+        <text>更多</text>
+      </view>
+      <view class="cont">
+        <view scroll-x="{{true}}" class="latestActWrap">
+          <view class="history" wx:for="{{historyAct}}" wx:key="act_id">
+            <image catchtap="actCatchtap" data-index="{{item.id}}" 
+              class='historyImg' mode="aspectFill" src="{{common.delPicture(item.smeta).thumb}}"></image>
+            <view class='historyTitle'>{{item.post_title}}</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+  </view>
+
+</view>

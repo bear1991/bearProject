@@ -1,0 +1,3548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <!--Import Google Icon Font-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconfonts/iconfont.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Import jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <!--高德地图api-->
+  <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=77562980635d3c0004e32c5ee2b7fd8a"></script>
+  <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+  <!--图表插件-->
+  <script type="text/javascript" src="js/echarts.min.js"></script>
+
+  <!--日期选择器-->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="css/foundation-datepicker.min.css" rel="stylesheet" type="text/css">
+  <script src="js/foundation-datepicker.js"></script>
+  <script src="js/locales/foundation-datepicker.zh-CN.js"></script>
+  <script type="text/javascript" src="js/jquery-clock-timepicker.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/part2.css">
+  
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ </head>
+ <body>    <!--onselectstart="return false;"-->
+  <div class="header clearfix pr">
+	<!--左侧业务中心-->
+	<div class="icon-logo pa">
+		<img class="vm" src="img/list.png" width="24" alt="">
+		<span class="fr vm fw">业务中心</span>
+	</div>
+	
+	<!--中间搜索-->
+	<form action="" class="search pa">
+		<img class="sear pa cur" src="img/search.png" alt="">
+		<input type="search" autofocus required placeholder="搜索">
+		<img class="remove pa cur dis-n" src="img/remove.png" alt="">
+	</form>
+
+	<!--右侧用户-->
+	<ul class="user-infor fr">
+		<li class="fl icon pr">
+			<img class="cur" src="img/schedule.png" width="18" alt="" title="我的日报">
+			
+			<dl class="icon-cont pa dis-n bAfter">
+				<dt>
+					<img class="vm br" src="img/xwm.png" width="40" alt="" />
+					<span class="fw pa">IEV(小维)</span>
+				</dt>
+				<dd class="tc cur pr">
+					<div class="record clearfix">
+						<span class="fl">新增维保单，通知神丰集团来维保设备</span>
+						<img class="fl ntp" src="img/time.png" alt="" />
+						<span class="fl">2017/05/26</span>
+					</div>
+					<div class="action pa dis-n">
+						<img class="vm" src="img/good.png" width="12" alt="" title="已读"/>
+						<img class="vm" src="img/del.png" width="10" alt="" title="删除"/>
+					</div>
+				</dd>
+				<dd class="tc cur pr">
+					<div class="record clearfix">
+						<span class="fl">新增维保单，通知神丰集团来维保设备</span>
+						<img class="fl ntp" src="img/time.png" alt="" />
+						<span class="fl">2017/05/26</span>
+					</div>
+					<div class="action pa dis-n">
+						<img class="vm" src="img/good.png" width="12" alt="" title="已读"/>
+						<img class="vm" src="img/del.png" width="10" alt="" title="删除"/>
+					</div>
+				</dd>
+				<dd class="tc cur pr">
+					<div class="record clearfix">
+						<span class="fl">新增维保单，通知神丰集团来维保设备</span>
+						<img class="fl ntp" src="img/time.png" alt="" />
+						<span class="fl">2017/05/26</span>
+					</div>
+					<div class="action pa dis-n">
+						<img class="vm" src="img/good.png" width="12" alt="" title="已读"/>
+						<img class="vm" src="img/del.png" width="10" alt="" title="删除"/>
+					</div>
+				</dd>
+				<dd class="tc cur pr">
+					<div class="record clearfix">
+						<span class="fl">新增维保单，通知神丰集团来维保设备</span>
+						<img class="fl ntp" src="img/time.png" alt="" />
+						<span class="fl">2017/05/26</span>
+					</div>
+					<div class="action pa dis-n">
+						<img class="vm" src="img/good.png" width="12" alt="" title="已读"/>
+						<img class="vm" src="img/del.png" width="10" alt="" title="删除"/>
+					</div>
+				</dd>
+				
+			</dl>
+
+		</li>
+
+		<li class="fl icon pr">
+			<img class="cur" src="img/people.png" width="30" alt="" title="我的同事">
+
+			<!--用户人员列表-->
+			<ul class="icon-cont user-infor-list pa dis-n">
+				<li class="clearfix cur">
+					<img class="fl br vm" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>朱晓晨</span>项目经理</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br vm" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>王小二</span>操作人员</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>朱晓晨</span>项目经理</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>朱晓晨</span>操作人员</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>王小二</span>操作人员</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>王小二</span>项目经理</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>朱晓晨</span>项目经理</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+				<li class="clearfix cur">
+					<img class="fl br" src="img/head.jpg" width="36" alt="">
+					<ul class="fr">
+						<li><span>朱晓晨</span>项目经理</li>
+						<li>12345678901</li>
+					</ul>
+				</li>
+			</ul>
+
+		</li>
+		<li class="fl icon pr">
+			<img class="cur" src="img/message.png" width="20" alt="" title="消息通知">
+			<div class="br pa cur"><span class="pa">10</span></div>
+
+			<ul class="icon-cont w-n-icon pa dis-n">
+				<li class="mag1 clearfix cur">
+					<p class="fl">
+						<img class="vm" src="img/warnIcon.png" width="16" alt="" />
+						<span class="vm red-text">故障通知</span>
+					</p>
+					<p class="fr pr br red"><span class="pa">12</span></p>
+				</li>
+				<li class="mag2 clearfix cur">
+					<p class="fl">
+						<img class="vm" src="img/warnIcon.png" width="16" alt="" />
+						<span class="vm red-text">设备维护</span>
+					</p>
+					<p class="fr pr br red"><span class="pa">8</span></p>
+				</li>
+				<li class="mag3 clearfix cur">
+					<p class="fl">
+						<img class="vm" src="img/noticeIcon.png" width="16" alt="" />
+						<span class="vm blue-text">订单确认</span>
+					</p>
+					<p class="fr pr br blue"><span class="pa">2</span></p>
+				</li>
+				<li class="msg4 clearfix cur">
+					<p class="fl">
+						<img class="vm" src="img/noticeIcon.png" width="16" alt="" />
+						<span class="vm blue-text">设备加高</span>
+					</p>
+					<p class="fr pr br blue"><span class="pa">2</span></p>
+				</li>
+			</ul>
+
+		</li>
+		<li class="fl pr">
+			<img class="circle cur" width="38" src="img/head.jpg" alt="">
+		
+			<div class="icon-cont person-data pa dis-n">
+				<ul class="p-d-title clearfix">
+					<li class="fl pr br fh">
+						<img src="img/head.jpg" width="100%" alt="" />
+						<p class="pa tc cur">
+							<a class="waves-effect waves-light btn header-modal" href="#uploadPic" title="更改">更改</a>
+						</p>
+					</li>
+					<li class="fl tc">
+						<span>原研哉</span>
+					</li>
+					<li class="fr">
+						<span>项目经理</span>
+					</li>	
+				</ul>
+				<dl class="fh">
+					<dt>基本</dt>
+					<dd class="clearfix cur">
+						<a class="waves-effect waves-light btn header-modal" href="#person" title="个人资料">
+							<span class="fl fw vm">个人资料</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+						</a>
+					</dd>
+					<dd class="clearfix cur">
+						<a class="waves-effect waves-light btn header-modal" href="#rwPassword" title="修改密码">
+							<span class="fl fw vm">修改密码</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+						</a>
+					</dd>
+				</dl>
+				<dl class="fh">
+					<dt>设置</dt>
+					<dd class="clearfix cur">
+						<a class="waves-effect waves-light btn header-modal" href="#advice" title="意见反馈">
+							<span class="fl fw vm">意见反馈</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+						</a>
+					</dd>
+					<dd class="clearfix">
+						<span class="fl fw vm">服务条款</span>
+						<img class="fr vm" src="img/right.png" alt="" />
+					</dd>
+					<dd>
+						<a class="waves-effect waves-light btn header-modal" href="#aboutUs" title="关于我们">
+							<span class="fl fw vm">关于我们</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+						</a>
+					</dd>
+				</dl>
+				
+				<div class="exit tc">
+					<p class="cur">退出登录</p>
+				</div>
+
+			</div>
+
+		</li>
+	</ul>
+  </div>
+
+  <div class="main">
+	<div class="aside pf fh">
+		<ul class="aside-wrap">
+			<li class="tc cur">
+				<img src="img/left_01.png" width="50%" alt="">
+				<p class="fw">业务中心</p>
+			</li>
+			<li class="tc cur">
+				<img src="img/left_12.png" width="50%" alt="">
+				<p class="fw">数据中心</p>
+			</li>
+			<li class="tc cur">
+				<img src="img/left_13.png" width="50%" alt="">
+				<p class="fw">消息中心</p>
+			</li>
+		</ul>
+	</div>
+	<ul class="content pr fh">
+		<li class="cont dis-n pa">
+			<div class="cont-wrap cont1">
+				<!--内容区一：业务中心-->
+
+				<ul class="noCont pa tc dis-n">
+					<li class="br">
+						<img src="img/noCont.png" height="60" alt="" />
+					</li>
+					<li>业务中心中暂无内容</li>
+				</ul>
+
+				<a class="btn-floating btn-large waves-effect waves-light red pf" id="aProject"><i class="material-icons">add</i></a>
+
+				<!--新增项目-->
+				<div class="addProject pf">
+					<ul class="aP-header clearfix add-header">
+						<li class="fl">新增项目</li>
+						<li class="fr">
+							<img class="cur minDisplay" src="img/scale-hide.png" width="16" alt="" />
+							<img class="cur change" src="img/scale-big.png" width="16" alt="" />
+							<img class="cur addClose" src="img/scale-remove.png" width="16" alt="" />
+						</li>
+					</ul>
+					<div class="aP-content">
+						<div class="aP-content-wrap clearfix add-wrap">
+							<div class="input-field col s12 fl">
+								<input id="aP-name" name="aP-name" type="text" class="validate">
+								<label for="aP-name">项目名称</label>
+							 </div>
+							<div class="input-field col s12 fl">
+								<input id="aP-num" name="aP-num" type="text" class="validate">
+								<label for="aP-num">确认单编号</label>
+							 </div>
+							
+							<div class="input-field col s12 fl">
+								<input id="aP-chuz" name="aP-chuz" type="text" class="validate">
+								<label for="aP-chuz">出租方</label>
+							 </div>
+
+							<div class="input-field col s12 fl">
+								<input id="aP-chengz" name="aP-chengz" type="text" class="validate">
+								<label for="aP-Chengz">承租方</label>
+							 </div>
+						
+							<div class="input-field col s12 fl">
+								<input id="aP-address" name="aP-address" type="text" class="validate">
+								<label for="aP-address">工程地点</label>
+							 </div>
+
+							<div class="input-field col s12 fl">
+								<input id="aP-company1" name="aP-company1" type="text" class="validate">
+								<label for="aP-company1">总包单位</label>
+							 </div>
+					 
+							<div class="input-field col s12 fl">
+								<input id="aP-company2" name="aP-company2" type="text" class="validate">
+								<label for="aP-company2">监理单位</label>
+							 </div>
+
+							<div class="input-field col s12 fl">
+								<input id="aP-money" name="aP-money" type="text" class="validate">
+								<label for="aP-money">租金</label>
+							 </div>
+							
+							 <div class="input-field col s12 fl">
+								<select class="aP-shebei" name="aP-shebei">
+								  <option value="" disabled selected>选择设备品牌和型号</option>
+								  <option value="1">选项 1</option>
+								  <option value="2">选项 2</option>
+								  <option value="3">选项 3</option>
+								</select>
+							 </div>
+
+							<div class="input-field col s12 fl">
+								<input id="aP-shebei-num" name="aP-shebei-num" type="text" class="validate">
+								<label for="aP-shebei-num">设备数量</label>
+							 </div>
+					
+							<div class="input-field col s12 fl">
+								<input id="aP-je-money" name="aP-je-money" type="text" class="validate">
+								<label for="aP-je-money">进出场费</label>
+							 </div>
+
+							<div class="input-field col s12 fl radio">
+								<dl class="clearfix">
+									<dt>司机确认</dt>
+									<dd class="fl">
+										<input class="with-gap" name="aP-driver1" type="radio" id="aP-driver11" />
+										<label for="aP-driver11">用户自己找司机</label>
+									</dd>
+									<dd class="fl">
+										<input class="with-gap" name="aP-driver1" type="radio" id="aP-driver12" checked/>
+										<label for="aP-driver12">神丰司机</label>
+									</dd>
+								</dl>
+							 </div>
+							
+							<div class="input-field col s12 fl">
+								<input id="aP-time1" name="aP-time1" type="text" class="validate date-time">
+								<label for="aP-time1">预计进场时间</label>
+							 </div>
+							
+							<div class="input-field col s12 fl">
+								<input id="aP-time2" name="aP-time2" type="text" class="validate date-time">
+								<label for="aP-time2">预计出场时间</label>
+							 </div>
+							
+					
+							<div class="input-field col s12 fl">
+								<input id="aP-note" name="aP-note" type="text" class="validate">
+								<label for="aP-note">备注</label>
+							 </div>
+						</div>
+					</div>
+					
+					<ul class="aP-footer clearfix tc add-footer">
+						<li class="fl cur save">保存项目</li>
+						<li class="fl cur">新增司机</li>
+					</ul>
+				</div>
+				
+				<!--新增司机-->
+				<div class="addDriver pf">
+					<ul class="aD-header clearfix add-header">
+						<li class="fl">新增司机</li>
+						<li class="fr">
+							<img class="cur minDisplay" src="img/scale-hide.png" width="16" alt="" />
+							<img class="cur change" src="img/scale-big.png" width="16" alt="" />
+							<img class="cur addClose" src="img/scale-remove.png" width="16" alt="" />
+						</li>
+					</ul>
+					<div class="aD-content">
+						<div class="aD-content-wrap clearfix add-wrap">
+							<div class="input-field col s12 fl">
+								<input id="aD-name" name="aD-name" type="text" class="validate">
+								<label for="aD-name">司机姓名</label>
+							 </div>
+
+							<div class="input-field col s12 fl">
+								<input id="aD-id" name="aD-id" type="text" class="validate">
+								<label for="aD-id">身份证号</label>
+								<span class="dis-n pa" style="top:30px">格式错误</span>
+							 </div>
+						
+							<div class="input-field col s12 fl">
+								<input id="aD-tel" name="aD-tel" type="text" class="validate tel">
+								<label for="aD-tel">联系电话</label>
+								<span class="dis-n pa" style="top:30px;">格式错误</span>
+							 </div>
+
+							<div class="input-field col s12 fl radio">
+								<dl class="clearfix">
+									<dt>工资类型</dt>
+									<dd class="fl">
+										<input class="with-gap" name="aD-receive" type="radio" id="aD-receive1"/>
+										<label for="aD-receive1">月工资</label>
+									</dd>
+									<dd class="fl">
+										<input class="with-gap" name="aD-receive" type="radio" id="aD-receive2" checked/>
+										<label for="aD-receive2">包干工资</label>
+									</dd>
+								</dl>
+							 </div>
+					
+							<div class="input-field col s12 fl">
+								<input id="aD-pay" name="aD-pay" type="text" class="validate">
+								<label for="aD-pay">工资</label>
+							 </div>
+
+							<div class="input-field col s12 fl radio">
+								<dl class="clearfix">
+									<dt>司机安全教育</dt>
+									<dd class="fl">
+										<input class="with-gap" name="aD-re-type" type="radio" id="aD-re-type1" />
+										<label for="aD-re-type1">完成</label>
+									</dd>
+									<dd class="fl">
+										<input class="with-gap" name="aD-re-type" type="radio" id="aD-re-type2" checked/>
+										<label for="aD-re-type2">未完成</label>
+									</dd>
+								</dl>
+							 </div>
+						</div>
+					</div>
+					
+					<ul class="aD-footer clearfix tc add-footer">
+						<li class="fl cur save">保存</li>
+						<li class="fl cur">新增司机</li>
+						<li class="fr cur">
+							<img src="img/download.png" width="24" alt="" title="下载"/>
+						</li>
+					</ul>
+				</div>
+
+				<!--删除项目(类似模态)-->
+				<div class="delProject pa clearfix dis-n">
+					<div class="dp-title fw">删除项目</div>	
+					<div class="dp-cont">是否确认删除选中的项目？</div>
+					<ul class="dp-btn fr">
+						<li class="fr cur dp-sure">确认</li>
+						<li class="fr cur dp-cancel">取消</li>
+					</ul>
+				</div>
+
+				<!--删除设备(类似模态)-->
+				<div class="delShebei pa clearfix dis-n">
+					<div class="dp-title fw">删除设备</div>	
+					<div class="dp-cont">是否确认删除选中的设备？</div>
+					<ul class="dp-btn fr">
+						<li class="fr cur dp-sure">确认</li>
+						<li class="fr cur dp-cancel">取消</li>
+					</ul>
+				</div>
+	
+				<!--日期-->
+				<div class="date-wrap pr clearfix">
+					<div class="date fr cur">
+						<a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='date-dropdown1'>
+							<img class="vm" src="img/cal.png" width="18" alt="">
+							<span class="vm dateSelect">05/2017</span>
+							<img class="vm" src="img/down.png" alt="">
+						</a>
+					</div>
+					<ul id='date-dropdown1' class="dropdown-content pr">
+						<!--
+						<li>2017年7月</li>
+						<li>2017年6月</li>
+						<li>2017年5月</li>
+						<li>2017年4月</li>
+						<li>2017年3月</li>
+						<li>2017年2月</li>
+						<li>2017年1月</li>
+						-->
+					</ul>
+				</div>
+
+				<!--项目名称1-->
+				<div class="pro">
+					<div class="project">
+						<strong class="dis-b">项目名称1</strong>
+						<div class="pro-infor clearfix">
+							<ul class="infor-list fl">
+								<li class="fl">数量：<span>20</span></li>
+								<li class="fl">进出场费：￥<span>2000</span>元</li>
+								<li class="fl">司机费用：￥<span>2000</span>元</li>
+								<li class="fl">租金：￥<span>2000</span>元</li>
+								<li class="fl">预计进场时间：<span>2017/05/14</span></li>
+								<li class="fl">预计出场时间：<span>2017/05/14</span></li>
+							</ul>
+							<ul class="action fr pr">
+								<li class="titbg fh">
+									<div>合计：￥<span>3500</span>元</div>
+								</li>
+								
+								<li class="titImg tc pa">
+									<a class="waves-effect waves-light btn header-modal vm" href="#addShebei" style="margin:0px 0 0;padding:0;" title="新增设备">
+										<img class="dis-inb" src="img/tab.png" alt="" title="新增设备" width="18">
+									</a>
+									<a class="waves-effect waves-light btn header-modal vm" href="#editorProject" style="margin:-2px 8px 0;padding:0;" title="编辑项目">
+										<img class="dis-inb" src="img/editorw.png" alt="" title="编辑项目" width="18">
+									</a>
+									<img class="dis-inb del-pro vm cur" src="img/delw.png" alt="" title="删除项目" width="14">
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="pro-name fl">
+										<img class="vm" src="img/main_icon01.png" width="24" alt="">
+										<span class="vm fw">MT127345</span>
+									</li>
+									<li class="pro-progress fl">
+										<div class="big">
+											<div class="small pr">
+												<div class="cir pa br"></div>
+											</div>
+										</div>
+									</li>
+									<li class="pro-step fl">阶段：<span class="rt-border">设备报装</span></li>
+									<li class="pro-address fl">安装地点：<span class="rt-border">世纪大道A座</span></li>
+									<li class="pro-notice fl">
+										<img class="vm" src="img/noticeIcon.png" width="14" alt="">
+										<span class="vm">通知</span>
+										<div class="dis-inb br vm pr"><span class="pa">1</span></div>
+									</li>
+									<li class="pro-warn fl">
+										<img class="vm" src="img/warnIcon.png" width="14" alt="">
+										<span class="vm">警告</span>
+										<div class="dis-inb br vm pr"><span class="pa">10</span></div>
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">MT127324</li>
+									<li class="address fl">安装地点：<span>世纪大道A座</span></li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb vm" src="img/split.png" alt="" title="数据中心" width="18">
+									<a class="waves-effect waves-light btn header-modal vm" href="#editorSheibei" title="编辑设备">
+										<img class="dis-inb" src="img/editor.png" alt="" title="编辑设备" width="18">
+									</a>
+									<img class="dis-inb del-shebei vm" src="img/del.png" alt="" title="删除设备" width="12">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								
+								<ul class="step tc">
+									<li class="dis-inb">
+										<img class="vm" src="img/list1.png" alt="">
+										<span class="vm">前期沟通</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list2.png" alt="">
+										<span class="vm">设备报装</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list3.png" alt="">
+										<span class="vm">设备安装</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list4.png" alt="">
+										<span class="vm">设备启租</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list5.png" alt="">
+										<span class="vm">司机确认</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list6.png" alt="">
+										<span class="vm">设备维护</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list7.png" alt="">
+										<span class="vm">设备维修</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list8.png" alt="">
+										<span class="vm">设备加高</span>	
+										<span class="step-line vm"></span>
+									</li>
+									<li class="dis-inb">
+										<img class="vm" src="img/list9.png" alt="">
+										<span class="vm">拆除设备</span>	
+									</li>
+								</ul>
+								<ul class="step-cont pr">
+									<li class="pa">
+										<!--前期沟通-->
+										<div class="list list-rt">
+											<p class="text-title">进场沟通单</p>
+
+											<!--列表文本-->
+											<dl>
+												<dt>项目信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">项目名称：<span title="项目名称1">项目名称1</span></li>
+														<li class="fl">确认单号：<span title="001">001</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">出租方：<span title="神丰集团有限公司">神丰集团有限公司</span></li>
+														<li class="fl">承租方：<span title="上海一建有限公司">上海一建有限公司</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">工程地点：<span title="世纪大道">世纪大道</span></li>
+														<li class="fl">总包单位：<span title="上海总包有限公司">上海总包有限公司</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">监理单位：<span title="上海一建有限公司">上海一建有限公司</span></li>
+														<li class="fl">预计进场时间：<span title="2017/05/14">2017/05/14</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">预计出场时间：<span title="2017/05/14">2017/05/14</span></li>
+														<li class="fl">设备数量：<span title="3">3</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">租金：￥<span title="2000">2000</span>元</li>
+														<li class="fl">进出场费：￥<span title="2000">2000</span>元</li>
+													</ul>
+												</dd>
+												<dd class="nbt">
+													<ul class="clearfix">
+														<li class="fl">司机工资：￥<span title="2000">2000</span>元</li>
+														<li class="fl">项目负责人：<span title="13862973721">13862973721</span></li>
+													</ul>
+												</dd>
+												<dd class="nbt">
+													<div class="t-money tr">总金额：￥<span>6000</span>元</div>
+												</dd>
+											</dl>
+
+											<dl>
+												<dt>设备信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备品牌：<span title="神丰">神丰</span></li>
+														<li class="fl">设备型号：<span title="MT127456">MT127456</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">预埋件安装时间：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl">安装高度：<span title="10">10</span>米</li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">安装时间：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">租赁价格：￥<span title="1000">1000</span>元</li>
+														<li class="fl">使用时间：<span title="2017/05/14">2017/05/14</span></li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">前期沟通资料已确认没有问题</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+
+
+									<li class="pa">
+										<!--设备报装-->
+
+										<!--上传报装资料-->
+										<div class="add add-file tc">
+											<form action="">
+												<label class="dis-b tc" for="uploadFile"><img class="cur" src="img/uploadPic.png" width="48" alt=""></label>
+												<label class="dis-b tc cur waves-effect waves-light btn" for="uploadFile">选择照片上传报装资料</label>
+												<input class="dis-n" type="file" id="uploadFile"/>
+											</form>
+										</div>
+
+
+										<div class="list list-rt">
+											<p class="pic-title">报装资料</p>
+											
+											<!--列表图片-->
+											<ul class="pic col">
+												<li class="fh">
+													<img class="dis-b cur" src="img/bgPic.png" alt="">
+												</li>
+												<li class="fh">
+													<img class="dis-b cur" src="img/bgPic1.png" alt="">
+												</li>
+											</ul>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+										
+
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">报装资料已确认没有问题</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+
+
+									<li class="pa">
+										<!--设备安装-->
+										<!--申请现场技术交底-->
+										<div class="add add-file tc">
+											<form action="">
+												<label class="dis-b tc" for="uploadFile"><img class="cur" src="img/applyTec.png" width="48" alt=""></label>
+												<label class="dis-b tc cur waves-effect waves-light btn" for="uploadFile">申请现场技术交底</label>
+												<input class="dis-n" type="file" id="uploadFile"/>
+											</form>
+										</div>
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">现场技术已交底，请确认</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<!--右侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">现场技术交底已确认没有问题</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+
+										<!--上传安装资料-->
+										<div class="add add-file tc">
+											<form action="">
+												<label class="dis-b tc" for="uploadFile"><img class="cur" src="img/uploadPic.png" width="48" alt=""></label>
+												<label class="dis-b tc cur waves-effect waves-light btn" for="uploadFile">选择照片上传安装资料</label>
+												<input class="dis-n" type="file" id="uploadFile"/>
+											</form>
+										</div>
+											
+										<!--图片水平-->
+										<div class="list list-rt">
+											<p class="pic-title">安装时间：<span>2017/05/10</span></p>
+											
+											<!--列表图片-->
+											<ul class="pic row clearfix">
+												<li class="fl fh">
+													<img class="dis-b cur" src="img/table.png" alt="">
+												</li>
+												<li class="fl fh">
+													<img class="dis-b cur" src="img/table.png" alt="">
+												</li>
+											</ul>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										
+										</div>
+										
+
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">安装后检查已确认没有问题</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+										<!--上传三方凭证-->
+										<div class="add add-file tc">
+											<form action="">
+												<label class="dis-b tc" for="uploadFile"><img class="cur" src="img/uploadPic.png" width="48" alt=""></label>
+												<label class="dis-b tc cur waves-effect waves-light btn" for="uploadFile">选择照片上传三方凭证</label>
+												<input class="dis-n" type="file" id="uploadFile"/>
+											</form>
+										</div>
+
+
+										<!--验收凭证-->
+										<div class="list list-rt">
+											<p class="pic-title">第三方验证凭证</p>
+											
+											<!--列表图片-->
+											<ul class="pic col">
+												<li class="fh">
+													<img class="dis-b cur" src="img/test.png" alt="">
+												</li>
+												
+											</ul>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+											
+										
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">第三方检验机构三方联合验收已确认没有问题</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+										
+										<!--报告-->
+										<dl class="report clearfix">
+											<dt class="r-title fw tc">设备安装报告</dt>
+											<dd class="r-cont">
+												<span class="fl vm">现场技术交底</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="r-cont">
+												<span class="fl vm">安装后检查</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="r-cont">
+												<span class="fl vm">第三方检测机构三方联合验收</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="pr">
+												<img class="pa" src="img/pass.png" width="100" alt="">
+											</dd>
+										</dl>
+
+									</li>
+
+
+									<li class="pa">
+										<!--设备启租-->
+
+										<!--新增单-->
+										<div class="add tc">
+											<a class="waves-effect waves-light btn" href="#modal1-0"><img class="cur" src="img/add.png" alt=""></a>
+											<a class="waves-effect waves-light btn add-btn dis-b cur" href="#modal1-0">新增启租单</a>
+										</div>
+										
+										<!--启租单-->
+										<div class="list list-rt">
+											<p class="text-title">启租单</p>
+
+											<!--列表文本-->
+											<dl>
+												<dt>使用移交书</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备编号：<span title="MT127456">MT127456</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">项目负责人：<span title="深泽直人">深泽直人</span></li>
+														<li class="fl">联系电话：<span title="13864751323">13864751323</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">启租时间：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl">产权备案号：<span title="284894222">284894222</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">检查单位：<span title="上海一建有限公司">上海一建有限公司</span></li>
+														<li class="fl">检测报告编号<span title="83839422">83839422</span></li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										
+										</div>
+
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">使用移交书已确认，确认开始</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>	
+
+									</li>
+
+
+									<li class="pa">
+										<!--司机确认-->
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">用户自己找司机，请确认</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+
+										</div>
+
+
+										<!--司机人员清单-->
+										<div class="list list-rt">
+											<p class="text-title">司机人员单</p>
+
+											<!--列表文本-->
+											<dl>
+												<dt>司机信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">司机姓名：<span title="吴金波">吴金波</span></li>
+														<li class="fl">身份证号：<span title="320682342353453">320682342353453</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">联系电话：<span title="13878393431">13878393431</span></li>
+														<li class="fl">工资类型：<span title="月工资">月工资</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">工资：￥<span title="3000">3000</span>元</li>
+														<li class="fl">司机安全教育：<span title="已完成">已完成</span></li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+												<dt></dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">司机姓名：<span title="吴金波">吴金波</span></li>
+														<li class="fl">身份证号：<span title="320682342353453">320682342353453</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">联系电话：<span title="13878393431">13878393431</span></li>
+														<li class="fl">工资类型：<span title="月工资">月工资</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">工资：￥<span title="3000">3000</span>元</li>
+														<li class="fl">司机安全教育：<span title="已完成">已完成</span></li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--时间人员-->
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+											
+										
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">司机人员合同清单已确认</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									
+									
+									<li class="pa">
+										<!--设备维护-->
+
+										<div class="list list-lf">
+											<p class="text-title">设备维护单</p>
+
+											<!--设备维护单-->
+											<dl>
+												<dt>设备信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备型号：<span title="MT127456">MT127456</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+														
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl admin">项目负责人：<span title="深泽直人">深泽直人</span></li>
+														<li class="fl">联系电话：<span title="13862974832">13862974832</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl s-date">开始维护日期：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl e-date">结束维护日期：<span title="2017/05/22">2017/05/22</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl" style="width:60px;">维护内容：</li>
+														<li class="fl mcCont" style="width:295px;">
+															<span title="bear">开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期开始维护日期</span>
+														</li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--人员时间-->
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已确认时间并发起维护</span>
+											</div>
+											
+										</div>
+
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备维护时间已确认，稍后立即安排维护</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已完成维保</span>
+											</div>
+										</div>
+
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备已完成维护，请稍后确认</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										</div>
+										
+
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">设备维护内容验收已通过</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+
+										<!--设备锁机-->
+										<div class="add add-lock tc">
+											<a class="waves-effect waves-light btn" href="javascript:void(0);"><img class="cur" src="img/lock.png" alt=""></a>
+											<a class="waves-effect waves-light btn add-btn dis-b cur" href="javascript:void(0);">设备锁机</a>
+										</div>
+
+									</li>
+
+
+									<li class="pa">
+										<!--设备维修-->
+									
+										<div class="list list-lf">
+											<p class="text-title">故障告知单</p>
+
+											<!--故障告知书-->
+											<dl>
+												<dt>设备信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备型号：<span title="MT127456">MT127456</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+														
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl admin">项目负责人：<span title="深泽直人">深泽直人</span></li>
+														<li class="fl">联系电话：<span title="13862974832">13862974832</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl s-date">开始维护日期：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl e-date">结束维护日期：<span title="2017/05/22">2017/05/22</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl" style="width:60px;">维修内容：</li>
+														<li class="fl m-cont" style="width:295px;">
+															<span title="bear">设备启动不了</span>
+														</li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--人员时间-->
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+
+											<div class="button clearfix">
+												<a class="header-modal vm wx-btn" href="#addPerson" style="height:25px;box-shadow:none">
+													<span class="fl waves-effect waves-light btn" style="line-height:25px;padding:0 10px;">已确认时间，并发起维修</span>
+												</a>
+											</div>
+
+										</div>
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备维修时间已确认，稍后立即安排维修</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已完成维修</span>
+											</div>
+										</div>
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备已完成维修，请稍后确认</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<!--右侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">设备维修内容验收已通过</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+
+
+									<li class="pa">
+										<!--设备加高-->
+
+										<div class="list list-lf">
+											<p class="text-title">服务要求表</p>
+
+											<!--设备维护单-->
+											<dl>
+												<dt>设备信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备型号：<span title="MT127456">MT127456</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+														
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl admin">项目负责人：<span title="深泽直人">深泽直人</span></li>
+														<li class="fl">联系电话：<span title="13862974832">13862974832</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl s-date">开始加高日期：<span title="2017/05/22">2017/05/22</span></li>
+														<li class="fl e-date">结束加高日期：<span title="2017/05/22">2017/05/22</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl" style="width:60px;">加高内容：</li>
+														<li class="fl m-cont" style="width:295px;">
+															<span title="10米">10米</span>
+														</li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--人员时间-->
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已确认时间并发起加高</span>
+											</div>
+											
+										</div>
+
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备加高时间已确认，稍后立即安排加高</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已完成加高</span>
+											</div>
+										</div>
+
+
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">设备已完成加高，请稍后确认</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										</div>
+
+
+										<!--左侧确认-->
+										<div class="confirm-lf">
+											<div class="con-title c-t-lf">
+												<img class="vm br" src="img/confirm.png" alt="">
+												<span class="vm">设备加高内容验收已通过</span>
+											</div>
+											
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+										</div>
+										
+									</li>
+									
+
+									<li class="pa">
+										<!--拆除设备-->
+									
+										<div class="list list-lf">
+											<p class="text-title">停租单</p>
+
+											<!--设备维护单-->
+											<dl>
+												<dt>设备信息</dt>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl">设备型号：<span title="MT127456">MT127456</span></li>
+														<li class="fl">安装地点：<span title="世纪大道A座">世纪大道A座</span></li>
+														
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl admin">项目负责人：<span title="深泽直人">深泽直人</span></li>
+														<li class="fl">联系电话：<span title="13862974832">13862974832</span></li>
+													</ul>
+												</dd>
+												<dd>
+													<ul class="clearfix">
+														<li class="fl s-date" style="width:60px;">拆机日期：</li>
+														<li class="fl" style="width:295px;"><span title="bear">2017/05/08 4:30</span></li>
+													</ul>
+												</dd>
+											</dl>
+
+											<!--人员时间-->
+											<div class="person-time clearfix">
+												<ul class="person fl pr">
+													<li>
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+													<li class="pa">
+														<div class="fw">朱晓晨</div>
+														<div>车间主任</div>
+													</li>
+												</ul>
+												<div class="time fr">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">费用已结清</span>
+												<span class="fl">费用未结清</span>
+											</div>
+											
+										</div>
+										
+
+										<!--驳回-->
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm red-text">费用未结清，请立即缴费</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+
+											<div class="button clearfix">
+												<span class="fl waves-effect waves-light btn">已完成维保</span>
+											</div>
+
+										</div>
+
+
+										<!--报告-->
+										<dl class="report clearfix">
+											<dt class="r-title fw tc">费用清算</dt>
+											<dd class="r-cont">
+												<span class="fl vm">经出场费（￥2000元）</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="r-cont">
+												<span class="fl vm">司机工资（￥2000元）</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="r-cont">
+												<span class="fl vm">租金（￥2000元）</span>
+												<img class="fr vm br" src="img/confirm.png" alt="">
+											</dd>
+											<dd class="pr">
+												<img class="pa" src="img/pass.png" width="100" alt="">
+											</dd>
+										</dl>
+
+										
+										<div class="confirm-rt">
+											<div class="con-title c-t-rt pr clearfix">
+												<span class="vm">费用已结清，立即安排拆机</span>
+												<img class="vm br pa" src="img/confirm.png" alt="">
+											</div>
+											
+											<div class="time-person clearfix">
+												<div class="time fl">
+													<img class="vm" src="img/time.png" alt="">
+													<span class="vm">2017/05/10 12:30</span>
+												</div>
+												<ul class="person fr pr">
+													<li>
+														<div class="fw">原研哉</div>
+														<div>车间主任</div>
+													</li>
+													<li class="pa">
+														<img class="circle" src="img/head.jpg" width="40" alt="">
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+
+				<!--项目名称2-->
+				<!-- comment   modal1-1 -->
+				<div class="pro">
+					<div class="project">
+						<strong class="dis-b">项目名称2</strong>
+						<div class="pro-infor clearfix">
+							<ul class="infor-list fl">
+								<li class="fl">数量：<span>20</span></li>
+								<li class="fl">进出场费：￥<span>2000</span>元</li>
+								<li class="fl">司机费用：￥<span>2000</span>元</li>
+								<li class="fl">租金：￥<span>2000</span>元</li>
+								<li class="fl">预计进场时间：<span>2017/05/14</span></li>
+								<li class="fl">预计出场时间：<span>2017/05/14</span></li>
+							</ul>
+							<ul class="action fr pr">
+								<li class="titbg fh"><div>合计：￥<span>3500</span>元</div></li>
+								<li class="titImg tc pa">
+									<a class="waves-effect waves-light btn header-modal vm" href="#addShebei" style="margin:0px 0 0;padding:0;" title="新增设备">
+										<img class="dis-inb" src="img/tab.png" alt="" title="新增设备" width="18">
+									</a>
+									<a class="waves-effect waves-light btn header-modal vm" href="#editorProject" style="margin:-2px 8px 0;padding:0;" title="编辑项目">
+										<img class="dis-inb" src="img/editorw.png" alt="" title="编辑项目" width="18">
+									</a>
+									<img class="dis-inb del-pro vm cur" src="img/delw.png" alt="" title="删除项目" width="14">
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+
+
+					</ul>
+				</div>
+			
+				<!-- contl-服务评价模态 -->
+				<div id="comment" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">服务评价</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+					</div>
+					<div class="modal-content">
+						<!--星级评价-->
+						<ul class="com-star clearfix">
+							<li class="fl tc cur">
+								<img src="img/star.png" alt="">
+								<p>极差</p>
+							</li>
+							<li class="fl tc cur">
+								<img src="img/star.png" alt="">
+								<p>较差</p>
+							</li>
+							<li class="fl tc cur">
+								<img src="img/star.png" alt="">
+								<p>一般</p>
+							</li>
+							<li class="fl tc cur">
+								<img src="img/star.png" alt="">
+								<p class="cblue">不错</p>
+							</li>
+							<li class="fl tc cur">
+								<img src="img/ustar.png" alt="">
+								<p>很棒</p>
+							</li>
+						</ul>
+	
+						<div class="com-cont" contenteditable="true"> 
+							请写下您要对我们服务的评价！
+						</div>
+						
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存</a>
+					</div>
+				</div>
+
+				<!--cont1-新增设备模态-->
+				<div id="addShebei" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">新增设备</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+					</div>
+					<div class="modal-content">
+						
+						<ul class="select">
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="s-brand" name="s-brand" type="text" class="validate">
+									<label for="s-brand">设备品牌</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-num" name="s-num" type="text" class="validate">
+									<label for="s-num">设备型号</label>
+								 </div>
+								
+							</li>
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<input id="ymj-time" name="s-stime" type="text" class="validate s-stime date-time">
+									<label for="ymj-time">预埋件安装时间</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-high" name="s-high" type="text" class="validate high">
+									<label for="s-high">安装高度(米)</label>
+									<span class="dis-n pa">格式错误</span>
+								 </div>
+							</li>
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<input id="az-time" name="s-atime" type="text" class="validate s-atime date-time">
+									<label for="az-time">安装时间</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-position" name="s-position" type="text" class="validate">
+									<label for="s-position">安装地点</label>
+								 </div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="sy-time" name="s-utime" type="text" class="validate s-utime date-time">
+									<label for="sy-time">使用时间</label>
+								 </div>
+							</li>
+						</ul>
+
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存</a>
+					  <a href="javascript:void(0);" class="increase">继续增加</a>
+					</div>
+				</div>
+				
+				<!--cont1-编辑项目模态-->
+				<div id="editorProject" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">编辑项目</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+					</div>
+					<div class="modal-content">
+						
+						<ul class="select">
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-name" name="aP-name" type="text" class="validate">
+									<label for="aP-name">项目名称</label>
+								</div>
+								<div class="input-field col s12 fr">
+									<input id="aP-num" name="aP-num" type="text" class="validate">
+									<label for="aP-num">确认单编号</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-chuz" name="aP-chuz" type="text" class="validate">
+									<label for="aP-chuz">出租方</label>
+								</div>
+
+								<div class="input-field col s12 fr">
+									<input id="aP-chengz" name="aP-chengz" type="text" class="validate">
+									<label for="aP-Chengz">承租方</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<input id="aP-address" name="aP-address" type="text" class="validate">
+									<label for="aP-address">工程地点</label>
+								</div>
+
+								<div class="input-field col s12 fr">
+									<input id="aP-company1" name="aP-company1" type="text" class="validate">
+									<label for="aP-company1">总包单位</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-company2" name="aP-company2" type="text" class="validate">
+									<label for="aP-company2">监理单位</label>
+								</div>
+
+								<div class="input-field col s12 fr">
+									<input id="aP-money" name="aP-money" type="text" class="validate">
+									<label for="aP-money">租金</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<select class="aP-shebei" name="aP-shebei">
+										<option value="" disabled selected>选择设备品牌和型号</option>
+										<option value="1">选项 1</option>
+										<option value="2">选项 2</option>
+										<option value="3">选项 3</option>
+									</select>
+								</div>
+
+								<div class="input-field col s12 fr">
+									<input id="aP-shebei-num" name="aP-shebei-num" type="text" class="validate">
+									<label for="aP-shebei-num">设备数量</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-je-money" name="aP-je-money" type="text" class="validate">
+									<label for="aP-je-money">进出场费</label>
+								</div>
+
+								<div class="input-field col s12 fr radio">
+									<dl class="clearfix">
+										<dt>司机确认</dt>
+										<dd class="fl">
+											<input class="with-gap" name="aP-driver2" type="radio" id="aP-driver21" />
+											<label for="aP-driver21">用户自己找司机</label>
+										</dd>
+										<dd class="fl">
+											<input class="with-gap" name="aP-driver2" type="radio" id="aP-driver22" checked/>
+											<label for="aP-driver22">神丰司机</label>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-time1" name="aP-time1" type="text" class="validate date-time">
+									<label for="aP-time1">预计进场时间</label>
+								</div>
+
+								<div class="input-field col s12 fr">
+									<input id="aP-time2" name="aP-time2" type="text" class="validate date-time">
+									<label for="aP-time2">预计出场时间</label>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="aP-note" name="aP-note" type="text" class="validate">
+									<label for="aP-note">备注</label>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存</a>
+					</div>
+				</div>
+
+				<!--cont1-编辑设备模态-->
+				<div id="editorSheibei" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">编辑设备</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+					</div>
+					<div class="modal-content">
+						
+						<ul class="select">
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="s-brand" name="s-brand" type="text" class="validate">
+									<label for="s-brand">设备品牌</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-num" name="s-num" type="text" class="validate">
+									<label for="s-num">设备型号</label>
+								 </div>
+								
+							</li>
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<input id="ymj-time" name="s-stime" type="text" class="validate s-stime date-time">
+									<label for="ymj-time">预埋件安装时间</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-high" name="s-high" type="text" class="validate high">
+									<label for="s-high">安装高度(米)</label>
+									<span class="dis-n pa">格式错误</span>
+								 </div>
+							</li>
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<input id="az-time" name="s-atime" type="text" class="validate s-atime date-time">
+									<label for="az-time">安装时间</label>
+								 </div>
+
+								<div class="input-field col s12 fr">
+									<input id="s-position" name="s-position" type="text" class="validate">
+									<label for="s-position">安装地点</label>
+								 </div>
+							</li>
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="sy-time" name="s-utime" type="text" class="validate s-utime date-time">
+									<label for="sy-time">使用时间</label>
+								 </div>
+							</li>
+						</ul>
+
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存</a>
+					</div>
+				</div>
+
+				<!-- cont1-新增启租模态 -->
+				<div id="modal1-0" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">新增启租单</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+					</div>
+					<div class="modal-content">
+						<ul class="select">
+							<li class="clearfix">
+								
+								<div class="input-field col s12 fl">
+									<select class="admin" name="admin">
+									  <option value="" disabled selected>选择负责人</option>
+									  <option value="1">选项 1</option>
+									  <option value="2">选项 2</option>
+									  <option value="3">选项 3</option>
+									</select>
+								 </div>
+
+								 <div class="input-field col s12 fr">
+									<input id="sqz-data" name="s-data" type="text" class="validate s-data onlyDate">
+									<label for="sqz-data">起租日期</label>
+								 </div>
+								
+							</li>
+						
+							<li class="clearfix">
+								 <div class="input-field col s12 fl">
+									<!--<input id="sqz-time" name="s-time" type="text" class="validate s-time onlyTime">-->
+									<input id="sqz-time" name="s-time" type="text" class="validate s-time pr timeOnly">
+									<label for="sqz-time">起租时间</label>
+								 </div>
+								
+								<div class="input-field col s12 fr">
+									<input id="b-num" name="b-num" type="text" class="validate">
+									<label for="b-num">产权备案号</label>
+								 </div>
+						
+							</li>
+
+							<li class="clearfix">
+								<div class="input-field col s12 fl">
+									<input id="b-company" name="b-company" type="text" class="validate">
+									<label for="b-company">检测单位</label>
+								 </div>
+
+								 <div class="input-field col s12 fr">
+									<input id="b-id" name="b-id" type="text" class="validate">
+									<label for="b-id">检测报告编号</label>
+								 </div>
+							</li>
+						</ul>
+
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">修改保存</a>
+					</div>
+				</div>
+
+				<!--cont1-选择维修人员-->
+				<div id="addPerson" class="modal">
+					<div class="modal-header clearfix">
+						<span class="modal-title fl fw">选择维修人员</span>
+						<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+						<img class="pa cur searchPerson" src="img/search.png" width="24" alt="" title="搜索">
+						<input type="search" class="pa personSearch dis-n" placeholder="请输入搜索的维修人员">
+					</div>
+
+					<div class="modal-content">
+						
+						<div class="person-row clearfix">
+						
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+
+							<div class="p-list fl pr">
+								<input type="checkbox" class="filled-in" id="filled-in-box" name="p-charge" checked="checked" />
+								<label class="clearfix" for="filled-in-box">
+									<img class="br fl" src="img/head.jpg" width="36" alt="" />
+									<ul class="fl">
+										<li>
+											<span>朱晓程</span>
+											<span>项目经理</span>
+										</li>
+										<li>13865245678</li>
+									</ul>
+								</label>
+							</div>
+							
+						</div>
+
+					</div>
+					<div class="modal-footer clearfix">
+					  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">确定</a>
+					</div>
+				</div>
+			
+			</div>
+		</li>
+		<li class="cont dis-n pa">
+			<div class="cont-wrap cont2">
+				<!--内容区二：数据中心-->
+
+				<a class="btn-floating btn-large waves-effect waves-light red pf" href="#modal-cont2">日报</a>
+				
+				<div class="cpn-pdt pr clearfix">
+					<!--公司设备-->
+					<img class="fl" src="img/record.png" width="24" alt="">
+					<div class="cp-cont fl">
+						<span class="class1">上海一建有限公司</span>
+						<span class="cpn-line"></span>
+						<span class="class2">设备1</span>
+					</div>
+					<img class="pa" src="img/down.png" alt="" style="right:20px;top:26px;">
+					<ul class='menu1 pa dis-n'>
+						<li class="pr clearfix">
+							<span class="fl vm">上海中建一局</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+							<ul class="menu2 pa dis-n">
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备1</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备2</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备3</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备4</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备5</a></li>
+							</ul>
+						</li>
+						<li class="pr clearfix">
+							<span class="fl vm">项目2</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+							<ul class="menu2 pa dis-n">
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备1</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备2</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备3</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备4</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备5</a></li>
+							</ul>
+						</li>
+						<li class="pr clearfix">
+							<span class="fl vm">项目3</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+							<ul class="menu2 pa dis-n">
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备1</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备2</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备3</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备4</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备5</a></li>
+							</ul>
+						</li>
+						<li class="pr clearfix">
+							<span class="fl vm">项目4</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+							<ul class="menu2 pa dis-n">
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备1</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备2</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备3</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备4</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备5</a></li>
+							</ul>
+						</li>
+						<li class="pr clearfix">
+							<span class="fl vm">项目5</span>
+							<img class="fr vm" src="img/right.png" alt="" />
+							<ul class="menu2 pa dis-n">
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备1</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备2</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备3</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备4</a></li>
+								<li><a class="waves-effect waves-light btn" href="#modal-cont2">设备5</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<!-- Modal Structure -->
+					<div id="modal-cont2" class="modal">
+						<div class="modal-header clearfix">
+							<span class="modal-title fl">日报</span>
+							<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+						</div>
+						<div class="modal-content">
+							<!--日期-->
+							<div class="date-wrap pr">
+								<div class="date cur">
+									<a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='date-dropdown2'>
+										<img class="vm" src="img/cal.png" width="16" alt="">
+										<span class="vm dateSelect">2017/05/12</span>
+										<img class="vm" src="img/down.png" width="16" alt="">
+									</a>
+								</div>
+								<ul id='date-dropdown2' class="dropdown-content pr">
+									<!--
+									<li>2017/05/12</li>
+									<li>2017/05/11</li>
+									<li>2017/05/10</li>
+									<li>2017/05/09</li>
+									<li>2017/05/08</li>
+									<li>2017/05/07</li>
+									<li>2017/05/06</li>
+									-->
+								</ul>
+							</div>
+								
+							<div class="m-c-intro">
+								<h6 class="fw">施工电梯检查日报</h6>
+								<dl class="intro-list">
+									<dt class="light-green-text text-lighten-2">检查项目</dt>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">基础螺栓、导向轮、齿条、传动齿轮牢固</li>
+											<li class="fr light-blue-text text-lighten-2">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">传动机构工作正常、声音正常、润滑良好</li>
+											<li class="fr light-green-text text-lighten-2">已修复</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">传动机构工作正常、声音正常、润滑良好</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">吊笼无变形、损坏</li>
+											<li class="fr red-text">待修复</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">各制动器灵敏、可靠、摩擦表面无油</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">标准节螺栓齐全、无松动</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">附墙架链接牢固、无松动</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">电梯的前后门灵活、完整</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd>
+										<ul class="clearfix">
+											<li class="fl">电缆小车运行无障碍、电缆垂直</li>
+											<li class="fr light-blue-text">正常</li>
+										</ul>
+									</dd>
+									<dd></dd>
+								</dl>
+								<dl class="intro-report clearfix">
+									<dt class="fw">人工智能数据报告</dt>
+									<dd class="tc fl">
+										<img class="dis-b" src="img/safe.png" width="60" alt="">
+										<span>设备很安全</span>
+									</dd>
+									<dd class="tc fl">
+										<p><span class="fw">1000</span>kg</p>
+										<span>设备很安全</span>
+									</dd>
+									<dd class="tc fl">
+										<p><span class="fw">20</span>h</p>
+										<span>累计工作时间</span>
+									</dd>
+								</dl>
+							</div>
+
+						</div>
+						
+					</div>
+				
+				</div>
+				
+				<!--故障警告-->
+				<div class="cpn-warn red-text clearfix">
+					<h6>
+						<img class="vm" src="img/warnIcon.png" width="16" alt="">
+						<span class="vm">报警</span>
+					</h6>
+					
+					<div class="cpn-w-cont clearfix">
+						<ul class="fl">
+							<li class="clearfix">
+								<h2 class="fl fw">5</h2>
+								<span class="fr">次</span>
+							</li>
+							<li class="tc">电机过热</li>
+						</ul>
+					
+						<ul class="fl">
+							<li class="clearfix">
+								<h2 class="fl fw">1</h2>
+								<span class="fr">次</span>
+							</li>
+							<li class="tc">上行超速</li>
+						</ul>
+						
+						<ul class="fl">
+							<li class="clearfix">
+								<h2 class="fl fw">1</h2>
+								<span class="fr">次</span>
+							</li>
+							<li class="tc">下行超速</li>
+						</ul>
+					
+						<ul class="fl">
+							<li class="clearfix">
+								<h2 class="fl fw">1</h2>
+								<span class="fr">次</span>
+							</li>
+							<li class="tc">运行至上极限位置</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!--数据监控-->
+				<div class="cpn-watch">
+					<h6 class="fw">A1数据监测</h6>
+					<div class="cpn-w-cont fh">
+						<div class="cpn-w-map pr">
+							<!--显示地图-->
+							<div id="allmap"></div>
+							<!--地图上设备信息-->
+							<ul class="map-infor pa tc">
+								<li>
+									<img class="br" src="img/door.png" alt="">
+									<p>开关门次数</p>
+									<p class="fw">
+										<span>20</span>
+									</p>
+								</li>
+								<li>
+									<img class="br" src="img/wtime.png" alt="">
+									<p>累计工作时间</p>
+									<p class="fw">
+										<span>53</span>H
+										<span>14</span>M
+										<span>20</span>S
+									</p>
+								</li>
+							</ul>
+						</div>
+							
+						<!--代码故障-->
+						<div class="code-fault clearfix">
+							<ul class="cf-one fl red-text">
+								<li class="c-f-title">
+									<img class="vm" src="img/warnIcon.png" width="16" alt="">
+									<span class="vm">故障代码</span>
+								</li>
+								<li class="c-f-cont">远程预锁机开启，升降机将在实际运行12小时后锁机，可运行至最低楼层</li>
+							</ul>
+							<ul class="cf-two fr">
+								<li>
+									<div id="cf-two-1" class="echartDom" style="width:200px;height:200px;"></div>
+								</li>
+								<li>
+									<div id="cf-two-2" class="echartDom" style="width:200px;height:200px;"></div>
+								</li>
+							</ul>
+							<ul class="cf-three fl">
+								<li class="fl">
+									<div id="cf-three-1" class="echartDom" style="width:180px;height:150px;"></div>
+								</li>
+								<li class="fl">
+									<div id="cf-three-2" class="echartDom" style="width:180px;height:150px;"></div>
+								</li>
+								<li class="fl">
+									<div id="cf-three-3" class="echartDom" style="width:180px;height:150px;"></div>
+								</li>
+								<li class="fl">
+									<div id="cf-three-4" class="echartDom" style="width:180px;height:150px;"></div>
+								</li>
+								<li class="fl">
+									<div id="cf-three-5" class="echartDom" style="width:180px;height:150px;"></div>
+								</li>
+							
+							</ul>
+						</div>
+
+						<!--折线图-->
+						<div class="chart clearfix">
+							<ul class="chart-lf fl">
+								<li class="tc">
+									<span>载重量</span>
+									<p class="fw"><span>1200</span>KG</p>
+								</li>
+								<li class="tc">
+									<span>超载</span>
+									<p class="fw"><span>4</span>次</p>
+								</li>
+								<li class="tc">
+									<span>超载量</span>
+									<p class="fw"><span>450</span>KG</p>
+								</li>
+							</ul>
+							<div class="chart-rt fr">
+								<div id="cf-four-1" class="echartDom" style="width:580px;height:380px;"></div>
+							</div>
+							<ul class="chart-infor fl tc clearfix">
+								<li class="fl fw">
+									<p><span>0</span>次</p>
+									<span>运行至上极限位置</span>
+								</li>
+								<li class="fl fw">
+									<p><span>0</span>次</p>
+									<span>运行至下极限位置</span>
+								</li>
+								<li class="fl fw">
+									<p><span>0</span>次</p>
+									<span>上行超速</span>
+								</li>
+								<li class="fl fw">
+									<p><span>0</span>次</p>
+									<span>下行超速</span>
+								</li>
+								<li class="fl fw">
+									<p><span>0</span>次</p>
+									<span>超过上行极限位置<br>/严重超速</span>
+								</li>
+								<li class="fl fw">
+									<p><span>4</span>次</p>
+									<span>电机过热</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>		
+
+			</div>
+		</li>
+		<li class="cont dis-n pa">
+			<div class="cont-wrap cont3">
+				<!--内容区三：消息中心-->
+				<!--故障通知-->
+				<div class="pro">
+					<div class="project">
+						
+						<ul class="pro-infor clearfix">
+							<li class="fl">
+								<img class="vm" src="img/warnIcon.png" width="16" alt="" />
+								<span class="vm red-text">故障通知</span>
+							</li>
+							<li class="fr">
+								<img class="vm cur" src="img/icon1.png" width="16" alt="" title="全部已读"/>
+								<img class="vm cur" src="img/icon2.png" width="12" alt="" title="删除"/>
+							</li>
+							
+						</ul>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+						
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/comIcon.png" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动不了，请立即来修理</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动不了，请立即来修理</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读"/>
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维修</span>
+									<span class="fl">已维修</span>
+								</div>
+								<div class="analysis pr">
+									<dl class="analysis-cont">
+										<dt class="fw">IVE分析</dt>
+										<dd>把设备重新启动一下</dd>
+										<dd>设备的电源有松动，请检查设备的电源</dd>
+										<dd>是否把开关给关闭了</dd>
+									</dl>
+									<div class="identity tc pa">
+										<img class="br" src="img/xwm.png" width="60" alt="" />
+										<p class="fw">IVE(小维)</p>
+									</div>
+								</div>
+
+
+							</div>
+						</li>
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/head.jpg" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维修</span>
+									<span class="fl">已维修</span>
+								</div>
+							
+								<div class="analysis pr">
+									<dl class="analysis-cont">
+										<dt class="fw">IVE分析</dt>
+										<dd>把设备重新启动一下</dd>
+										<dd>设备的电源有松动，请检查设备的电源</dd>
+										<dd>是否把开关给关闭了</dd>
+									</dl>
+									<div class="identity tc pa">
+										<img class="br" src="img/xwm.png" width="60" alt="" />
+										<p class="fw">IVE(小维)</p>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/head.jpg" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维修</span>
+									<span class="fl">已维修</span>
+								</div>
+							
+								<div class="analysis pr">
+									<dl class="analysis-cont">
+										<dt class="fw">IVE分析</dt>
+										<dd>把设备重新启动一下</dd>
+										<dd>设备的电源有松动，请检查设备的电源</dd>
+										<dd>是否把开关给关闭了</dd>
+									</dl>
+									<div class="identity tc pa">
+										<img class="br" src="img/xwm.png" width="60" alt="" />
+										<p class="fw">IVE(小维)</p>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/head.jpg" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备启动停在PY1无信号，变频器未接受到输入运行信号或变频器硬件故障</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维修</span>
+									<span class="fl">已维修</span>
+								</div>
+							
+								<div class="analysis pr">
+									<dl class="analysis-cont">
+										<dt class="fw">IVE分析</dt>
+										<dd>把设备重新启动一下</dd>
+										<dd>设备的电源有松动，请检查设备的电源</dd>
+										<dd>是否把开关给关闭了</dd>
+									</dl>
+									<div class="identity tc pa">
+										<img class="br" src="img/head.jpg" width="60" alt="" />
+										<p class="fw">IVE(小维)</p>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+
+					</ul>
+
+					<div class="more tc"><span class="cur">更多...</span></div>
+
+				</div>
+
+				<!--设备维护-->
+				<div class="pro">
+					<div class="project">
+						
+						<ul class="pro-infor clearfix">
+							<li class="fl">
+								<img class="vm" src="img/repair.png" width="16" alt="" />
+								<span class="vm red-text">设备维护</span>
+							</li>
+							<li class="fr">
+								<img class="vm cur" src="img/icon1.png" width="16" alt="" title="全部已读"/>
+								<img class="vm cur" src="img/icon2.png" width="12" alt=""  title="删除"/>
+							</li>
+							
+						</ul>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/head.jpg" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备已用一个月，需要立即维护检查</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备已用一个月，需要立即维护检查</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维护</span>
+									<span class="fl">已维修</span>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/comIcon.png" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备已用一个月，需要立即维护检查</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备已用一个月，需要立即维护检查</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起维护</span>
+									<span class="fl">已维修</span>
+								</div>
+							</div>
+						</li>
+
+
+					</ul>
+
+					<div class="more tc"><span class="cur">更多...</span></div>
+
+				</div>
+
+				<!--订单确认-->
+				<div class="pro">
+					<div class="project">
+						
+						<ul class="pro-infor clearfix">
+							<li class="fl">
+								<img class="vm" src="img/noticeIcon.png" width="16" alt="" />
+								<span class="vm blue-text">订单确认</span>
+							</li>
+							<li class="fr">
+								<img class="vm cur" src="img/icon1.png" width="16" alt="" title="全部已读"/>
+								<img class="vm cur" src="img/icon2.png" width="12" alt=""  title="删除"/>
+							</li>
+							
+						</ul>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/comIcon.png" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										确认了<span>项目名称1---设备号M1283、M2829、M9393、M9383</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										确认了<span>项目名称1---设备号M1283、M2829、M9393、M9383</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">确认</span>
+									<span class="fl">驳回</span>
+								</div>
+					
+							</div>
+						</li>
+
+
+					</ul>
+
+					<div class="more tc"><span class="cur">更多...</span></div>
+
+				</div>
+
+				<!--设备加高-->
+				<div class="pro">
+					<div class="project">
+						
+						<ul class="pro-infor clearfix">
+							<li class="fl">
+								<img class="vm" src="img/highIcon.png" width="16" alt="" />
+								<span class="vm blue-text">设备加高</span>
+							</li>
+							<li class="fr">
+								<img class="vm cur" src="img/icon1.png" width="16" alt="" title="全部已读"/>
+								<img class="vm cur" src="img/icon2.png" width="12" alt="" title="删除"/>
+							</li>
+							
+						</ul>
+					</div>
+					<ul class="collapsible popout" data-collapsible="accordion">
+						
+						<li>
+							<div class="collapsible-header pr">
+								
+								<ul class="pro-list clearfix">
+									<li class="fl">
+										<img class="vm br" src="img/comIcon.png" width="24" alt="">
+										<span class="vm fw">神风有限公司</span>
+									</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备需要加高10米</span>
+									</li>
+									<li class="fl">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+
+								<ul class="title clearfix dis-n">
+									<li class="name fl fw">神风有限公司</li>
+									<li class="fl">
+										<span>项目名称1</span>---
+										<span>M1234</span>---
+										<span>世纪大道A座</span>
+										<span>设备需要加高10米</span>
+									</li>
+									<li class="fr">
+										<img class="vm" src="img/time.png" alt="">
+										<span class="vm">2017/05/03 12:30</span>								
+									</li>
+								</ul>
+								
+								<div class="pro-list-action pa tc">
+									<img class="dis-inb" src="img/good.png" alt="" title="已读">
+									<img class="dis-inb" src="img/icon2.png" width="12" alt="" title="删除">
+								</div>
+							
+							</div>
+							<div class="collapsible-body">
+								<div class="button button-lf clearfix">
+									<span class="fl waves-effect waves-light btn">已核实并发起加高</span>
+									<span class="fl">已加高</span>
+								</div>
+
+							</div>
+						</li>
+			
+					</ul>
+
+					<div class="more tc"><span class="cur">更多...</span></div>
+
+				</div>
+	
+			</div>
+		</li>
+	</ul>
+  </div>
+
+    <!--头部模态弹框-->
+	<!-- header-个人资料模态 -->
+	<div id="person" class="modal">
+		<div class="modal-header clearfix">
+			<span class="modal-title fl fw">个人资料</span>
+			<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+		</div>
+		<div class="modal-content">
+			<!--个人资料-->
+			<ul class="select">
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="name" name="name" type="text" class="validate">
+						<label for="name">姓名</label>
+					 </div>
+
+					<div class="input-field col s12 fr">
+						<input id="work" name="work" type="text" class="validate">
+						<label for="work">职位</label>
+					 </div>
+					
+				</li>
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="company" name="company" type="text" class="validate">
+						<label for="company">公司名称</label>
+					 </div>
+
+					<div class="input-field col s12 fr">
+						<dl class="clearfix">
+							<dt>性别</dt>
+							<dd class="fl">
+								<input class="with-gap" name="sex" type="radio" id="man" checked />
+								<label for="man">男性</label>
+							</dd>
+							<dd class="fl">
+								<input class="with-gap" name="sex" type="radio" id="women" />
+								<label for="women">女性</label>
+							</dd>
+						</dl>
+					 </div>
+				</li>
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="phone" name="phone" type="text" class="validate">
+						<label for="phone">联系电话</label>
+						<span class="dis-n pa">格式错误</span>
+					 </div>
+
+					<div class="input-field col s12 fr">
+						<input id="number" name="number" type="text" class="validate">
+						<label for="number">身份证号</label>
+						<span class="dis-n pa">格式错误</span>
+					 </div>
+				</li>
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="location" name="location" type="text" class="validate">
+						<label for="location">所在地区</label>
+					 </div>
+				</li>
+			</ul>
+			
+		</div>
+		<div class="modal-footer">
+		  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存修改</a>
+		</div>
+	</div>
+
+	<!-- header-修改密码模态 -->
+	<div id="rwPassword" class="modal">
+		<div class="modal-header clearfix">
+			<span class="modal-title fl fw">修改密码</span>
+			<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+		</div>
+		<div class="modal-content">
+			<!--个人资料-->
+			<ul class="select">
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="oldPassword" name="oldPassword" type="text" class="validate">
+						<label for="oldPassword">原密码</label>
+					 </div>
+
+					<div class="input-field col s12 fr">
+						<input id="newPassword" name="newPassword" type="text" class="validate">
+						<label for="newPassword">新密码</label>
+					 </div>
+					
+				</li>
+				<li class="clearfix">
+					<div class="input-field col s12 fl">
+						<input id="surePassword" name="surePassword" type="text" class="validate">
+						<label for="surePassword">确认密码</label>
+					 </div>
+				</li>
+			</ul>
+			
+		</div>
+		<div class="modal-footer">
+		  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存修改</a>
+		</div>
+	</div>
+
+	<!-- contl-意见反馈模态 -->
+	<div id="advice" class="modal">
+		<div class="modal-header clearfix">
+			<span class="modal-title fl fw">意见反馈</span>
+			<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+		</div>
+		<div class="modal-content">	
+			<div class="com-cont" contenteditable="true" style="height:260px;"> 
+				请写下您要对我们说的话！
+			</div>
+			
+		</div>
+		<div class="modal-footer">
+		  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">提交</a>
+		</div>
+	</div>
+
+	<!-- header-上传个人照片模态 -->
+	<div id="uploadPic" class="modal">
+		<div class="modal-header clearfix">
+			<span class="modal-title fl fw">选择个人资料照片</span>
+			<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+		</div>
+		<div class="modal-content">
+			
+			<!--上传个人资料照片-->
+			<div class="add add-file tc">
+				<form action="">
+					<label class="dis-b tc" for="uploadFile"><img class="cur" src="img/uploadFile.png" width="48" alt=""></label>
+					<label class="dis-b tc cur" for="uploadFile">选择照片上传个人头像</label>
+					<input class="dis-n" type="file" id="uploadFile"/>
+				</form>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+		  <a href="javascript:void(0);" id="modal-save" class=" modal-action modal-close waves-effect waves-light btn modal-save">保存修改</a>
+		  <a href="javascript:void(0);" class="cancel">取消</a>
+		</div>
+	</div>
+
+	<!-- header-关于我们 -->
+	<div id="aboutUs" class="modal">
+		<div class="modal-header clearfix">
+			<span class="modal-title fl fw">关于我们</span>
+			<img class="m-h-close fr cur" src="img/remove.png" width="24" alt="">
+		</div>
+		<div class="modal-content">
+			<p class="about">Materialize-UI中文网 -- materialize.okgoes.com 创建于2016年。起因是国内没有较好的关于Materialize-UI的中文教程和交流渠道，因此，我们对Materialize-UI的文档进行了翻译整理，并且建立了QQ群和微博（@OKGOES），方便更多热爱这个CSS框架的攻城师们分享、交流自己在前端设计、开发方面的心得。Materialize-UI中文网 -- materialize.okgoes.com 创建于2016年。起因是国内没有较好的关于Materialize-UI的中文教程和交流渠道，因此，我们对Materialize-UI的文档进行了翻译整理，并且建立了QQ群和微博（@OKGOES），方便更多热爱这个CSS框架的攻城师们分享、交流自己在前端设计、开发方面的心得。</p>
+			<p class="about">Materialize-UI中文网 -- materialize.okgoes.com 创建于2016年。起因是国内没有较好的关于Materialize-UI的中文教程和交流渠道，因此，我们对Materialize-UI的文档进行了翻译整理，并且建立了QQ群和微博（@OKGOES），方便更多热爱这个CSS框架的攻城师们分享、交流自己在前端设计、开发方面的心得。</p>
+			<p class="about">Materialize-UI中文网 -- materialize.okgoes.com 创建于2016年。起因是国内没有较好的关于Materialize-UI的中文教程和交流渠道，因此，我们对Materialize-UI的文档进行了翻译整理，并且建立了QQ群和微博（@OKGOES），方便更多热爱这个CSS框架的攻城师们分享、交流自己在前端设计、开发方面的心得。</p>
+		</div>
+	</div>
+
+	<!--自定义时间选择器-->
+	<div class="wrap dis-n pa" onselectstart="return false;">
+		<div class="w-tp pr fh">
+			<ul class="w-tp-time">
+				<li class="num fl tc cur"><span>00</span></li>
+				<li class="fl tc">:</li>
+				<li class="num fl tc cur"><span>00</span></li>
+			</ul>
+			<ul class="w-tp-ma pa">
+				<li class="cur"><span>上午</span></li>
+				<li class="cur"><span>下午</span></li>
+			</ul>
+		</div>
+		<div class="w-cont">
+			<ul class="clock pr fh">
+				<li class="circle-line pa">
+					<div class="circle fh">
+						<div class="sm-circle"></div>
+					</div>
+					<div class="line"></div>
+				</li>
+				<li class="pa">
+					<ul class="number pa">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>11</li>
+						<li>12</li>
+					</ul>
+				</li>
+				<li class="pa cur">
+					<ul class="number pa">
+						<li>5</li>
+						<li>10</li>
+						<li>15</li>
+						<li>20</li>
+						<li>25</li>
+						<li>30</li>
+						<li>35</li>
+						<li>40</li>
+						<li>45</li>
+						<li>50</li>
+						<li>55</li>
+						<li>00</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="w-bt fr tc">
+				<span class="dis-inb cur">确认</span>
+				<span class="dis-inb cur">取消</span>
+			</div>
+		</div>	
+	</div>
+
+  <script type="text/javascript" src="js/part2.js"></script>
+</body>
+</html>

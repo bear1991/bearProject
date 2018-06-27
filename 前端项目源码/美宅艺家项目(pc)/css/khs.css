@@ -1,0 +1,85 @@
+/* 主体 */
+.picShow{
+    padding: 24px 0 16px;
+}
+
+
+.main>.contentWrap{
+    margin-bottom: 36px;
+    padding: 24px 0;
+    background: #E9E9E9;
+}
+
+.content{
+    height: 580px;
+    padding: 0;
+}
+
+.contLf{
+    width: 66%;
+    margin-right: 2%;
+}
+.playVideo{
+    height: 280px;
+}
+
+.commentWrap{
+    height: 300px;
+    padding: 2%;
+}
+.comment>p{
+    width: 36px;
+    margin-right: 12px; 
+    padding: 2px 10px;
+    background: #D6AC3C;
+}
+.comment>span{
+    line-height: 24px;
+}
+.form-control{
+    resize: none;
+}
+.publish{
+    margin: 4px 0;
+    padding: 3px 16px 0;
+    background: #D6AC3C;
+    color: #FFF
+}
+.rateWrap{
+    height: 130px;
+    margin: 12px 0;
+}
+.rateWrap>li>.left>p{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin: 4px auto; 
+}
+.rateWrap>li>.left>p>img{
+    max-width: 100%;
+    min-height: 100%;
+}
+.rateWrap>li>.right{
+    padding: 4px 0;
+}
+
+
+.contRt{
+    width: 32%;
+    padding: 12px 4px;
+}
+.contRt>img{
+    height: 30px;
+}
+.contRt>ul{
+    height: 472px;
+    margin: 12px 0;
+}
+.contRt>ul>li{
+    height: 152px;
+    margin:0 0 8px;
+    background: green;
+    color: #FFF;
+}

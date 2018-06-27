@@ -1,0 +1,12 @@
+/* 主体 */
+.main>.contentWrap{
+    margin-bottom: 36px;
+    padding: 24px 0;
+}
+.main>.contentWrap>.content{
+    min-height: 360px;
+    padding: 0;
+}
+
+
+

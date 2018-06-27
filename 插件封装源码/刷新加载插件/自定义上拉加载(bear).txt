@@ -1,0 +1,279 @@
+// html部分
+<div id="orderlist" style="overflow:hidden;">
+	<div class="dd-cx">
+		<div>
+			<div class="page">bear</div>
+			<div class="page">bear</div>
+			<div class="page">bear</div>
+			<div class="page">bear</div>
+			<div class="page">bear</div>
+		</div>
+		<div id="morePart">暂无更多信息</div>
+	</div>
+</div>
+
+
+
+// js部分
+// 上拉加载新数据(思路一)
+var oOrderlist = $('#orderlist'),
+    oOrderlistChild = oOrderlist.children('div').eq(0);
+var sPagey = 0;    // 保存初始y方向坐标
+var sMarginTop = 0;    // 保存初始marginTop值
+var direction = 0;   // 保存触摸移动方向，默认为0，静止
+
+
+// 获取最大marginTop值
+var maxTop = oOrderlistChild.height()+14-oOrderlist.height();
+// console.log('max', maxTop);
+
+if(maxTop>0){
+    $('#morePart .more>span').html("上拉加载信息");
+}
+
+oOrderlist[0].ontouchstart = touchStart;
+function touchStart(e) {
+    // console.log(e.originalEvent.changedTouches[0]);
+    oOrderlistChild[0].style.transition = "none";
+    direction = 0;
+
+    sMarginTop = parseInt(oOrderlistChild.css('marginTop'));
+    // console.log('s', sMarginTop);
+    sPagey = e.changedTouches[0].pageY;
+}
+
+oOrderlist[0].ontouchmove = touchMove;
+function touchMove(e){
+    var ePagey = e.changedTouches[0].pageY;
+    var eMarginTop = sMarginTop+ePagey-sPagey;
+
+    if(ePagey-sPagey>0){
+	direction = -1;     // 向下拉
+    }else if(ePagey-sPagey<0){
+	direction = 1;     // 向上拉
+    }
+
+    // 限制最小值
+    if(-eMarginTop >= maxTop+40 ){
+	oOrderlistChild[0].style.transition = "0.8s";
+	eMarginTop = -maxTop-40;
+    }
+    // 限制最大值
+    if(eMarginTop>=40){
+	oOrderlistChild[0].style.transition = "0.8s";
+	eMarginTop = 40;
+    }
+
+    // 当前内容没有超过外边框时
+    if(maxTop<0){
+	if(direction == -1){
+	    oOrderlistChild[0].style.transition = "0.8s";
+	    eMarginTop = 40;
+	}else{
+	    eMarginTop = 0;
+	}
+    }
+    // console.log('m', eMarginTop);
+    oOrderlistChild.css('marginTop', eMarginTop+'px');
+}
+
+oOrderlist[0].ontouchend = touchEnd;
+function touchEnd(e){
+    var sMarginTop = parseInt(oOrderlistChild.css('marginTop'));
+    oOrderlistChild[0].style.transition = "0.8s";
+    if(sMarginTop>=0){
+	oOrderlistChild.css('marginTop', 0);
+    }else if(sMarginTop<=-maxTop){
+	oOrderlistChild.css('marginTop', -maxTop+'px');
+	// 请求新数据
+	// 加载中提示
+	var loading = weui.loading('loading', {
+	    className: 'custom-classname'
+	});
+
+	setTimeout(function(){
+	    //请求新数据代码
+
+	    var state=$("#state").val();
+	    if (pagedata.currentPage<pagedata.totalPage){
+		$.ajax({
+		    data: {
+			"state": state,
+			"currentPage":pagedata.currentPage+1,
+			"totalPage":pagedata.totalPage
+		    },
+		    type: "POST",
+		    url: ctx + "/wechat/orderlistajax.do",
+		    dataType: "json",
+		    success: function (req) {
+			renderT(req,oOrderlistChild.children('div').eq(0),2);
+		    }
+		});
+	    }
+
+
+	    // 请求数据成功后，加载提示消失
+	    loading.hide(function() {
+	    });
+
+	    // 添加新数据成功后，需要重新确定maxTop
+	    maxTop = oOrderlistChild.height()+14-oOrderlist.height();
+
+	},800);
+
+    }else{
+	var prop = 1;
+	if(direction == -1){
+	    prop = 0.8;
+	}else if(direction == 1){
+	    prop = 1.4;
+	}
+
+	var eMarginTop = sMarginTop*prop;
+	if(eMarginTop>=0){
+	    eMarginTop = 0;
+	}
+	if(eMarginTop<=-maxTop){
+	    eMarginTop = -maxTop;
+	}
+	// console.log('e', eMarginTop);
+	oOrderlistChild.css('marginTop', eMarginTop+'px');
+    }
+}
+
+
+
+
+
+// 上拉加载新数据(思路二)
+var oOrderlist = $('#orderlist'),
+    oOrderlistChild = oOrderlist.children('div').eq(0);
+var sPagey = 0;    // 保存初始y方向坐标
+var sMarginTop = 0;    // 保存初始marginTop值
+var direction = 0;   // 保存触摸移动方向，默认为0，静止
+
+var sTime = '';     // 保存初始时间
+var position = 0;    // 保存触摸开始到触摸结束期间移动的距离
+
+// 获取最大marginTop值
+var maxTop = oOrderlistChild.height()+14-oOrderlist.height();
+// console.log('max', maxTop);
+
+if(maxTop>0){
+    $('#morePart .more>span').html("上拉加载信息");
+}
+
+oOrderlist[0].ontouchstart = touchStart;
+function touchStart(e) {
+    sTime = new Date();    // 获取触摸开始时时间
+
+    // console.log(e.originalEvent.changedTouches[0]);
+    oOrderlistChild[0].style.transition = "none";
+    direction = 0;
+
+    sMarginTop = parseInt(oOrderlistChild.css('marginTop'));
+    // console.log('s', sMarginTop);
+    sPagey = e.changedTouches[0].pageY;
+}
+
+oOrderlist[0].ontouchmove = touchMove;
+function touchMove(e){
+    var ePagey = e.changedTouches[0].pageY;
+    var eMarginTop = sMarginTop+ePagey-sPagey;
+
+    position = ePagey-sPagey;     // 获取每次触摸移动的距离
+
+    if(ePagey-sPagey>0){
+	direction = -1;     // 向下拉
+    }else if(ePagey-sPagey<0){
+	direction = 1;     // 向上拉
+    }
+
+    // 限制最小值
+    if(-eMarginTop >= maxTop+40 ){
+	oOrderlistChild[0].style.transition = "0.8s";
+	eMarginTop = -maxTop-40;
+    }
+    // 限制最大值
+    if(eMarginTop>=40){
+	oOrderlistChild[0].style.transition = "0.8s";
+	eMarginTop = 40;
+    }
+
+    // 当前内容没有超过外边框时
+    if(maxTop<0){
+	if(direction == -1){
+	    oOrderlistChild[0].style.transition = "0.8s";
+	    eMarginTop = 40;
+	}else{
+	    eMarginTop = 0;
+	}
+    }
+    // console.log('m', eMarginTop);
+    oOrderlistChild.css('marginTop', eMarginTop+'px');
+}
+
+oOrderlist[0].ontouchend = touchEnd;
+function touchEnd(e){
+    var eTime = new Date();    // 保存触摸离开时时间
+
+    var sMarginTop = parseInt(oOrderlistChild.css('marginTop'));
+    oOrderlistChild[0].style.transition = "0.8s";
+    if(sMarginTop>=0){
+	oOrderlistChild.css('marginTop', 0);
+    }else if(sMarginTop<=-maxTop){
+	oOrderlistChild.css('marginTop', -maxTop+'px');
+	// 请求新数据
+	// 加载中提示
+	var loading = weui.loading('loading', {
+	    className: 'custom-classname'
+	});
+
+	setTimeout(function(){
+	    //请求新数据代码
+
+	    var state=$("#state").val();
+	    if (pagedata.currentPage<pagedata.totalPage){
+		$.ajax({
+		    data: {
+			"state": state,
+			"currentPage":pagedata.currentPage+1,
+			"totalPage":pagedata.totalPage
+		    },
+		    type: "POST",
+		    url: ctx + "/wechat/orderlistajax.do",
+		    dataType: "json",
+		    success: function (req) {
+			renderT(req,oOrderlistChild.children('div').eq(0),2);
+		    }
+		});
+	    }
+
+
+	    // 请求数据成功后，加载提示消失
+	    loading.hide(function() {
+	    });
+
+	    // 添加新数据成功后，需要重新确定maxTop
+	    maxTop = oOrderlistChild.height()+14-oOrderlist.height();
+
+	},800);
+
+    }else{
+	if(direction == 0){
+	    position = 0;
+	}
+	var speed = position/(eTime-sTime);
+	console.log(speed);
+	var eMarginTop = sMarginTop+speed*160;
+
+	if(eMarginTop>=0){
+	    eMarginTop = 0;
+	}
+	if(eMarginTop<=-maxTop){
+	    eMarginTop = -maxTop;
+	}
+	// console.log('e', eMarginTop);
+	oOrderlistChild.css('marginTop', eMarginTop+'px');
+    }
+}

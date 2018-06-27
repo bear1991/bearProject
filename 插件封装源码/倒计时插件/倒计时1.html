@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+ </head>
+	<div id="bear"></div>
+ <body>
+  <script>
+  var oBear = document.getElementById("bear");
+  
+
+  var str = '01:01:10';
+  var timeArr = str.split(':');
+  timeReduce(oBear);
+  function timeReduce(obj){
+	  var timer = setTimeout(function(){
+		if(timeArr[2] == '00'){
+			timeArr[2] = 59;
+			if(timeArr[1] == '00'){
+				if(timeArr[0] != '00'){
+					timeArr[1] = 59;
+					timeArr[0] = timeFormat(timeArr[0]);
+				}
+			}else{
+				timeArr[1] = timeFormat(timeArr[1]);
+			}
+		}else{
+			timeArr[2] = timeFormat(timeArr[2]);
+		}
+		clearTimeout(timer);
+		obj.innerHTML = timeArr.join(':');
+		/*
+		if(timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0){
+			return;
+		}else{
+			timeReduce(obj);
+		}
+		*/
+		timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?'':timeReduce(obj);
+	  },1000);
+  }
+  function timeFormat(num){
+	/*
+	if(num.length==2&&num[0]==0){
+		num = num[1];
+	}
+	*/
+	num = num.length==2&&num[0]==0?num[1]:num;
+	num--;
+	/*
+	if(num < 10){
+		num = '0' + num
+	}
+	*/
+	num = num<10?'0'+num:num;
+	return num;
+  }
+  
+  </script>
+ </body>
+</html>

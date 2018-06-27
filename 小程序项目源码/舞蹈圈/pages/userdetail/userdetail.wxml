@@ -1,0 +1,16 @@
+<wxs src="../common.wxs" module="common" />
+<view class='container'>
+  <image class='img' src="{{user.avatar}}" binderror='error'></image>
+
+  <view class='follow' wx:if="{{user.isfollow == 0}}" catchtap='followCatchtap'>关注</view>
+  <view class='follow' wx:elif="{{user.isfollow == 1}}" catchtap='followCatchtap'>取消关注</view>
+
+  <view class='user_item_root'>
+    <view class='key'>昵称</view>
+    <view class='value'>{{user.user_nicename}}</view>
+  </view>
+  <view class='user_item_root'>
+    <view class='key'>联系方式</view>
+    <view class='value'>{{common.getMobile(user.mobile)}}</view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+/* pages/goodsdetail/goodsdetail.wxss */
+/* 商品详情 */
+@import "../../wxParse/wxParse.wxss";
+page,
+.container{
+  height: 100%;
+  background-color: #fff;
+}
+
+.content{
+  height: 100%;
+}
+.carouse{
+  height: 40%;
+}
+swiper{
+  height: 100%;
+}
+.swiperPic{
+  width: 100%;
+  height: 100%;
+}
+.name{
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: gray;
+}
+.price{
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: red;
+}
+.webcontent{
+  margin-top: 10rpx;
+  width: 100%;
+  margin: 0 40rpx;
+}
+.desc{
+  /* text-align: center; */
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: black;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.space{
+  height: 120rpx;
+}
+.btnContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  background-color: red;
+}
+.btn{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  vertical-align: middle;
+}
+.addCarBtn{
+  background-color: white;
+}
+.buyBtn{
+  background-color: red;
+  color: white;
+}

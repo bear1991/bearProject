@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>美美咱家</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mmzj.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="index">
+    <!-- logo、注册、登录 -->
+    <header class="clearfix">
+        <div class="header-wrap col-sm-8 col-sm-offset-2 dis-f">
+            <div class="header-left dis-f">
+                <img src="./images/index/logotext.png" alt="">
+                <div class="cur">
+                    <img src="./images/index/location.png" alt="">
+                    <span>上海</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="reg-login clearfix">
+                    <li class="fl">我有美宅/样板房征集</li>
+                    <li class="fr"><span>注册</span>/<span>登录</span></li>
+                </ul>
+                <div class="search pr fh">
+                    <input class="w100 h100 size12" type="text" placeholder="搜索品牌/单品/风格">
+                    <img class="pa cur" src="./images/index/searchicon.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="clearfix">
+        <ul class="col-sm-10 col-sm-offset-1 dis-f h100">
+            <li class="h100">
+                <span class="pr cur" type="index">首页</span>
+            </li>
+            <li class="pr h100">
+                <span class="pr cur" type="zzgy">住宅公寓</span>
+                <ul class="menu dis-n pa w100 bgw tc cur">
+                    <li><span>看看人家</span></li>
+                    <li><span>美美咱家</span></li>
+                    <li><span>就近逛逛</span></li>
+                    <li><span>美宅特色</span></li>
+                </ul>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="dzbs">大宅别墅</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mskz">民宿客栈</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mztx">美宅天下</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur">登堂入室</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="xmzx">小美在线</span>
+            </li>
+            <li class="h100">
+                <span class="pr cur" type="mzyj">美宅艺家</span>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- 主体 -->
+    <section class="main clearfix">
+        <section class="header col-sm-8 col-sm-offset-2 size18">
+            <span class="pr fw">美宅艺家</span>
+            <span class="fw">>></span>
+            <span class="currentColor">美美咱家</span>
+        </section>
+
+
+        <section class="picShow col-sm-8 col-sm-offset-2">
+            <img class="w100" src="../meizhai/images/mzjt/banner.png" alt="" srcset="">
+        </section>
+
+
+        <section class="contentWrap col-sm-12 clearfix">
+            <section class="content col-sm-8 col-sm-offset-2">
+               <div class="homeWrap pr">
+                   <img class="dis-b w100" src="./images/mmzj/bg.png" alt="">
+                   <div class="home pa w100 h100 tc">
+                        <div class="homeCont">
+                            <div class="homeLf col-xs-4 h100">
+                                <ul>
+                                    <li class="clearfix">
+                                        <img class="fl" src="./images/mmzj/five.png" alt="">
+                                        <input type="text" class="form-control fl size12" placeholder="小区名称">
+                                    </li>
+                                    <li class="clearfix pr">
+                                        <img class="fl" src="./images/mmzj/five.png" alt="">
+                                        <input type="text" class="form-control fl size12" placeholder="使用面积">
+                                        <span class="pa size12">m<sup>2</sup></span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img class="fl" src="./images/mmzj/five.png" alt="">
+                                        <input type="text" class="form-control fl size12" placeholder="房型">
+                                    </li>
+                                    <li class="dis-f">
+                                        <button class="btn btn-default size12 other" type="submit">尊享版</button>
+                                        <button class="btn btn-default size12" type="submit">唯美版</button>
+                                        <button class="btn btn-default size12 other" type="submit">精英版</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="homeRt col-xs-8 h100">
+                                <p class="tl size12">点击查看套餐效果图</p>
+                                <ul class="clearfix size12">
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">现代简约风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">地中海风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">欧式风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">现代简约风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">现代简约风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">地中海风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">欧式风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">地中海风格</li>
+                                    <li class="fl cur" data-toggle="modal" data-target=".bs-example-modal-lg">地中海风格</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-default" type="submit">下一步</button>
+                   </div>
+               </div>
+            </section>
+        </section>
+
+        <section class="footer graybg col-sm-8 col-sm-offset-2"></section>
+    </section>
+
+
+
+    <!-- 联系我们、地址 -->
+    <footer class="clearfix" id="mzyj">
+        <ul class="clearfix">
+            <li class="fl w50 dis-f">
+                <img src="./images/index/code.png" alt="">
+                <div class="dis-b">
+                    <img src="./images/index/logotext1.png" alt="" srcset="">
+                    <h5>扫描二维码了解更多</h5>
+                </div>
+            </li>
+            <li class="fl w50 dis-f">
+                <h5>联系我们</h5>
+                <h5>400-7676-399 ( 9:00-18:00 )</h5>
+            </li>
+        </ul>
+        <div class="address col-sm-8 col-sm-offset-2 tc">
+            <p>上海市闵行区申长路588号虹桥绿谷B座606</p>
+            <p>免责声明 Copyright &copy; 2018 美宅艺家 版权所有 沪ICP备 138000号</p>
+        </div>
+    </footer>
+
+
+    
+    <!-- 模态弹窗 -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- 轮播 -->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active dis-f">
+                            <img class="dis-b" src="./images/index/banner.png" alt="轮播图1">
+                        </div>
+                        <div class="item dis-f">
+                            <img class="dis-b" src="./images/index/pic.jpg" alt="轮播图2">
+                        </div>
+                        <div class="item dis-f">
+                            <img class="dis-b" src="./images/index/jg.jpg" alt="轮播图3">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/common.js"></script>
+  </body>
+</html>

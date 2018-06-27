@@ -1,0 +1,181 @@
+<!--pages/index/task/taskdetail/taskdetail.wxml-->
+<view class='container'>
+  <view class='task-step-list'>
+    <view class='task-step' wx:if='{{taskDetail.contractPlanType1List.length>0}}'>
+      <view class='step-title' data-index='0' catchtap='catchTaskStepTap'>
+        <text data-index='0'>进场</text>
+        <image class='{{imgRotateState[0]}}' src='../../../image/show.png' data-index='0'></image>
+      </view>
+      <view class='step-cont {{displayState[0]}}' wx:for='{{taskDetail.contractPlanType1List}}' wx:key='id'>
+        <view class='row'>
+          <text>分类：</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='col move'>
+          <view>  
+            <text>品种：</text>
+            <text>{{item.varietyName}}</text>
+          </view>
+          <view>
+            <text>单价：</text>
+            <text>{{item.singleprice}}元/unit</text>
+          </view>
+        </view>
+        <view class='col'>
+          <view>  
+            <text>计划数量：</text>
+            <text>{{item.num}}</text>
+          </view>
+          <view>
+            <text>实际数量：</text>
+            <text>{{item.relnum}}</text>
+          </view>
+        </view>
+        <view class='row'>
+          <text>计划开始时间：</text>
+          <text>{{item.startDate}}</text>
+        </view>
+        <view class='row'>
+          <text>计划结束时间：</text>
+          <text>{{item.endDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relStartDate}}'>
+          <text>实际开始时间：</text>
+          <text>{{item.relStartDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relEndDate}}'>
+          <text>实际结束时间：</text>
+          <text>{{item.relEndDate}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='task-step' wx:if='{{taskDetail.contractPlanType2List.length>0}}'>
+      <view class='step-title' data-index='1' catchtap='catchTaskStepTap'>
+        <text data-index='1'>辅材</text>
+        <image class='{{imgRotateState[1]}}' src='../../../image/show.png' data-index='1'></image>
+      </view>
+      <view class='step-cont {{displayState[1]}}' wx:for='{{taskDetail.contractPlanType2List}}' wx:key='id'>
+        <view class='row'>
+          <text>分类：</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='col move'>
+          <view>  
+            <text>品种：</text>
+            <text>{{item.varietyName}}</text>
+          </view>
+          <view>
+            <text>单价：</text>
+            <text>{{item.singleprice}}元/unit</text>
+          </view>
+        </view>
+        <view class='col'>
+          <view>  
+            <text>计划数量：</text>
+            <text>{{item.num}}</text>
+          </view>
+          <view>
+            <text>实际数量：</text>
+            <text>{{item.relnum}}</text>
+          </view>
+        </view>
+        <view class='row'>
+          <text>计划开始时间：</text>
+          <text>{{item.startDate}}</text>
+        </view>
+        <view class='row'>
+          <text>计划结束时间：</text>
+          <text>{{item.endDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relStartDate}}'>
+          <text>实际开始时间：</text>
+          <text>{{item.relStartDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relEndDate}}'>
+          <text>实际结束时间：</text>
+          <text>{{item.relEndDate}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='task-step' wx:if='{{taskDetail.contractPlanType3List.length>0}}'>
+      <view class='step-title' data-index='2' catchtap='catchTaskStepTap'>
+        <text data-index='2'>人工</text>
+        <image class='{{imgRotateState[2]}}' src='../../../image/show.png' data-index='2'></image>
+      </view>
+      <view class='step-cont {{displayState[2]}}' wx:for='{{taskDetail.contractPlanType3List}}' wx:key='id'>
+        <view class='row'>
+          <text>分类：</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='row'>
+          <text>计划栽植日期：</text>
+          <text>{{item.planDate}}</text>
+        </view>
+        <view class='row'>
+          <text>计划工种：</text>
+          <text>{{item.varietyName}}</text>
+        </view>
+        <view class='row'>
+          <text>计划人数：</text>
+          <text>{{item.num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='task-step' wx:if='{{taskDetail.contractPlanType4List.length>0}}'>
+      <view class='step-title' data-index='3' catchtap='catchTaskStepTap'>
+        <text data-index='3'>设备</text>
+        <image class='{{imgRotateState[3]}}' src='../../../image/show.png' data-index='3'></image>
+      </view>
+      <view class='step-cont {{displayState[3]}}' wx:for='{{taskDetail.contractPlanType4List}}' wx:key='id'>
+        <view class='col'>
+          <view>  
+            <text>分类：</text>
+            <text>{{item.title}}</text>
+          </view>
+          <view>
+            <text>机械名称：</text>
+            <text>{{item.varietyName}}</text>
+          </view>
+        </view>
+        <view class='col'>
+          <view>  
+            <text>计划数量或台班：</text>
+            <text>{{item.num}}</text>
+          </view>
+          <view>
+            <text>实际数量或台班：</text>
+            <text>{{item.relnum}}</text>
+          </view>
+        </view>
+        <view class='row'>
+          <text>计划开始时间：</text>
+          <text>{{item.startDate}}</text>
+        </view>
+        <view class='row'>
+          <text>计划结束时间：</text>
+          <text>{{item.endDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relStartDate}}'>
+          <text>实际开始时间：</text>
+          <text>{{item.relStartDate}}</text>
+        </view>
+        <view class='row' wx:if='{{item.relEndDate}}'>
+          <text>实际结束时间：</text>
+          <text>{{item.relEndDate}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class='task-step' wx:if='{{taskDetail.contractPlanAttachmentList.length>0}}'>
+      <view class='task-pic-list'>
+        <image mode='aspectFit' wx:for='{{taskDetail.contractPlanAttachmentList}}' wx:for-index='picIndex' wx:key='planId' class='task-pic' data-index='{{picIndex}}' data-picUrl='{{item.imgurl}}' catchtap='catchPreviewTap' src='{{item.imgurl}}'></image>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class='submit' wx:if='{{!taskDetail.confirmDate}}' catchtap='catchTaskSubmitTap'>
+    <button type='primary'>确认</button>
+  </view>
+
+</view>

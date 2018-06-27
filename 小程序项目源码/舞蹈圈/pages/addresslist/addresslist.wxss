@@ -1,0 +1,127 @@
+/* pages/addresslist/addresslist.wxss */
+page{
+  background: white;
+}
+.container{
+  /* position: relative; */
+  display: block;
+  background: #EFEFEF;
+}
+.container:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.addressList{
+  margin-bottom: 0;
+  /* margin-top: 20rpx; */
+  width: 100%;
+}
+.a-address{
+  background: #fff;
+  width: 100%;
+  height: 240rpx;
+}
+
+.up{
+  background-color: #0C1C6C; 
+  height: 33.3%;
+  width: 100%;
+}
+.up-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:row;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    transition: margin-left 0.2s ease-in-out;
+    background: url(https://cdn.it120.cc/images/weappshop/gou.png) no-repeat 30rpx center;
+    background-size: 35rpx auto; 
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+    font-size: 30rpx;
+}
+.up-cont.active{
+    background: url(https://cdn.it120.cc/images/weappshop/gou-red.png) no-repeat 30rpx center;
+    background-size: 35rpx auto; 
+}
+
+.title{
+  /* background: black; */
+  /* margin-left: 60rpx; */
+  width: 180rpx;
+  text-align: right;
+}
+
+.editBtn{
+  right: 170rpx;
+}
+
+.delBtn{
+  right: 10rpx;
+}
+.btn{
+  width: 150rpx;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn>image{
+  display: flex;
+  width: 37rpx;
+  height: 37rpx;
+  margin-left: 20rpx;
+}
+.btn>text{
+  display: flex;
+  margin-right: 20rpx;
+}
+
+.down{
+  height: 66.6666%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_top{
+  display: flex;
+  color: black;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  flex:1;
+  line-height: 80rpx;
+}
+
+.text_bottom{
+  display: flex;
+  color: gray;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  flex: 1;
+  /* line-height: 80rpx; */
+}
+
+
+.bottom-box{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size:28rpx;
+    color:#000000;
+    border-top: 1rpx solid #eee;
+    height:100rpx;
+    line-height: 100rpx;
+    background: #fff url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 705rpx center;
+    background-size: 15rpx auto;
+}
+.bottom-box .add-btn{
+    margin-left: 30rpx;
+    padding-left: 70rpx;
+    background: url(https://cdn.it120.cc/images/weappshop/add-addr.png) no-repeat left center;
+    background-size: 40rpx auto;
+}

@@ -1,0 +1,121 @@
+<!--pages/matdetail/matdetail.wxml-->
+<!-- <text>pages/matdetail/matdetail.wxml</text> -->
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<import src="../../templates/search/search.wxml" />   <!-- 引入搜索查询模板 -->
+<import src="../../templates/comment/comment.wxml" />    <!-- 引入评论列表模板 -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container {{slideupStatus?'hide':''}}">
+  <!-- 头部搜索、拍照、添加图片 -->
+  <template is="search" />
+
+  <!-- 比赛展图 -->
+  <view class="list">
+    <image src="{{common.delPicture(matDetailData.smeta).thumb}}"></image>
+    <view class="listInfo">
+      <view catchtap="activityCatchtap" data-index="{{matDetailData.id}}" data-islike="{{matDetailData.islike}}">
+        <image src="../../images/activity/{{matDetailData.islike==1?'yzan':'nzan'}}.png"></image>
+        <text>{{matDetailData.post_like}}</text>
+      </view>
+      <view>
+        <image src="../../images/activity/view.png"></image>
+        <text>{{matDetailData.post_hits}}</text>
+      </view>
+      <view>
+        <image src="../../images/activity/person.png"></image>
+        <text>{{matDetailData.number}}人</text>
+      </view>
+    </view>
+    <image class="picBack" src="../../images/activity/picBack.png" catchtap="backCatchtap"></image>
+  </view>
+
+  <!-- 比赛菜单 -->
+  <!--
+  <view class="menu">
+    <text class="{{menuStatus[0]?'active':''}}" catchtap="menuCatchtap" data-index="0">比赛详情</text>
+    <text>|</text>
+    <text class="{{menuStatus[1]?'active':''}}" catchtap="menuCatchtap" data-index="1">参赛选手</text>
+    <text>|</text>
+    <text class="{{menuStatus[2]?'active':''}}" catchtap="menuCatchtap" data-index="2">精选内容</text>
+  </view>
+  -->
+
+  <!-- 比赛说明 -->
+  <view class="intro">
+    <view class="title"><text>【比赛】{{matDetailData.post_title}}</text></view>
+    <view class="content">
+      <text>简介：{{matDetailData.post_keywords}}</text>
+
+      <!-- 富文本内容展示 -->
+      <view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    
+    </view>
+    <view class="time"><text>活动时间：{{matDetailData.start_date}}</text></view>
+    <view class="purchase">
+      <text wx:if="{{uploadText}}" catchtap="changeCatchtap" data-flag="{{matDetailData.flag}}">{{uploadText}}</text>
+      <button catchtap="attendCatchtap" data-index="{{matDetailData.id}}" data-flag="{{matDetailData.flag}}">{{matDetailData.flag==1?'已报名':'报名'}}</button>
+    </view>
+  </view>
+  
+
+  <!-- 晋级名单/比赛人员 -->
+  <view class="personListWrap">
+    <view class="personList" wx:for="{{personData}}" wx:key="title" wx:if="{{item.list.length}}">
+      <view class="title">
+        <text>{{item.title}}</text>
+        <!-- <text wx:if="{{item.list.length>=10}}" catchtap="moreCatchtap" data-index="{{item.index}}">更多</text> -->
+        <text catchtap="slideupCatchtap" data-index="{{index}}">更多</text>
+      </view>
+      <view class="person" wx:if="{{item.list.length}}">
+        <view wx:for="{{item.list}}" wx:for-item="itemItem" wx:key="id">
+          <image src="{{linkIpUpload}}{{itemItem.avatar}}"></image>
+          <text>{{itemItem.user_nicename}}</text>
+          <!-- <text>关注：{{itemItem.careNum}}</text> -->
+        </view>
+      </view> 
+    </view>
+  </view>
+
+  <!-- 精选酷图 -->
+  <!--
+  <view class="pictureListWrap">
+    <view class="pictureList">
+      <view class="title">
+        <text>精选酷图</text>
+      </view>
+      <view class="picture">
+        <image src="../../images/activity/lunbo.png"></image>
+      </view> 
+    </view>
+  </view> 
+  -->
+
+  <!-- 评论列表 -->
+  <template is="comment" data="{{...commentTemData}}"/>
+
+  <!-- 更多人员 -->
+  <view class="personShow {{slideupStatus?'slideup':''}}">
+    <view class="personList">
+      <view class="headerTitle">
+        <text>{{morePerson.title}}</text>
+        <image src="../../images/activity/exit.png" catchtap="slidedownCatch"></image>
+      </view>
+      <view class="personCont">
+        <scroll-view scroll-y class="scrollView">
+          <view class="scroll" wx:for="{{morePerson.list}}" wx:for-item="item" wx:key="id">
+            <image class="avatar" src="{{linkIpUpload}}{{item.avatar}}"></image>
+            <text>{{item.user_nicename}}</text>
+            <!-- <text>关注：{{itemItem.careNum}}</text> -->
+          </view>
+        </scroll-view>  
+      </view>
+    </view>
+  </view>
+</view>
+
+

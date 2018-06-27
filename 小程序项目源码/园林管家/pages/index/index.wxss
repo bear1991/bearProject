@@ -1,0 +1,109 @@
+/**index.wxss**/
+/*轮播*/
+.swiper-wrap{
+  position: relative;
+  width: 100%;
+  height: 388rpx;
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiperList-wrap{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  height: 20rpx;
+}
+.swiperList{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 16rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.active{
+  background: #FFF;
+}
+
+
+/*公告*/
+.notice{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 88rpx;
+  background: #FFF;
+}
+.notice-img{
+  align-self: center;
+}
+.notice-img>image{
+  width: 42rpx;
+  height: 45rpx;
+  margin:0 20rpx;
+}
+.notice-text{
+  align-self: center;
+  margin-right: 20rpx;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swiper-notice{
+  width: 668rpx;
+  height: 100%;
+}
+.notice-text>text{
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+/*功能分区*/
+.type{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 24rpx;
+  background: #FFF;
+  text-align: center;
+}
+.type-item{
+  width: 240rpx;
+  height: 208rpx;
+  margin: 0 0 0 6rpx;
+  padding-top: 60rpx;
+  background: #FFF;
+  border-right: 1rpx solid #E7E7E7;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.nrt-border{
+  border-right: none; 
+}
+.nbt-border{
+  border-bottom: none;
+}
+.type-item>image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom:16rpx; 
+}
+.type-item-text{
+  font-size: 30rpx;
+  color: #666666;
+}

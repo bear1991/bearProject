@@ -1,0 +1,44 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+	
+	.weui-search-bar__box .weui-search-bar__input{
+		height: 2em;
+	}
+
+	.weui-grids>.weui-grid{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.weui-grids>.weui-grid>div{
+		height: 40px;
+	}
+	.weui-grid__icon>img{
+		width: 40px;
+		height: 40px;
+	}   
+	.weui-grid__icon>.other{
+		width: 40px;
+		height: 10px;
+		margin-top: 16px;
+	}
+	.weui-grid__icon+.weui-grid__label{
+		margin-top: 0;
+		line-height: 40px;
+	}
+           

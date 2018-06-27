@@ -1,0 +1,38 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+
+
+	.container{
+		height: 92%;
+	}
+
+	.weui-media-box_text{
+		margin-bottom: 14px;
+	}
+	.weui-media-box_text .weui-media-box__title{
+		font-size: 15px;
+	}
+	.weui-media-box__desc{
+		color: inherit;
+	}
+	.weui-media-box__desc>div{
+		margin-bottom: 8px;
+	}
+	.weui-media-box__desc span{
+		color: #E74D50;
+	}

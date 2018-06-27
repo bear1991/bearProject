@@ -1,0 +1,77 @@
+/* pages/index/appoint/appoint.wxss */
+
+/****** 我的预约 ******/
+.appoint-list-wrap{
+  width: 100%;
+  height: 100%;
+  margin: 138rpx 0 132rpx; 
+  overflow-y: auto;
+}
+
+/******左侧内容区******/
+.an-date{
+  margin-right: 10rpx; 
+}
+
+
+/******右侧******/
+.appoint-now{
+  color: #757575;
+  font-size: 28rpx;
+}
+.action{
+  position: absolute;
+  right: 0;
+  bottom: 12rpx;
+  font-size: 32rpx;
+}
+.wait{
+  color: #D97273;
+}
+.sure{
+  color: #5CB55B;
+}
+
+/****** 底部进入预约按钮 ******/
+.submit{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #FFF;
+}
+.submit>button{
+  width: 90%;
+  margin: 20rpx auto;
+}
+
+.step-cont{
+  margin-bottom: 24rpx; 
+  padding:20rpx 0; 
+  background: #FFF;
+}
+.col,
+.row{
+  margin: 0 30rpx;
+  font-size: 30rpx;
+}
+.row,
+.col>view{
+  padding: 8rpx 0;
+}
+.col{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.col:last-child view:last-child{
+  line-height: 12rpx;
+}
+.step-cont>view:nth-child(2).col.move>view:first-child{
+  padding: 16rpx 0 0; 
+}
+
+/****** 上拉加载更多 ******/
+.loadMore{
+  bottom: 130rpx;
+}

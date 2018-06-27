@@ -1,0 +1,48 @@
+	html, body{
+		background: #F5F5F5;
+	}
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 8%;
+		background: #EEC434;
+	}
+	header>i:first-child{
+		margin-left: 5%
+	}
+	header>i:last-child{
+		margin-right: 5%; 
+	}
+
+	
+	.container{
+		margin-top: 3%;
+	}
+
+	.ecode-fail{
+		top: 36%;
+		left: 0;
+	}
+	.fa-times-circle{
+		margin-right: 12px;
+		font-size: 30px;
+		color: #E74D50;
+	}
+	.fa-times-circle+span{
+		font-size: 20px;
+	}
+	.knowBtn{
+		bottom: 0;
+		left: 0;
+		color: #999;
+	}
+	.knowBtn>div>span{
+		color: #E74D50;
+	}
+	.knowBtn>.weui-btn{
+		width: 94%;
+		margin: 8px auto 16px;
+		background: #EEC434;
+	}

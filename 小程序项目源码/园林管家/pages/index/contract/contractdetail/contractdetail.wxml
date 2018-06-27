@@ -1,0 +1,56 @@
+<!--pages/index/contract/contractdetail/contractdetail.wxml-->
+<view class='container'>
+  <view class='group-list'>
+    <view class='group-title'>
+      <text>基本信息</text>
+    </view>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>客户名称</text>
+        <text>{{contractDetail.customName}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>对应报价</text>
+        <text>{{contractDetail.quote}}元</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>付款方式</text>
+        <text>{{contractDetail.payWayName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='group-list'>
+    <view class='group-title'>
+      <text>合同信息</text>
+    </view>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>合同标题</text>
+        <text>{{contractDetail.contractName}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>合同标号</text>
+        <text>{{contractDetail.contractCode}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>开始时间</text>
+        <text>{{contractDetail.contractStartTime}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>截止时间</text>
+        <text>{{contractDetail.contractEndTime}}</text>
+      </view>
+      <view class='group-cont-list'>
+        <text>合同备注</text>
+        <text>{{contractDetail.note}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if='{{contractDetail.contractFileList.length>0}}' class='group-list'>
+    <view class='task-pic-list'>
+      <image mode='aspectFit' wx:for='{{contractDetail.contractFileList}}' wx:for-index='picIndex' wx:key='contractId' class='task-pic' data-index='{{picIndex}}' data-picUrl='{{item.fileLink}}' catchtap='catchPreviewTap' src='{{item.fileLink}}'></image>
+    </view>
+  </view>
+  
+</view>

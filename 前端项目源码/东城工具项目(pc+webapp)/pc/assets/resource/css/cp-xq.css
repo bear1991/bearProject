@@ -1,0 +1,51 @@
+/* 产品详情页中间内容部分 */
+#tab-content-list{
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px solid #EEE;
+}
+#tab-content-list>ul>li{
+    padding: 10px;
+}
+#tab-content-list>ul>li .pro-info>h4{
+    margin-top: 0;
+}
+#tab-content-list>ul>li .pro-info>ul{
+    margin: 16px 0;
+}
+#tab-content-list>ul>li .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+}
+#tab-content-list>ul>li .pro-info>p{
+    color: #787878;
+    font-size: 12px;
+}
+#tab-content-list>ul>li .pro-info>p>span:first-child{
+    padding: 2px 8px;
+    background: #D05A4E;
+    color: #FFF;
+}
+
+.join-shopcar{
+    margin-bottom: 16px;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.pro-detail>dt{
+    margin: 20px 0 8px;
+}
+.pro-detail>dt>span{
+    padding: 4px 12px;
+    background: #FAFAFA;
+}
+.pro-detail>dd{
+    padding: 4px;
+    font-size: 12px;
+}
+.pro-detail>dd>span:first-child{
+    width: 18%;
+    padding-left: 0;
+    color: #B1B1B1;
+}

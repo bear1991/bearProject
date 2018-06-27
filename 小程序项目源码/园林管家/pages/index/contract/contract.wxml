@@ -1,0 +1,44 @@
+<!--pages/index/contract/contract.wxml-->
+<view class='container'>
+  <view class='search-wrap'>
+    <view class='search'>
+      <input class='text' bindinput='bindSearchInput' value='{{inputVal}}'></input>
+      <icon type='search' size='22' color='green' catchtap='catchSearchTap'></icon>
+    </view>
+  </view>
+
+  <view class='contract-list-wrap'>
+    <view  wx:for='{{requestContent}}' wx:key='customId' class='step-cont' catchtap='catchContractdetailTap' data-contractDetail='{{item}}'>
+      <view class='col'>
+        <view>
+          <text>合同编号：</text>
+          <text>{{item.contractCode}}</text>
+        </view>
+        <view>
+          <text>{{item.createName}}</text>/
+          <text>{{item.classifyName}}</text>
+        </view>
+      </view>
+      <view class='col'>
+        <view>
+          <text>合同金额：</text>
+          <text>{{item.contractMoney}}元</text>
+        </view>
+        <view>
+          <text>{{item.payWayName}}</text>
+        </view>
+      </view>
+      <view class='col'>
+        <view>
+          <text>业务经理：</text>
+          <text>{{item.nickName}}</text>
+        </view>
+        <view>
+          <text>{{item.createTime}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,137 @@
+/* pages/index/appoint/appointsubmit/appointsubmit.wxss */
+
+.appointsubmit-list-wrap{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.group-list{
+  width: 100%;
+}
+
+.group-title{
+  padding: 30rpx;
+  color: #BBBBBB;
+  font-size: 32rpx;
+}
+
+.group-cont{
+  background: #FFF;
+}
+.group-cont-list{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #F6F6F6; 
+}
+.group-cont-list>text:last-child{
+  color: #BBBBBB;
+}
+
+.picker-select{
+  align-self: center;
+}
+.picker-text{
+  color: #BBBBBB;
+  vertical-align: middle;
+  font-size: 34rpx;
+}
+.picker-pic{
+  width: 24rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+.novertical{
+  vertical-align: none;
+}
+.group-cont-list>text{
+  margin: 30rpx 0;
+  font-size: 34rpx;
+}
+.group-cont-list>input{
+  width: 450rpx;  
+  margin: 30rpx 0;
+  text-align: right;
+  color: #BBBBBB;
+}
+
+
+/*自定义预约项目选择器*/
+.project-select-wrap{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+}
+.project-select{
+  position: absolute;
+  bottom: -560rpx;
+  left: 0;
+  width: 100%;
+  /*height: 560rpx;*/
+  height: 600rpx;
+  background: #FFF;
+}
+.cancel-sure{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  /*border: 1rpx solid #EDEDED;*/
+  font-size: 36rpx;
+}
+.select-cancel{
+  margin-left: 30rpx;
+  color: #888888;
+}
+.select-sure{
+  margin-right: 30rpx;
+  color: #1AAD19;
+}
+.project-select-cont{
+  width: 360rpx;
+  height: 300rpx;
+  margin: 80rpx auto 0;
+  padding: 20rpx 30rpx;
+  border: 2rpx solid #1AAD19;
+  border-left: none;
+  border-right: none; 
+}
+.project-checkbox-group{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.project-checkbox{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.project-checkbox-text{
+  margin-left: 10rpx;
+  font-size: 34rpx; 
+  align-self: center;
+}
+
+
+/****** 底部预约提交按钮 ******/
+.submit{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #FFF;
+}
+.submit>button{
+  width: 90%;
+  margin: 20rpx auto;
+}

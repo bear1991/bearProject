@@ -1,0 +1,47 @@
+<!--templates/comment/comment.wxml-->
+<!-- <text>templates/comment/comment.wxml</text> -->
+
+<!-- 评论列表模板 -->
+<template name="comment">
+  <view class="comment">
+    <view class="comNum"><text>{{newCommentDataLength}}条评价</text></view>
+    <view  wx:for="{{commentData}}" wx:key="id_comment">
+      <view class="comList" catchtap="replyComment" data-index="{{index}}">
+         <view class="left"><image src="{{item.avatar}}" binderror="errorFunction" catchtap='toDetail' data-index="{{index}}"></image></view>
+        <view class="center">
+          <text class="name">{{item.user_nicename}}</text>
+          <text class="cont">{{item.content}}</text>
+          <text class="time">{{item.create_time}}</text>
+        </view>
+        <view class="right" catchtap="comPraiseCatchtap" data-index="{{item.id}}" data-flag="{{item.flag}}">
+          <image class='headImg' src="../../images/activity/{{item.flag==1?'ygood':'ngood'}}.png"></image>
+          <text>{{item.praise_num}}</text>
+        </view> 
+        <!-- <view class='pcomList'>
+          <view class="pright" catchtap="comPraiseCatchtap" data-index="{{item.id}}" data-flag="{{item.flag}}">
+            <image class='headImg' src="../../images/activity/{{item.flag==1?'ygood':'ngood'}}.png"></image>
+            <text class='textNumber'>{{item.praise_num}}</text>
+          </view>
+          <view class='leftRoot'>
+            <view class="userHead"><image src="{{item.avatar}}" binderror="errorFunction" data-index="{{index}}"></image></view>
+            <view>
+              <text class="pname">{{item.user_nicename}}</text>
+              <text class="pcont">{{item.content}}</text>
+              <text class="ptime">{{item.create_time}}</text>
+            </view>
+          </view>
+        </view> -->
+      </view>
+      <view wx:if="{{item.reply != undefined}}" class='childRoot'>
+        <view class='childRow'>
+          <text class='childName'>@{{item.reply.user_nicename}}</text>
+          <text class='childContent'>{{item.reply.content}}</text>
+        </view>
+      </view>
+    </view>
+    
+
+    <view class="comNum comMore" wx:if="{{newCommentDataLength<10}}"><text>暂无更多评论</text></view>
+    <view class="comNum comMore" wx:else catchtap="moreCatchtap"><text>查看更多评论</text></view>
+  </view>
+</template>

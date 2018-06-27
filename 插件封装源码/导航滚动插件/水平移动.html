@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <style>
+  *{
+	margin: 0;
+	padding: 0;
+  }
+  ul>li{
+	list-style: none;
+  }
+
+
+  #wrap{
+	position: relative;
+	width: 800px;
+	height: 200px;
+	margin: 80px auto 20px;
+	border: 1px solid red;
+	color: #FFF;
+  }
+
+  #tab{
+	position: absolute;
+	top:20px;
+	right: -50px;
+	width:40px;
+  }
+  #tab>li{
+	width: 40px;
+	height: 40px;
+	margin: 4px 0;
+	background: red;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+  }
+
+  #contWrap{
+	overflow: hidden;
+  }
+  #contWrap, #cont{
+	height: 100%;
+  }
+  #cont{
+	transition: 0.4s;
+  }
+  #cont:after{
+	content: '';
+	display: block;
+	clear:both;
+  }
+  #cont>li{
+	float: left;
+	width:100px;
+	height:100%;
+	background:green;
+  }
+
+  #add{
+	width: 40px;
+	height:30px;
+	background: blue;
+	text-align: center;
+	line-height: 30px;
+  }
+	
+  </style>
+ </head>
+
+ <body>
+  <div id="wrap">
+	<ul id="tab">
+		<li>left</li>
+		<li>right</li>
+	</ul>
+	<div id="contWrap">
+		<ul id="cont">
+			<!-- <li>0</li> -->
+		</ul>
+	</div>
+	
+  </div>
+  
+  <div id="add">增加</div>
+
+  <script>
+	var oLeft = document.getElementById('tab').children[0],
+		oRight = document.getElementById('tab').children[1],
+		oContWrap = document.getElementById('contWrap'),
+		oCont = document.getElementById('cont'),
+		oAdd = document.getElementById('add'),
+		oCwWidth = oContWrap.clientWidth,
+		aContChild = oCont.children,
+		numIndex = 0, 
+		numIndexClone = 0; 
+
+	// 增加子项
+	var cont = 0;
+	oAdd.addEventListener('click',function(){
+		var oLi = document.createElement('li');
+		oLi.style.width = Math.ceil(Math.random()*120)+80 + 'px';
+		oLi.innerHTML = cont++;
+		
+		// 子项删除
+		oLi.addEventListener('click',function(){
+			this.parentNode.removeChild(this);
+			
+			if(numIndex){
+				var totleWidthDel = 0;
+				for(var i=0;i<aContChild.length;i++){
+					totleWidthDel += aContChild[i].clientWidth;
+				}
+				oCont.style.width = totleWidthDel + 'px';
+				if(totleWidthDel<oCwWidth){
+					oCont.style.marginLeft = '0px';
+					numIndexClone = numIndex = 0;
+				}else{
+					var contMgLf = parseInt(oCont.style.marginLeft);
+
+					if(totleWidthDel+contMgLf<=oCwWidth){
+						oCont.style.marginLeft = -(totleWidthDel-oCwWidth) + 'px';
+						numIndex = aContChild.length-1;
+					}else{
+						var totleWidthC = 0;
+						for(var i=0;i<aContChild.length;i++){
+							totleWidthC += aContChild[i].clientWidth;
+							// 删除后重新计算numIndex值
+							if(totleWidthC>=oCwWidth-contMgLf){
+								numIndex = i;
+								return false;
+							}
+						}
+					}
+				}
+			}
+		});
+		
+		oCont.append(oLi);
+
+		var totleWidth = 0;
+		for(var i=0;i<aContChild.length;i++){
+			totleWidth += aContChild[i].clientWidth;
+			
+			// 初始化时保存超过外层的子项序列
+			if(numIndex==0 && totleWidth>=oCwWidth){
+				numIndex = i;
+				numIndexClone = numIndex;	
+			}
+			
+		}
+		if(totleWidth > oCwWidth){
+			oCont.style.width = totleWidth + 'px';		
+		}
+	});
+
+
+	// 右点击
+	oRight.addEventListener('click',function(){
+		if(aContChild.length){
+			if(numIndex){
+				var tWidth = 0;
+				for(var i=0;i<=numIndex;i++){
+					tWidth += aContChild[i].clientWidth;
+				}
+				if(aContChild[numIndex+1]){
+					numIndex++;
+					tWidth += aContChild[numIndex].clientWidth;
+				}
+				oCont.style.marginLeft = -(tWidth - oCwWidth) + 'px';	
+			}
+			oCont.border = false;
+		}
+	});
+
+
+	// 左点击
+	oCont.border = false;
+	oLeft.addEventListener('click',function(){
+		if(aContChild.length){
+			if(numIndex>numIndexClone){
+				numIndex--;
+			}else if(numIndex==numIndexClone){
+				oCont.border = true;  
+			}else{
+				var contMgLf = parseInt(oCont.style.marginLeft);
+				if(!contMgLf){
+					oCont.border = true; 
+				}else{
+					numIndex--;
+				}
+			}
+
+			var tWidth = 0;
+			for(var i=0;i<=numIndex;i++){
+				tWidth += aContChild[i].clientWidth;
+			}
+
+			if(!oCont.border){
+				var contMgLf = parseInt(oCont.style.marginLeft);
+				if(-contMgLf<aContChild[0].clientWidth){
+					oCont.style.marginLeft = '0px';
+				}else{
+					oCont.style.marginLeft = -(tWidth - oCwWidth) + 'px';
+				}
+			}else{
+				oCont.style.marginLeft = '0px';
+			}
+		}
+	});
+
+
+  </script>
+ </body>
+</html>

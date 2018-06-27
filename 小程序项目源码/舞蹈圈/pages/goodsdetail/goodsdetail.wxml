@@ -1,0 +1,33 @@
+<!--pages/goodsdetail/goodsdetail.wxml-->
+<!-- 商品详情 -->
+<import src="../../wxParse/wxParse.wxml"/>
+<wxs src="../common.wxs" module="common" />
+
+<view class='container'>
+  <view hidden='{{true}}' id='goodsid'>{{goodsdetail.id}}</view>
+  <scroll-view class='content' scroll-y>
+    <view class='carouse'>
+      <swiper indicator-dots="{{true}}" indicator-active-color="#FFF" autoplay circular="{{true}}"
+    interval="4000">
+        <swiper-item wx:for="{{bannerPicData}}" wx:key="goodsdetail_slide_id">
+          <image mode='widthFix' class="swiperPic" src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    </view>
+    <view class='name'>
+      {{goodsdetail.name}}
+    </view>
+    <view class='price'>￥{{goodsdetail.price}}</view>
+    <view class='webcontent'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class='desc'>
+      {{goodsdetail.description}}
+    </view>
+    <view class='space'></view>
+  </scroll-view> 
+  <view class='btnContainer'>
+    <view class='addCarBtn btn' catchtap='addCarBtnClicked'>加入购物车</view>
+    <view class='buyBtn btn' catchtap='buyBtnClicked'>立即购买</view>
+  </view>
+</view>

@@ -1,0 +1,202 @@
+html, body{
+	background: #F5F5F5;
+}
+
+header{
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 8%;
+	background: #EEC434;
+}
+header>i:first-child{
+	margin-left: 5%
+}
+header>i:last-child{
+	margin-right: 5%; 
+}
+
+.container{
+	height: 84%;
+}
+.weui-search-bar__box{
+	padding-left: 15px;
+}
+.weui-search-bar__box .weui-search-bar__input{
+	height: 2em;
+}
+
+.pro-list-wrap{
+	height: 44px;
+	margin-bottom: 14px;
+	padding: 0 16px 0 0;
+}
+
+.pro-list-wrap>.pro-list>ul{
+	transition: margin-left 0.8s;
+}
+.pro-list-wrap>.pro-list>ul>li{
+	padding: 0 8px;
+	line-height: 44px;
+	color: #C9C9C9;
+}
+.pro-list-wrap>.pro-list>ul>li.active{
+	color: #363636;
+	font-weight: bold;
+}
+.fa-caret-right{
+	top: 14px;
+	right: 6px;
+	color: #C9C9C9;
+}
+
+.fa-align-justify{
+	line-height: 44px;
+}
+
+.weui-panel__bd>h4{
+	padding: 10px 0 10px 12px;
+	color: #C9A94E;
+}
+
+a.weui-media-box.weui-media-box_appmsg:active{
+	background: #FFF;
+}
+
+.weui-panel__bd .weui-media-box__hd{
+	width: 100px;
+	height: 80px;
+	padding: 8px 0;
+	line-height: 80px;
+}
+.weui-panel__bd .weui-media-box__hd>img{
+	width: 80px;
+}
+.weui-panel__bd .weui-media-box__bd{
+	line-height: 1.2;
+}
+.weui-media-box__title{
+	margin-bottom: 8px;
+	white-space: initial;
+	text-overflow: initial;
+}
+
+.weui-media-box__desc>div{
+	margin-bottom: 8px;
+}
+.weui-media-box__desc>div:first-child{
+	color: #6E6E6E;
+}
+
+.price-add>span:first-child{
+	line-height: 30px;
+	color: #E56F26;
+}
+.price-add>img{
+	width: 30px;
+	height: 30px;
+}
+.price-add>span:last-of-type{
+	padding: 0 8px;
+	line-height: 30px;
+}
+
+.weui-media-box:before,
+.weui-media-box:after{
+	display: none;
+}
+
+/* 购物车弹窗 */
+#iosActionsheet{
+	bottom: 8%;
+}
+#androidActionsheet>.weui-actionsheet{
+	width: 90%;
+	background: #FFF;
+}
+.actionsheet-header{
+	padding: 8px 0;
+	background: #FAFAFA;
+	border: 1px solid #CCC;
+}
+.weui-icon-cancel{
+	top: 8px;
+	right: 4px;
+	color: #000;
+}
+
+.actionsheet-cont{
+	padding: 12px 0 12px 12px;
+}
+.actionsheet-cont>li{
+	margin: 10px 6%;
+}
+.weui-actionsheet__title{
+	height: 30px;
+	color: #E05C5E;
+}
+.weui-actionsheet__title:before{
+	display: none;
+}
+.weui-actionsheet__menu{
+	padding-bottom: 20px;
+}
+.weui-actionsheet__menu>.page__bd.page__bd_spacing{
+	padding: 4px 12px 8px;
+}
+.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:first-child>div:first-child{
+	flex: 3;
+}
+.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:first-child>div:last-child{
+	flex: 2;
+}
+.weui-actionsheet__menu>.page__bd.page__bd_spacing>.weui-flex:last-child{
+	margin-top: 6px;
+}
+.weui-flex__item>.placeholder>img{
+	width: 24px;
+	height: 24px;
+}
+.weui-flex__item>.placeholder>span{
+	margin: 0 8px;
+}
+.num-action{
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+footer{
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+	z-index: 5001;
+	height: 8%;
+}
+footer>div:first-child{
+	justify-content: center;
+	align-items: center;
+	width: 75%;
+	background: #434343;
+	color: #FFF;
+}
+.shop-car{
+	top: -20px;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+	background: #FECF50;
+	line-height: 50px;
+}
+.shop-car>img{
+	width: 25px;
+	height: 25px;
+}
+footer>div:last-child{
+	justify-content: center;
+	align-items: center;
+	width: 25%; 
+	background: #FFCF2D;
+}

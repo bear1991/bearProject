@@ -1,0 +1,116 @@
+/* 主体 */
+.listShadow{
+    box-shadow: 0 0 2px #BBB;
+}
+.listShadow>div:first-child{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+
+
+.main>.content{
+    padding: 30px 0 24px;
+    background: #E9E9E9;
+}
+
+
+.main>.searchWrap{
+    margin-top: 12px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.selectWrap>div>button{
+    padding: 6px 12px;
+    background: #D6AC3C;
+    color: #FFF;
+}
+.selectWrap{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 0;
+}
+.selectWrap>div{
+    margin-right: 2%;
+}
+.selectWrap>div>input{
+    height: 34px;
+    border: 1px solid #3F3F3F;
+    padding-left: 28%;
+}
+.selectWrap>div{
+    width: 25%;
+}
+.selectWrap>div>span{
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: #D6AC3C;
+    border: 1px solid #3F3F3F;
+    border-right: none;
+    line-height: 34px;
+    color: #FFF;
+}
+.selectWrap>div>select{
+    padding-left: 26%;
+    border: 1px solid #3F3F3F;
+    border-radius: 0;
+}
+
+
+
+/* 分页 */
+.pageNav{
+    height: auto;
+    background: transparent;
+}
+.pagination{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.pagination>li{
+    padding: 0 1%;
+}
+.pagination>li>a{
+    background: #D6AC3C;
+    color: #FFF;
+}
+.pagination .turn{
+    padding: 0;
+}
+.pagination img{
+    height: 34px;
+    cursor: pointer;
+}
+
+
+/* 信息列表 */
+.main>.content>.listWrap{
+    padding: 20px 0;
+}
+.main>.content>.listWrap>li{
+    width: 31%;
+    margin: 0 0.5% 12px;
+    padding: 1% 1% 2%;
+}
+.main>.content>.listWrap>li:nth-child(3n+1){
+    margin-left: 2.5%;
+}
+.main>.content>.listWrap>li:nth-child(3n+3){
+    margin-right: 2.5%;
+}
+.main>.content>.listWrap>li>.info img,
+.main>.content>.listWrap>li>.address img{
+    height: 16px;
+}
+.main>.content>.listWrap>li>.info>p{
+    margin: 10px 2px;
+}
+
+

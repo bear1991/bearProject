@@ -1,0 +1,42 @@
+<!--pages/index/task/task.wxml-->
+<view class='container'>
+  <view class='search-wrap'>
+    <view class='search'>
+      <input class='text' bindinput='bindSearchInput' value='{{inputVal}}'></input>
+      <icon type='search' size='22' color='green' catchtap='catchSearchTap'></icon>
+    </view>
+  </view>
+
+  <view class='task-list-wrap'>
+    <view wx:for='{{requestContent}}' wx:key='contractCode' class='step-cont' catchtap='catchTaskdetailTap' data-taskDetail='{{item}}'>
+      <view class='col'>
+        <view>
+          <text>合同编号：</text>
+          <text>{{item.contractCode}}</text>
+        </view>
+        <view>
+          <text class='{{item.confirmDate==null?"wait":"sure"}}'>
+            {{item.confirmDate==null?'待确认':'已确认'}}
+          </text>
+        </view>
+      </view>
+      <view class='col'>
+        <view>
+          <text>合同金额：</text>
+          <text>{{item.contractMoney}}元</text>
+        </view>
+        <view>
+          <text>管家：</text>
+          <text>{{item.gadName}}</text>
+        </view>
+      </view>
+      <view class='row'>
+        <text>{{item.startDate}}</text>
+        <text> 至 </text>
+        <text>{{item.endDate}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

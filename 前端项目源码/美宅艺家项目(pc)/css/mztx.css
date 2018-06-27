@@ -1,0 +1,74 @@
+/* 主体 */
+.main>.content{
+    padding: 0 0 48px;
+}
+
+
+.locationbgWrap{
+    margin-top: 12px;
+    margin-bottom: 18px;
+    padding: 0;
+}
+.locationbgWrap>.locationbg>p{
+    flex-direction: column;
+    justify-content: center;
+    top: 36%;
+    left: 40%;
+    width: 20%;
+    height: 16%;
+    background: #D6AC3C;
+    color: #FFF;
+}
+
+
+
+
+.selectWrap{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+.selectWrap>div{
+    width: 20%;
+    margin-right: 2%;
+}
+.selectWrap>div>span{
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: #D6AC3C;
+    border: 1px solid #3F3F3F;
+    border-right: none;
+    line-height: 32px;
+    color: #FFF;
+}
+.selectWrap>div>select{
+    padding-left: 26%;
+    border: 1px solid #3F3F3F;
+    border-radius: 0;
+}
+
+
+.locationListWrap>.left{
+    width: 46%;
+}
+.locationList>li{
+    width: 31%;
+    height: 120px;
+    margin: 0 1%;
+    padding: 10px 0 0;
+}
+.locationList>li>div:last-child>p{
+    margin-bottom: 8px;
+}
+.locationList>li>div:last-child>p:first-child>span{
+    color: #D6AC3C;
+}
+.locationList>li>div:last-child>p:last-child>span:nth-last-child(2){
+    padding: 0 18px;
+}
+.locationList>li>div:last-child>p:last-child>img{
+    height: 15px;
+}

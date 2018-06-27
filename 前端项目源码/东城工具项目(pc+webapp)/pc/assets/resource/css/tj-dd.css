@@ -1,0 +1,53 @@
+/* 提交订单页中间内容部分 */
+#tjdd{
+    margin: 12px 0;
+}
+#tjdd .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+}
+#tjdd .dd-list{
+    margin: 12px 0;
+}
+#tjdd .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+
+#tjdd .dd-list+div h4,
+#tjdd .dd-list+div h4+div>span{
+    padding-right: 16px;
+}
+#tjdd .dd-list+div h4{
+    margin: 0 0 4px;
+    font-size: 12px;
+}
+#tjdd .dd-list+div h4>span{
+    font-size: 24px;
+}
+
+#tjdd .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#tjdd .dd-cont>div{
+    margin: 20px 0;
+}
+#tjdd .dd-cont>div:nth-of-type(2)>p{
+    margin-bottom: 4px;
+    color:#6C6C6C;
+}
+#tjdd .dd-cont img{
+    max-width: 180px;
+}
+
+#tjdd .pro-info>h5{
+    margin-top: 0;
+}
+#tjdd .pro-info>ul{
+    margin: 16px 0;
+}
+#tjdd .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}

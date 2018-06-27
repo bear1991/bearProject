@@ -1,0 +1,111 @@
+/* pages/index/back/backdetail/backdetail.wxss */
+
+/****** 服务反馈 ******/
+.type-list{
+  margin-top: 24rpx; 
+  font-size: 34rpx; 
+}
+.type-rt{
+  align-self: center;
+}
+.type-rt>text{
+  color: #888888;
+  vertical-align: middle;
+}
+.type-rt>image{
+  width: 24rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+
+.picker-select{
+  align-self: center;
+}
+.picker-text{
+  color: #BBBBBB;
+  vertical-align: middle;
+  font-size: 34rpx;
+}
+.picker-pic{
+  width: 24rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+.novertical{
+  vertical-align: none;
+}
+
+
+.back-list-wrap{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40rpx;
+  background: #FFF;
+  overflow-y: auto;
+}
+.back-list{
+  width: 680rpx;
+  height:400rpx;
+  margin: 40rpx auto 0;
+  font-size: 30rpx;
+}
+textarea{
+  width: 638rpx;
+  height: 360rpx;
+  padding: 20rpx;
+  border: 1rpx solid #87CA87;
+  overflow-y: auto;
+  font-size: 34rpx;
+}
+
+/****** 上传图片显示 ******/
+.show-pic{
+  width: 680rpx;
+  height: 180rpx;
+  margin: 30rpx auto 0;
+  white-space: nowrap;  
+}
+scroll-view{
+  height: 100%;
+  box-shadow: 0 0 2rpx 2rpx #87CA87;
+}
+.scroll-pic{
+  display: inline-block;
+  width: 150rpx;
+  height:150rpx;
+  margin: 15rpx 12rpx;
+  box-shadow: 0 0 4rpx #888888;
+}
+.scroll-pic>image:first-child{
+  width: 100%;
+  height: 100%;
+}
+
+.back-upload{
+  width: 690rpx;
+  height: 144rpx;
+  margin: 30rpx auto 0;
+  background: #FFF;
+}
+.back-upload>image{
+  width: 144rpx;
+  height: 100%;
+}
+.picType{
+  color: #CCC;
+  font-size: 28rpx;
+}
+
+.back-submit{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+.back-submit>button{
+  width: 90%;
+  margin: 20rpx auto;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <style>
+  *{
+	margin: 0;
+	padding: 0;
+  }
+  ul>li{
+	list-style: none;
+  }
+
+  #wrap{
+	position: relative;
+	width: 800px;
+	height: 200px;
+	margin: 80px auto 20px;
+	border: 1px solid red;
+	color: #FFF;
+  }
+
+  #tab{
+	display: none;
+	position: absolute;
+	top:20px;
+	right: -50px;
+	width:40px;
+  }
+  #tab>li{
+	width: 40px;
+	height: 40px;
+	margin: 4px 0;
+	background: red;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+  }
+
+  #contWrap{
+	overflow: hidden;
+  }
+  #contWrap, #cont{
+	height: 100%;
+  }
+  #cont{
+	transition: 0.4s;
+  }
+  #cont:after{
+	content: '';
+	display: block;
+	clear:both;
+  }
+  #cont>li{
+	float: left;
+	width:100px;
+	height:100%;
+	background:green;
+  }
+
+  #add{
+	width: 40px;
+	height:30px;
+	background: blue;
+	text-align: center;
+	line-height: 30px;
+  }
+	
+  </style>
+ </head>
+
+ <body>
+  <div id="wrap">
+	<ul id="tab">
+		<li>left</li>
+		<li>right</li>
+	</ul>
+	<div id="contWrap">
+		<ul id="cont">
+			<!-- <li>0</li> -->
+		</ul>
+	</div>
+	
+  </div>
+  
+  <div id="add">增加</div>
+
+  <script>
+	var oTab = document.getElementById('tab'),
+		oLeft = oTab.children[0],
+		oRight = oTab.children[1],
+		oContWrap = document.getElementById('contWrap'),
+		oCont = document.getElementById('cont'),
+		oAdd = document.getElementById('add'),
+		oCwWidth = oContWrap.clientWidth,
+		aContChild = oCont.children,
+		numIndex = 0;    // 保存右侧边界子项序列
+
+	// 增加子项
+	var cont = 0;
+	oAdd.addEventListener('click',function(){
+		// 创建随机宽度的子项
+		var oLi = document.createElement('li');
+		oLi.style.width = Math.ceil(Math.random()*120)+80 + 'px';
+		oLi.innerHTML = cont++;
+		
+		// 子项删除
+		oLi.addEventListener('click',function(){
+			this.parentNode.removeChild(this);
+			
+			// 重新确定右侧边界子项序列
+			var contMgLf = parseInt(oCont.style.marginLeft);
+			var totleWidth = 0;
+			for(var i=0;i<aContChild.length;i++){
+				totleWidth += aContChild[i].clientWidth;
+				// oCont宽度仍然大于oCont左外边距与oContWrap宽度之和时，获取右侧临界序列
+				if(totleWidth >= -contMgLf+oCwWidth){   
+					numIndex = i;
+					console.log(numIndex);
+					return; 
+				}
+			}
+			
+			// oCont宽度小于oCont左外边距与oContWrap宽度之和时
+			if(totleWidth <= -contMgLf+oCwWidth){
+				if(totleWidth>oCwWidth){	// oCont宽度大于oContWrap宽度时
+					numIndex = aContChild.length-1;
+					oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+				}else{		// oCont宽度小于oContWrap宽度时
+					numIndex = 0;
+					oCont.style.marginLeft = '0px';
+			
+					oTab.style.display = 'none';    // 隐藏左右切换按键
+				}
+				console.log(numIndex);
+			}
+
+		});
+		
+		oCont.append(oLi);
+
+		// 子项添加到oCont中
+		var totleWidth = 0;
+		for(var i=0;i<aContChild.length;i++){
+			totleWidth += aContChild[i].clientWidth;
+		}
+		// oCont宽度超出oContWrap宽度时，自动更新oCont宽度和左外边距，并更新右侧临界序列
+		if(totleWidth > oCwWidth){
+			oCont.style.width = totleWidth + 'px';
+			oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+
+			numIndex = aContChild.length-1;
+
+			// 当子项总宽超出外层边框宽度时，显示左右切换键
+			if(!oTab.style.display || oTab.style.display=='none'){   
+				oTab.style.display = 'block';
+			}
+		}
+		console.log(numIndex);
+	});
+
+		
+	// 左点击
+	oLeft.addEventListener('click',function(){
+		if(aContChild.length){
+			var contMgLf = parseInt(oCont.style.marginLeft);
+			contMgLf += aContChild[numIndex].clientWidth;
+			if(contMgLf>0){    // 到达左边界
+				contMgLf = 0;
+			}else{		// 未到达左边界
+				numIndex--;
+			}
+			oCont.style.marginLeft = contMgLf + 'px';
+		}
+		console.log(numIndex);
+	});
+
+
+	// 右点击
+	oRight.addEventListener('click',function(){
+		if(numIndex<aContChild.length-1 && numIndex){		// 当前没有到达最后子项序列时
+			numIndex++;
+				
+			var totleWidth = 0;
+			for(var i=0;i<=numIndex;i++){
+				totleWidth += aContChild[i].clientWidth;
+			}
+
+			oCont.style.marginLeft = (oCwWidth-totleWidth) + 'px';
+		}
+		console.log(numIndex);
+	});
+
+  </script>
+ </body>
+</html>

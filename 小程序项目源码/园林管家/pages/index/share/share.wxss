@@ -1,0 +1,44 @@
+/* pages/index/share/share.wxss */
+
+/****** 资讯分享 ******/
+.share-list-wrap{
+  width: 100%;
+  height: 100%;
+  margin-top: 138rpx; 
+  overflow-y: auto;
+}
+
+.type-list{
+  min-height: 160rpx;
+}
+
+/******左侧内容区******/
+.type-lf{
+  width: 480rpx;
+}
+.share-intro{
+  margin-bottom: 24rpx;
+}
+.share-intro>text{
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 50rpx;
+}
+.share-person{
+  margin-right: 20rpx;
+}
+.share-person,.share-time{
+  font-size: 28rpx;
+  color: #757575;
+}
+
+/******右侧图片******/
+.type-rt{
+  align-self: center;
+  width: 155rpx;
+}
+.share-pic{
+  width: 155rpx;
+  height: 153rpx;
+}
+

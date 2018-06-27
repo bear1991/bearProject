@@ -1,0 +1,29 @@
+/* pages/index/appoint/appointdetail/appointdetail.wxss */
+
+.group-list{
+  width: 100%;
+}
+
+.group-title{
+  padding: 30rpx;
+  color: #BBBBBB;
+  font-size: 32rpx;
+}
+
+.group-cont{
+  background: #FFF;
+}
+.group-cont-list{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+.group-cont-list>text{
+  font-size: 34rpx;
+}
+.group-cont-list>text:last-child{
+  color: #888888;
+}

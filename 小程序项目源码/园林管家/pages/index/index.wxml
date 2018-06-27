@@ -1,0 +1,82 @@
+<!--pages/index/index.wxml-->
+
+<view class='dispalyWait' wx:if='{{displayWaitPage}}'>
+  <view>加载中......</view>
+  <!-- <view>若加载不出，请退出重进</view> -->
+</view>
+<view class='dispalyWait' wx:if='{{exitPage}}'>{{waitMessage}}</view> 
+
+
+<view class='container' wx:if='{{showIndexPage}}'>
+
+  <!--轮播-->
+  <view class='swiper-wrap'>
+    <swiper class="swiper" autoplay circular bindchange='bindSwiperChange'>
+      <block wx:for='{{swiperPic}}' wx:key='*this'>
+        <swiper-item  class="swiper-item">
+          <image class="swiper-img" src='{{item}}'/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 自定义轮播指示点 -->
+    <view class='swiperList-wrap'>
+      <view class='swiperList {{index==currentIndex?"active":""}}' wx:for='{{swiperPic}}' wx:key='*this'></view>
+    </view>
+  </view>
+  
+  <!--公告-->
+  <view class="notice" wx:if='{{noticeMessage.length>0}}'>
+    <view class='notice-img'>
+      <image src='../image/notice.png'></image>
+    </view>
+    <view class='notice-text'>
+      <swiper class="swiper-notice" autoplay circular vertical='true'>
+        <block wx:for='{{noticeMessage}}' wx:key='*this'>
+          <swiper-item class='notice-text'>
+            <text>{{item}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!--功能分区-->
+  <view class="type">
+
+    <view class='type-item' catchtap='catchShareTap'>
+      <image src='../image/type1.jpg'></image>
+      <view class='type-item-text'>
+        <text>资讯分享</text>
+      </view>
+    </view>
+    <view class='type-item' catchtap='catchAppointTap'>
+      <image src='../image/type2.jpg'></image>
+      <view class='type-item-text'>
+        <text>我要预约</text>
+      </view>
+    </view>
+    <view class='type-item nrt-border' catchtap='catchBackTap'>
+      <image src='../image/type3.jpg'></image>
+      <view class='type-item-text'>
+        <text>服务反馈</text>
+      </view>
+    </view>
+    <view class='type-item nbt-border' catchtap='catchContractTap'>
+      <image src='../image/type4.jpg'></image>
+      <view class='type-item-text'>
+        <text>我的合同</text>
+      </view>
+    </view>
+    <view class='type-item nbt-border' catchtap='catchTaskTap'>
+      <image src='../image/type5.jpg'></image>
+      <view class='type-item-text'>
+        <text>任务确认</text>
+      </view>
+    </view>
+    <view class='type-item nrt-border'></view>
+  </view>
+
+  
+
+</view>
+

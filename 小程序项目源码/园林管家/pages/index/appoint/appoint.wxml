@@ -1,0 +1,45 @@
+<!--pages/index/appoint/appoint.wxml-->
+
+<view class='container'>
+  <view class='search-wrap'>
+    <view class='search'>
+      <input class='text' bindinput='bindSearchInput' value='{{inputVal}}'></input>
+      <icon type='search' size='22' color='green' catchtap='catchSearchTap'></icon>
+    </view>
+  </view>
+
+  <view class='appoint-list-wrap'> 
+    <view wx:for='{{requestContent}}' wx:key='content' class='step-cont' catchtap='catchAppointDetailTap' data-appointDetail='{{item}}'>
+      <view class='col'>
+        <view>
+          <text>预约类型：</text>
+          <text>{{item.bespeakType}}</text>
+        </view>
+        <view>
+          <text class='an-date'>{{item.createTime}}</text>
+        </view>
+      </view>
+      <view class='row'>
+        <text>预约项目：</text>
+        <text>{{item.content}}</text>
+      </view>
+      <view class='col'>
+        <view>
+          <text>预约服务时间：</text>
+          <text>{{item.bespeakTime}}</text>
+        </view>
+        <view>
+          <text class='{{item.isconfirm?"sure":"wait"}}'>
+            {{item.isconfirm?'已确定':'待确认'}}
+          </text>
+        </view>
+      </view>
+    </view>
+      
+  </view>
+  
+  <view class='submit'>
+    <button type='primary' catchtap='catchAppointSubmitTap'>我要预约</button>
+  </view>
+  
+</view>

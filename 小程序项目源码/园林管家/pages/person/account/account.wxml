@@ -1,0 +1,32 @@
+<!--pages/person/account/account.wxml-->
+<view class='container'>
+  <view class='group-list'>
+    <view class='group-cont'>
+      <view class='group-cont-list'>
+        <text>头像</text>
+        <view>
+          <image class='avatar' src='{{accountDetail.avatar}}'></image>
+        </view>
+      </view>
+      <view class='group-cont-list'>
+        <text>姓名</text>
+        <view>
+          <text class='picker-text'>{{accountDetail.customName||accountDetail.memberName}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list'>
+        <text>性别</text>
+        <view>
+          <text class='picker-text'>{{accountDetail.sex}}</text>
+        </view>
+      </view>
+      <view class='group-cont-list'>
+        <text>联系方式</text>
+        <view>
+          <text class='picker-text'>{{accountDetail.phone}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

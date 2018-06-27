@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "我的合同",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
+}

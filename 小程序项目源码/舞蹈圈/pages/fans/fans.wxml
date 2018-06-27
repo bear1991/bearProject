@@ -1,0 +1,71 @@
+<!--pages/fans/fans.wxml-->
+<!-- <text>pages/fans/fans.wxml</text> -->
+<!-- 粉丝 -->
+
+
+<view class='container'>
+  <!-- <view class="header">
+    <text>我的粉丝</text>
+  </view>
+  <view class="listTitle">
+    <text>编号</text>
+    <text>名称</text>
+    <text>邮箱</text>
+  </view> -->
+   <view class="content"> 
+    <!-- <scroll-view class="scrollView" scroll-y> -->
+       
+      <!-- <view class="scroll" catchtap="fansCatchtap" data-id="1">
+        <view class="listIndex"><text>1</text></view>
+        <view class="pictureName">
+          <image class="picture" src="../../images/my/xp.jpg" mode="aspectFill"></image>
+          <text class="name">bear1991bear1991</text>
+        </view>
+        <view class="email">
+          <text>1063667046@qq.com</text>
+        </view>
+      </view> 
+       -->
+     
+      <view class="scroll" wx:if="{{fansData.length}}" wx:for="{{fansData}}" wx:key="fans_id" catchtap="toDetail" data-index="{{item.id}}">
+        <view class="pictureName">
+          <image class="picture" src="{{item.avatar}}" mode="aspectFill"></image>
+          <text class="name">{{item.user_nicename}}</text>
+        </view>
+        <!-- <view class="email">{{item.email}}</view> -->
+      </view>
+
+    <!-- </scroll-view> -->
+   </view> 
+
+
+  <!-- <view class="fansDetail {{fansDetailStatus?'active':''}}">
+    <icon class="close" type="clear" color="#1AAD19" catchtap="closeCatchtap"></icon>
+    <view class="title">粉丝详情</view>
+    <view class="detail">
+      <view>
+        <text>头像：</text>
+        <text><image src="{{fansDetailData.avatar}}" mode="aspectFill"></image></text>
+      </view>
+      <view>
+        <text>昵称：</text>
+        <text>{{fansDetailData.user_nicename}}</text>
+      </view>
+      <view>
+        <text>手机：</text>
+        <text>{{fansDetailData.mobile}}</text>
+      </view>
+      <view>
+        <text>邮箱：</text>
+        <text>{{fansDetailData.user_email}}</text>
+      </view>
+      <view>
+        <text>关注：</text>
+        <text>{{fansDetailData.isfollow?'已关注':'未关注'}}</text>
+      </view>
+    </view>
+    
+    <button class="follow" type="primary" catchtap="followCatchtap" data-id="{{fansDetailData.id}}" data-isfollow="{{fansDetailData.isfollow}}">{{fansDetailData.isfollow?'取消关注':'关注'}}</button>
+  </view> -->
+
+</view>

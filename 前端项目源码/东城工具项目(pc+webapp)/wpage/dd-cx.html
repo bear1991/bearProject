@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>订单查询</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">    <!-- 字体图标样式 -->
+        <link rel="stylesheet" href="./assets/resource/css/dd-cx.css"/>     
+ 
+    </head>
+    <body class="h100">
+        <header class="dis-f">
+            <i class="fas fa-chevron-left size20"></i>
+            <span class="size18">订单查询</span>
+            <i class="fas fa-home size20"></i>
+        </header>
+        <section class="container bgw">
+            <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="输入您想搜索的产品" required/>
+                    </div>
+                </form>
+            </div>
+            <div class="page h100" id="message">
+                <div class="page__bd" style="height: 100%;">
+                    <div class="weui-tab">
+                        <div class="weui-navbar">
+                            <div class="weui-navbar__item weui-bar__item_on pr">全部</div>
+                            <div class="weui-navbar__item pr">待确认</div>
+                            <div class="weui-navbar__item pr">已审核</div>
+                            <div class="weui-navbar__item pr">已完成</div>
+                            <div class="weui-navbar__item pr">已取消</div>
+                            <div class="line pa"></div>
+                        </div>
+                        
+                        <div class="weui-tab__panel fya">
+                            <div class="dis-n active dd-cx" id="qbwc">    <!-- 全部 -->
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix" style="color:#333333;">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                    </li>
+                                                    <li class="tr size14" style="color:#FF6702;">小计：<span>￥52500.00</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>     
+                                            <div class="clearfix">
+                                                <span class="fl wntj">为您推荐</span>
+                                                <span class="fr">合计：<span class="fw size18" style="color:#FF6702;">￥105000.00</span>
+                                            </div>
+                                            <p class="tr size12">账户欠款：140000.00 &nbsp; 已用额度：10万 &nbsp; 授信额度：30万</p>
+                                            <div class="tr cancel-dd clearfix"><p class="fr size14">取消订单</p></div>
+                                            <p class="tc more">展开更多</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                        <span class="fr size12">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>     
+                                            <div>
+                                                <p class="tr size14">合计：<span class="fw" style="color:#333333;">￥105000.00</span></p>
+                                                <div class="clearfix">
+                                                    <span class="fl fhxx">发货信息</span>
+                                                    <span class="fr">开票总价：<span class="fw size18" style="color:#FF6702;">￥95000.00</span>
+                                                </div>
+                                            </div>
+                                            <p class="tc more">展开更多</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dis-n dd-cx" id="dqd">     <!-- 待确定 -->
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix" style="color:#333333;">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                    </li>
+                                                    <li class="tr size14" style="color:#FF6702;">小计：<span>￥52500.00</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix" style="color:#333333;">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                    </li>
+                                                    <li class="tr size14" style="color:#FF6702;">小计：<span>￥52500.00</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>     
+                                            <div class="clearfix">
+                                                <span class="fl wntj">为您推荐</span>
+                                                <span class="fr">合计：<span class="fw size18" style="color:#FF6702;">￥105000.00</span>
+                                            </div>
+                                            <p class="tr size12">账户欠款：140000.00 &nbsp; 已用额度：10万 &nbsp; 授信额度：30万</p>
+                                            <div class="tr cancel-dd clearfix"><p class="fr size14">取消订单</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix" style="color:#333333;">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                    </li>
+                                                    <li class="tr size14" style="color:#FF6702;">小计：<span>￥52500.00</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix" style="color:#333333;">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <span class="fl size12">下单数量：1000</span>
+                                                    </li>
+                                                    <li class="tr size14" style="color:#FF6702;">小计：<span>￥52500.00</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>     
+                                            <div class="clearfix">
+                                                <span class="fl wntj">为您推荐</span>
+                                                <span class="fr">合计：<span class="fw size18" style="color:#FF6702;">￥105000.00</span>
+                                            </div>
+                                            <p class="tr size12">账户欠款：140000.00 &nbsp; 已用额度：10万 &nbsp; 授信额度：30万</p>
+                                            <div class="tr cancel-dd clearfix"><p class="fr size14">取消订单</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dis-n dd-cx" id="ysh">     <!-- 已审核 -->
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw" style="color:#333333;">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl" style="color:#C7BF40;">发货信息</span>
+                                                <span class="fr">开票总价：￥<span class="fw" style="color:#FF6702;">95000.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw" style="color:#333333;">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl" style="color:#C7BF40;">发货信息</span>
+                                                <span class="fr">开票总价：￥<span class="fw" style="color:#FF6702;">95000.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dis-n dd-cx" id="ywc">     <!-- 已完成 -->
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">已完成</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw" style="color:#333333;">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl" style="color:#C7BF40;">开票信息</span>
+                                                <span class="fr">开票总价：￥<span class="fw" style="color:#FF6702;">95000.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">已完成</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl" style="color:#333333;">复核数量：500</span>
+                                                        <span class="fr" style="color:#FF6702;">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw" style="color:#333333;">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl" style="color:#C7BF40;">开票信息</span>
+                                                <span class="fr">开票总价：￥<span class="fw" style="color:#FF6702;">95000.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="dis-n dd-cx" id="yqx">    <!-- 已取消 -->
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                        <span class="fr">￥95.00 (优惠价)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl">已取消</span>
+                                                <span class="fr">开票总价：￥<span class="fw">95000.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page">
+                                    <div class="page__bd page__bd_spacing bgw">
+                                        <div class="weui-flex size14">
+                                            <div class="weui-flex__item"><div class="placeholder">订单编号：2928191</div></div>
+                                            <div class="weui-flex__item"><div class="placeholder tr">2018.01.22</div></div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="weui-flex clearfix dd-cont">
+                                            <div class="fl">
+                                                <img class="dis-b w100" src="./assets/images/goods.png" alt="">
+                                            </div>
+                                            <div class="fr">
+                                                <ul>
+                                                    <li class="size18">DCJZ05-10(a型)9.6V充电式单速起子电钻</li>
+                                                    <li>订单编号：2928191</li>
+                                                    <li class="clearfix">
+                                                        <span class="fl">复核数量：500</span>
+                                                        <span class="fr">￥105.00</span>
+                                                    </li>
+                                                    <li class="clearfix size12">
+                                                        <span class="fl">下单数量：1000</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="tr">合计：<span class="fw">￥105000.00</span></p>
+                                            <div class="clearfix">
+                                                <span class="fl">已取消</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <script src="./assets/js/zepto.min.js"></script>
+        <script src="./assets/resource/js/dd-cx.js"></script>
+
+    </body>
+</html>

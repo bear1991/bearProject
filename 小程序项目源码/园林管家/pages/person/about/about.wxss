@@ -1,0 +1,14 @@
+/* pages/person/about/about.wxss */
+
+.about{
+  width: 100%;
+  margin: 40rpx 0 0;
+}
+.about-title{
+  text-align: center;
+}
+.about-content{
+  padding: 30rpx;
+  font-size: 34rpx;
+  line-height: 50rpx;
+}

@@ -1,0 +1,68 @@
+/* 我的返利页中间内容部分 */
+#myFl .dd-title{
+    padding: 20px 0;
+    background: #F3F3F3;
+}
+
+#myFl .dd-list{
+    margin: 12px 0;
+    border: 1px solid #EEE;
+}
+#myFl .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+#myFl .dd-list>li>div:first-child{
+    padding: 20px 24px 16px;
+}
+#myFl .dd-list>li>div:first-child>h1{
+    margin-top: 10px;
+}
+
+#myFl .dd-cont{
+    border-bottom: 1px solid #EEE;
+}
+#myFl .dd-cont:last-child{
+    border: none;
+}
+#myFl .dd-cont>div{
+    margin: 20px 0;
+}
+
+#myFl .dd-cont>div:last-child>p.showmore{
+    margin-top: 18px;
+    font-size: 12px;
+    color:#787878;
+}
+#myFl .dd-cont img{
+    max-width: 180px;
+}
+#myFl .dd-cont h2{
+    margin: 0 0 4px; 
+    color:#36C34B;
+}
+#myFl .dd-cont h6{
+    color:#515151;
+}
+
+#myFl .dd-cont .wait{
+    color: #FE5758;
+}
+#myFl .dd-cont .finish{
+    color: #61AEFF;
+}
+
+#myFl .pro-info>h5{
+    margin-top: 0;
+}
+#myFlysh .pro-info>ul{
+    margin: 16px 0;
+}
+#myFl .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}
+
+#myFl+.page{
+    margin-top: -16px;
+}

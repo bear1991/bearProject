@@ -1,0 +1,134 @@
+html, body{
+    background: #F5F5F5;
+}
+
+header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    background: #EEC434;
+}
+header>i:first-child{
+    margin-left: 5%
+}
+header>i:last-child{
+    margin-right: 5%; 
+}
+
+.container{
+    height: 92%;
+}
+
+.weui-search-bar__box .weui-search-bar__input{
+    height: 2em;
+}
+
+
+#message{
+    background: #F5F5F5;
+}
+
+.weui-navbar{
+    z-index: inherit;
+}
+.weui-navbar:after,
+.weui-navbar__item:after{
+    display: none;
+}            
+
+.weui-navbar__item,
+.weui-navbar__item.weui-bar__item_on{
+    background: #FFF;
+}
+
+.weui-bar__item_on{
+    color: #DB742C;
+}
+.weui-bar__item_on>.line{
+    display: block;
+}
+
+.line{
+    bottom: -2px;
+    left: 3%;
+    width: 14%;
+    height: 2px;
+    background: #DB742C;
+    transition: 0.4s;
+}    
+
+.active{
+    display: block;
+}       
+
+
+
+/* tab切换内容公共部分 */
+.dd-cx .page{
+    margin-top: 14px;
+}
+.dd-cx .page__bd_spacing{
+    padding: 0 16px 10px;
+    color: #9E9E9E;
+}
+.dd-cx .page__bd_spacing>.weui-flex{
+    padding:8px 0;
+}
+.dd-cx .page__bd_spacing>.weui-flex.dd-cont>div:first-child{
+    width: 36%;
+}
+.dd-cx .page__bd_spacing>.weui-flex.dd-cont>div:last-child{
+    width: 62%;
+    margin-left: 2%;
+}
+.dd-cx .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:first-child{
+    line-height: 1.2;
+}
+
+
+
+/* 全部 待确定 */
+#qbwc .page__bd_spacing>div:last-child,
+#dqd .page__bd_spacing>div:last-child{
+    padding-top: 8px;
+    border-top: 1px solid #DDD;
+}
+
+#qbwc .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:first-child,
+#dqd .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:first-child{
+    color: #333333;
+}
+#qbwc .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:last-child,
+#dqd .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:last-child{
+    margin: 4px 0;
+}
+#qbwc .cancel-dd>p,
+#dqd .cancel-dd>p{
+    margin: 10px 0 0;
+    padding: 2px 16px;
+    border: 1px solid #9E9E9E;
+    border-radius: 16px;
+    color: #333333;
+}
+
+#qbwc .wntj,
+#dqd .wntj{
+    color: #5EB08D;
+}
+#qbwc .fhxx,
+#dqd .fhxx{
+    color: #C7BF40;
+}
+
+#qbwc .more,
+#dqd .more{
+    margin-top: 10px;
+}
+
+
+/* 已审核 --- 已完成 */
+#ysh .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:first-child,
+#ywc .page__bd_spacing>.weui-flex.dd-cont>div:last-child>ul>li:first-child{
+    color: #333333;
+}

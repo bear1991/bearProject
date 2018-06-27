@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+ </head>
+	<div id="bear"></div>
+ <body>
+  <script>
+  /*
+  // 当事件格式为： 0:1:10
+  var oBear = document.getElementById("bear");
+  var str = '0:1:10';
+  var timeArr = str.split(':');
+
+  //当倒计时结束后的回调函数
+  function cb(){
+	console.log('倒计时结束');
+  }
+
+  timeReduce(oBear,timeArr,cb);
+  function timeReduce(obj,timeArr,cb){
+	  var timer = setTimeout(function(){
+		if(timeArr[2] == '00'){
+			timeArr[2] = 59;
+			if(timeArr[1] == '00'){
+				if(timeArr[0] != '00'){
+					timeArr[1] = 59;
+					timeArr[0]--;
+				}
+			}else{
+				timeArr[1]--;
+			}
+		}else{
+			timeArr[2]--;
+		}
+		clearTimeout(timer);
+		obj.innerHTML = timeArr.join(':');
+		timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?cb&&cb();:timeReduce(obj,timeArr,cb);
+	  },1000);
+  }
+  */
+
+  
+
+
+  // 当事件格式为： 0:01:10
+  var oBear = document.getElementById("bear");
+  var str = '00:01:10';
+  var timeArr = str.split(':');
+
+  //当倒计时结束后的回调函数
+  function cb(){
+	console.log('倒计时结束');
+  }
+
+  timeReduce(oBear,timeArr,cb);
+  function timeReduce(obj,timeArr,cb){
+	  var timer = setTimeout(function(){
+		if(timeArr[2] == '00'){
+			timeArr[2] = 59;
+			if(timeArr[1] == '00'){
+				if(timeArr[0] != '00'){
+					timeArr[1] = 59;
+					timeArr[0] = timeFormat(timeArr[0]);
+				}
+			}else{
+				timeArr[1] = timeFormat(timeArr[1]);
+			}
+		}else{
+			timeArr[2] = timeFormat(timeArr[2]);
+		}
+		clearTimeout(timer);
+		obj.innerHTML = timeArr.join(':');
+		timeArr[0]==0&&timeArr[1]==0&&timeArr[2]==0?cb&&cb():timeReduce(obj,timeArr,cb);
+	  },1000);
+  }
+  function timeFormat(num){
+	num = num.length==2&&num[0]==0?num[1]:num;
+	num--;
+	num = num<10?'0'+num:num;
+	return num;
+  }
+  
+  </script>
+ </body>
+</html>

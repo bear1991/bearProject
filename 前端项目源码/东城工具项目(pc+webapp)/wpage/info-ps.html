@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>站内信-收件人</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <style>
+            .cancel{
+                padding: 10px 18px 4px;
+            }
+            .cancel>img{
+               width: 30px;
+            }
+
+            .weui-cells__title{
+                margin: 0;
+                padding: .4em 16px .4em 30px;
+                background: #F5F5F5;
+                color: #333333;
+                font-size: 18px;
+            }
+            .weui-cells__title>.weui-agree__checkbox{
+                margin-top: 6px;
+            }
+        </style>
+    </head>   
+    <body class="h100">
+        <section class="container h100">
+            <div class="cancel tr">
+                <img src="./assets/images/cancel.png" alt="">
+            </div>
+            <div class="page">
+                <div class="page__bd">
+                    <div class="weui-cells__title fw clearfix">
+                        <span class="fl">经销商</span>
+                        <input type="checkbox" class="weui-agree__checkbox fr">
+                    </div>
+                    <div class="weui-cells">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>如皋机电飞龙店</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>如皋机电飞龙店</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>如皋机电飞龙店</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__bd">
+                    <div class="weui-cells__title fw clearfix">
+                        <span class="fl">东成内勤人员</span>
+                        <input type="checkbox" class="weui-agree__checkbox fr">
+                    </div>
+                    <div class="weui-cells">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>飞龙店</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>飞龙店</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+        <script src="./assets/js/zepto.min.js"></script>
+        <script>
+            // 全选/全不选
+            $('.weui-cells__title>input').on('click', function(){
+                var checkedOne = this.checked,
+                    checkTwo =  $(this).parent().siblings().find('input'),
+                    checkedTwo = checkedOne?true:false;
+                checkTwo.forEach(item => {
+                    item.checked = checkedTwo;
+                });
+            });
+        
+        </script>
+    </body>
+</html>

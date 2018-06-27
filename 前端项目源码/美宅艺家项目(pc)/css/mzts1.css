@@ -1,0 +1,59 @@
+/* 主体 */
+.main>.contentWrap{
+    margin-bottom: 12px;
+    padding: 24px 0;
+}
+.main>.contentWrap>.content{
+    min-height: 360px;
+    padding: 60px 8px 24px;
+    background: #E9E9E9;
+}
+
+.bgTitle{
+    width: 68%;
+}
+
+.title{
+    height: 45px;
+    margin: 30px 0 18px;
+    background: url('../images/mzts/linebg.png') no-repeat center center/100% 100%;
+    color: #FFF;
+    line-height: 45px;
+}
+
+
+.introWrap{
+    padding: 12px 24px;
+}
+
+.intro>li{
+    padding: 0;
+}
+.intro>li>div{
+    min-height: 36px;
+    padding: 10px 0 6px;
+    color: #666666;
+}
+.intro>li>div:first-child{
+    color: #DDB95A;
+}
+.intro>li>div:nth-child(even){
+    background: #E9E9E9;
+}
+.intro>li:nth-child(2)>div,
+.intro>li:last-child>div:first-child{
+    background: #DDB95A;
+    border-bottom: 1px solid #FFF; 
+    color: #FFF;
+}
+.intro>li>div:first-child,
+.intro>li:last-child>div:first-child{
+    border-bottom: 2px solid #FFF;
+    font-size: 18px;
+}
+.intro>li:last-child{
+    border-left: 1px solid #FFF;
+}
+.intro>li>div>img{
+    height: 14px;
+}

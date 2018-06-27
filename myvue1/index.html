@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta href="/bearProject/myvue1/"><title>laughproject</title><script>/*
+      //rem布局
+      htmlSize();
+      window.onresize = htmlSize;
+      function htmlSize() {
+          //rem布局
+          var html = document.querySelector('html');
+          var width = html.getBoundingClientRect().width;
+          html.style.fontSize = width / 10 + 'px';
+      };
+      */
+      
+      //动态设置viewport
+      var meta = document.createElement('meta');
+      var fixedW = 320;
+      setViewPort();
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      window.onresize = setViewPort;
+      function setViewPort(){
+        var width = window.screen.width;
+        var scale = width / fixedW;
+        //setAttribute()方法设置meta新标签属性
+        meta.setAttribute('name','viewport');
+        meta.setAttribute('content','width='+fixedW+', initial-scale='+scale+', maximum-scale='+scale+', user-scalable=0');  
+      }</script><link href=./static/css/app.e48061b7f2647f97cd21525ba7d36726.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.7e8fcdc16ce78ddb0f2f.js></script><script type=text/javascript src=./static/js/vendor.037ac6a0b4053b974740.js></script><script type=text/javascript src=./static/js/app.6ebef4e773bec58dc17d.js></script></body></html>

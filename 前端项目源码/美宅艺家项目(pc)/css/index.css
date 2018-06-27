@@ -1,0 +1,581 @@
+@font-face{     
+    font-family: firstFont;     /* 大字字体 */
+	font-weight: normal;
+    src: url('../fonts/FZLTCHJW.TTF') format("truetype");
+}
+
+@font-face{
+    font-family: secondFont;        /* 小字字体 */
+	font-weight: normal;
+    src: url('../fonts/方正正黑简体.TTF') format("truetype");
+}
+
+body{
+    min-width: 1000px;
+    font-family: secondFont;
+}
+
+
+h2, h3{
+    font-family: firstFont;
+}
+
+
+.part{
+    margin-top: 36px;
+}
+
+.main{
+    padding-top: 40px;
+}
+.footer{
+    margin-top: 16px;
+}
+
+
+/* header头部 */
+.header-wrap{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+}
+.header-left{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+.header-left>img{
+    height: 40px;
+    margin-right: 20px;
+}
+.header-left>div>img{
+    height: 20px;
+}
+.header-left>div>span{
+    color: #6F6F6F;
+}
+
+.header-right{
+    margin: 0 0 20px 0;
+    color: #DDB95A;
+}
+.reg-login{
+    padding-left: 0;
+}
+.reg-login>li:first-child{
+    margin-right: 20px;
+}
+.search{
+    height: 28px;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+.search>input{
+    padding: 0 36px 0 10px;
+    border: none;
+    border-radius: 15px;
+    color: #6F6F6F;
+}
+.search>img{
+    top: 4px;
+    right: 10px;
+    width: 14px;
+}
+
+
+
+/* nav导航 */
+nav{
+    height: 36px;
+    background: #000;
+    color: #FFF;
+}
+nav>ul{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+nav>ul>li{
+    padding: 0 2%;
+    line-height: 36px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+nav>ul>li>.menu{
+    left: 0;
+    top: 36px;
+    z-index: 9;
+    padding: 0 0 4px 0;
+    border-radius: 0 0 4px 4px/0 0 4px 4px;
+    box-shadow: 0 2px 2px #888;
+    color: #000;
+}
+nav>ul>li>.menu>li{
+    margin: 4px 2px 0;
+    font-size: 14px;
+}
+nav>ul>li>.menu>li:hover{
+    background: #DDB95A;
+    color: #FFF;
+}
+
+/* banner轮播 */
+.carousel-indicators>li{
+    width: 30px;
+    height: 6px;
+    margin: 1px 4px;
+    background: #FFF;
+    border: none;
+}
+.carousel-indicators>li.active{
+    width: 30px;
+    height: 6px;
+    background: #DDB95A;
+    border: none;
+}
+.carousel-inner>.item{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.carousel-inner>.item>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* part1住宅公寓 */
+.part1{
+    background: url('../images/index/figure.png') no-repeat left top/100% auto;
+}
+/* 客服 */
+.part1>.header>.service{
+    right: -100px;
+    top: 0;
+    width: 90px;
+}
+.part1>.header>.service>p{
+    padding: 4px 0;
+}
+
+
+
+/* 大宅别墅 */
+.part2>.header>.locationSearch{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.part2>.header>.locationSearch>li:last-child{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #D6AC3C;
+    color: #FFF;
+}
+.part2>.header>.locationSearch>li>div{
+    margin-left: 16%;
+}
+.part2>.header>.locationSearch>li>div>span:last-child{
+    width: 200px;
+    height: 2px;
+    margin: 10px 0 0 4px; 
+}
+.part2>.header>.locationSearch>li>div:last-child{
+    width: 280px;
+    height: 30px;
+    margin-top: 10px;
+    padding-right: 30px;
+    background: #000;
+    border: 1px solid #000;
+    color: #000;
+}
+.part2>.header>.locationSearch>li>div:last-child>img{
+    top: 5px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+
+/* 民宿客栈 */
+.part3>.footer>ul{
+    margin-bottom: 20px
+}
+
+/* 小美在线 */
+.part4{
+    margin-top: 30px;
+    padding: 24px 0 48px;
+    background: #EEEDEB;
+}
+.part4>img{
+    width: 34%;
+    max-height: 240px;
+    max-height: 300px;
+    margin-left: 18%;
+}
+.part4>.intru{
+    top: 20%;
+    left: 46%;
+    width: 36%;
+    padding:0 2% 20px;
+}
+.part4>.intru>p{
+    margin: 6% 0 6%;
+}
+.part4>.intru>div>span{
+    padding: 4px 10px;
+    border: 1px solid #DDB95A;
+}
+
+
+/* 美宅天下 */
+.part5{
+    margin-top: 0;
+}
+
+/* 合作伙伴 */
+.part6{
+    margin-top: 10px;
+}
+.part6>.main{
+    margin-top: 80px;
+    padding: 3% 0;
+    background: #000;
+}
+.part6>.main>ul{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.part6>.main>ul>li{
+    padding: 0 2.4%;
+    border-left: 1px solid #444;
+}
+.part6>.main>ul>li:last-child{
+    border-right: 1px solid #444;
+}
+.part6>.main>ul>li>img{
+    height: 54px;
+}
+
+.part6>.footer{
+    margin-top: 6px;
+    padding: 24px 0 48px;
+    background: #EEEDEB;
+}
+.part6>.footer>img{
+    width: 34%;
+    max-height: 240px;
+    max-height: 300px;
+    margin-right: 18%;
+}
+.part6>.footer>.intru{
+    top: 20%;
+    right: 46%;
+    width: 36%;
+    padding:0 2% 20px;
+}
+.part6>.footer>.intru>p{
+    margin: 6% 0 6%;
+}
+.part6>.footer>.intru>div>span{
+    padding: 4px 10px;
+    border: 1px solid #DDB95A;
+}
+
+
+/* 联系我们、地址 */
+footer{
+    margin-top: 5px; 
+    padding: 30px 0 20px;
+    background: #969495;
+    color: #DDDCDC;
+}
+footer>ul{
+    padding-bottom: 12px;
+}
+footer>ul>li:first-child{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+footer>ul>li:first-child>img{
+    width: 80px;
+}
+footer>ul>li:first-child>div{
+    margin: 0 12px;
+}
+footer>ul>li:first-child>div>img{
+    height: 24px;
+}
+footer>ul>li:first-child>div>h6{
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+footer>ul>li:nth-child(2){
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    padding: 0 5%;
+    border-left: 1px solid #DDDCDC;
+    border-right: 1px solid #DDDCDC;
+}
+footer>ul>li:nth-child(2)>h6{
+    padding: 0 20px;
+    font-size: 14px;
+}
+footer>ul>li:nth-child(2)>h6:first-child{
+    margin-bottom: 4px;
+}
+footer>ul>li:last-child{
+    width: 20%;
+    margin-top: 22px;
+}
+footer>ul>li:last-child>h6{
+    font-size: 14px;
+}
+
+footer>.address{
+    padding: 16px 0 24px;
+    border-top: 1px solid #DDDCDC;
+}
+
+
+
+/* picShow类名样式 */
+.picShow>p{
+    left: 0;
+    bottom: 20%;
+}
+.picShow>p>span{
+    padding: 8px 28px;
+    background: #D6AC3C;
+    color: #FFF;
+}
+.picShow>p.special{
+    bottom: 64%;
+}
+
+
+/* three类名样式 */
+.part .three{
+    margin-top: 14px;
+}
+.part .three>li{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 200px;
+}
+.part .three>li:first-child{
+	margin-left: 0;
+}
+.part .three>li:nth-child(2){
+    margin: 0 0.5%;
+}
+.part .three>li:last-child{
+	margin-right: 0;
+}
+
+.part .three>li>img{
+    border: 2px solid #FFF;
+}
+.part .three>li:hover>img{
+    border-color: #DDB95A;
+    box-shadow: 1px 5px 10px #888;
+    transform: scale(1.02);
+}
+.part .three>li>div{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+}
+.part .three>li>div>span{
+    padding: 8px 18px;
+    background: #D6AC3C;
+    color: #FFF;
+}
+
+
+/* four类名样式 */
+.part .four{
+    margin-left: 0;
+    transition: 0.3s;
+}
+.part .four>li>div:first-child{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 152px;
+    margin: 16px auto 14px; 
+}
+.part .four>li>div:first-child>img{
+    min-width: 100%;
+    max-height: 100%;
+}
+/* .part .four>li>div:first-child>img{
+    max-width: 100%;
+    min-height: 100%;
+} */
+
+.part .four>li>div:first-child:hover{
+    border: 2px solid #DDB95A;
+    box-shadow: 1px 5px 10px #888;
+    transform: scale(1.04);
+}
+
+
+/* 左右滚动按钮样式 */
+.leftBtn{
+    top: 114px;
+    left: -80px;
+}
+.rightBtn{
+    top: 114px;
+    right: -80px;
+}
+
+
+
+/* 菱形 */
+.part .sharp{
+    margin-left: 0;
+    transition: 0.3s;
+}
+.part .sharp>li{
+    width: 160px; 
+    margin-right: 0;
+}
+.part .sharp>li:first-child{
+    margin-left: 0;
+}
+.part .sharp>li:last-child{
+    margin-right: 0;
+}
+
+
+
+.navFixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+
+/* 鼠标浮动字体下划线样式 */
+.navActive{
+    color: #DDB95A;
+}
+.navActive:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px; 
+    width: 100%;
+    height: 2px;
+    background: #DDB95A;
+}
+.shadow{
+    border-radius: 4px 4px 0 /4px 4px 0 0;
+    box-shadow: 0 -1px 2px #888;
+}
+
+.graybg{
+    height: 24px;
+    margin-bottom: 12px;
+    background: #E9E9E9;
+}
+
+.linebg{
+    height: 2px;
+    background: #E9E9E9;
+}
+
+
+.img-rounded{
+    border-radius: 16px;
+}
+
+
+/* 菱形样式 */
+.img-sharp{
+    width: 190px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 4px;
+}
+.img-sharp>img{
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.img-sharp>.over{
+    top: 0;
+    left: 0;
+}
+
+.img-sharp:hover>img{
+    transform: scale(1.04);
+}
+.img-sharp:hover>.over:last-child{
+    display: block;
+}
+
+
+
+
+
+/* 住宅公寓新增区域样式 */
+.sectionCont{
+    margin: 20px 0;
+    padding: 24px 0;
+    background: #F2F1EF;
+}
+
+.picture{
+    border: 1px solid #D6AC3C;
+}
+.picture>img{
+    width: 90%;
+    height: 245px;
+    margin: 12px auto -12px;
+    border-radius: 4px;
+    box-shadow: 0 0 12px #888;
+
+}
+.picturnDown .picture>img{
+    /* margin: -12px auto; */
+    margin: -12px auto 12px;
+}
+.picture+img{
+    margin: 20px 0 12px;
+}
+.picturnDown>p+img{
+    margin: 0 0 20px;
+}
+.sectionCont>li>h5{
+    width: 70%;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    background: #D6AC3C;
+    color: #FFF;
+}
+

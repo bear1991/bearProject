@@ -1,0 +1,43 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<!-- <text>pages/orderdetail/orderdetail.wxml</text> -->
+<wxs src="../common.wxs" module="common" />
+<view>
+  <modal hidden="{{hidden}}" title="删除订单" confirm-text="确定" cancel-text="取消" bindcancel="cancel"  bindconfirm="confirm" no-cancel="{      {nocancel}}">确定删除此订单?
+  </modal>
+  <view class='head'>
+    <view class='head_text'>{{common.getOrderType(order.status)}}</view>
+    <view class='head_del' catchtap="delOrder" wx:if="{{order.status == 0}}">删除</view>
+  </view>
+  <view class='head_address'>
+    <view class='head_address_name'>{{order.receiver+'  '+order.tel}}</view>
+    <view class='head_address_address'>{{order.province+order.city+order.district+order.address}}</view>
+  </view>
+  <view >
+    <view wx:for="{{order.data}}" wx:key="id" >
+      <view class="history" data-index="{{item.id}}">
+        <view class='order_middle'>
+          <image class='order_img' src="{{item.pic}}"></image>
+          <view class='goods_root'>
+            <view class='goods_name'>{{item.title}}</view>
+            <view class='goods_content_root'>
+              <view class='goods_price'>￥{{item.price}}</view>
+              <view class='goods_num'>X{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='order_bottom'>
+          <view class='order_sum'>
+            <view class='sum_text'>共{{item.num}}件商品</view>
+            <view class='sum_text'>小计:</view>
+            <view class='order_sum_price'>￥{{item.amount}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class='middle_root'>h</view> 
+  <view class='bottom_root' wx:if="{{order.status == 0}}">
+    <button class='button' catchtap="fetchPay">去支付</button>
+    <view class='bottom_input'></view>
+  </view> 
+</view>

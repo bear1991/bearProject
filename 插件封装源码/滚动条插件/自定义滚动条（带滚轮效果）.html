@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>自定义滚动条（带滚轮效果）</title>
+  <style type="text/css">
+  *{
+	margin:0;
+	padding:0;}
+  #wrap{
+	position:relative;
+	width:800px;
+	height:560px;
+	margin:20px auto;
+	padding:20px 40px 20px 20px;
+	background:pink;
+	-webkit-user-select:none;    /*苹果、谷歌*/
+	-moz-user-select:none;    /*火狐*/
+	-ms-user-select:none;     /*Ie*/
+	user-select:none;}
+  #wrap #box{
+	height:100%;
+	overflow:hidden;}
+  #wrap #cont{
+	padding:10px 20px;
+	background:lightgreen;}
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+	<div id="box">
+		<div id="cont">
+			<h2>阿甘正传</h2>
+			<br>
+			<p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
+		　　<p>生命就像一盒巧克力，结果往往出人意料。</p>
+		　　<p class="pbold">2、Stupid is as stupid does.</p>
+		　　<p>蠢人做蠢事，也可理解为傻人有傻福。</p>
+		　　<p class="pbold">3、Miracles happen every day.</p>
+		　　<p>奇迹每天都在发生。</p>
+		　　<p class="pbold">4、it made me look like a duck in water.</p>
+		　　<p>它让我如鱼得水。</p>
+		　　<p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+		　　<p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
+		　　<p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
+		　　<p>死亡是生命的一部分，是我们注定要做的一件事。</p>
+		　　<p class="pbold">7、You have got to put the past behind you before you can move on.</p>
+		　　<p>放下包袱，继续前进。</p>
+		　　<p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+		　　<p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
+		　　<p class="pbold">9、If there is anything you need, I will not be far away.</p>
+		　　<p>只要你需要，我就在这里。</p>
+		　　<p class="pbold">10、I am a man of my word.</p>
+		　　<p>我是信守承诺的人。</p>
+		　　<p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
+		　　<p>某人的一小步就是人类的一大步。</p>
+			<p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
+		　　<p>生命就像一盒巧克力，结果往往出人意料。</p>
+		　　<p class="pbold">2、Stupid is as stupid does.</p>
+		　　<p>蠢人做蠢事，也可理解为傻人有傻福。</p>
+		　　<p class="pbold">3、Miracles happen every day.</p>
+		　　<p>奇迹每天都在发生。</p>
+		　　<p class="pbold">4、it made me look like a duck in water.</p>
+		　　<p>它让我如鱼得水。</p>
+		　　<p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+		　　<p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
+		　　<p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
+		　　<p>死亡是生命的一部分，是我们注定要做的一件事。</p>
+		　　<p class="pbold">7、You have got to put the past behind you before you can move on.</p>
+		　　<p>放下包袱，继续前进。</p>
+		　　<p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+		　　<p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
+		　　<p class="pbold">9、If there is anything you need, I will not be far away.</p>
+		　　<p>只要你需要，我就在这里。</p>
+		　　<p class="pbold">10、I am a man of my word.</p>
+		　　<p>我是信守承诺的人。</p>
+		　　<p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
+		　　<p>某人的一小步就是人类的一大步。</p>
+			<p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
+		　　<p>生命就像一盒巧克力，结果往往出人意料。</p>
+		　　<p class="pbold">2、Stupid is as stupid does.</p>
+		　　<p>蠢人做蠢事，也可理解为傻人有傻福。</p>
+		　　<p class="pbold">3、Miracles happen every day.</p>
+		　　<p>奇迹每天都在发生。</p>
+		　　<p class="pbold">4、it made me look like a duck in water.</p>
+		　　<p>它让我如鱼得水。</p>
+		　　<p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+		　　<p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
+		　　<p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
+		　　<p>死亡是生命的一部分，是我们注定要做的一件事。</p>
+		　　<p class="pbold">7、You have got to put the past behind you before you can move on.</p>
+		　　<p>放下包袱，继续前进。</p>
+		　　<p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+		　　<p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
+		　　<p class="pbold">9、If there is anything you need, I will not be far away.</p>
+		　　<p>只要你需要，我就在这里。</p>
+		　　<p class="pbold">10、I am a man of my word.</p>
+		　　<p>我是信守承诺的人。</p>
+		　　<p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
+		　　<p>某人的一小步就是人类的一大步。</p>
+		</div>
+	</div>
+	
+ </div>
+ <script type="text/javascript">
+ //点击移动效果、滚动效果
+ (function(){
+	var oWrap = document.getElementById('wrap');
+	var oBox = document.getElementById('box');
+	var oCont = document.getElementById('cont');
+	var bigTop = getStyle(oWrap,'padding-top');
+	var bigHeight = oBox.clientHeight;    //右侧滚动栏高度
+	var smallHeight = oBox.clientHeight/oCont.clientHeight*bigHeight;   //右侧滚动块高度
+
+	//创建右侧滚动栏
+	var oBigDiv = document.createElement('div');
+	oBigDiv.style.cssText = 'position:absolute;top:'+ bigTop +';right:10px;width:20px;height:'+ bigHeight +'px;background:#000;';
+	
+	//创建右侧滚动块
+	var oSmallDiv = document.createElement('div');
+	oSmallDiv.style.cssText = 'position:absolute;top:0;left:3px;width:14px;height:'+ smallHeight +'px;background:#BBB;';
+	
+	oBigDiv.appendChild(oSmallDiv);     //将滚动块添加到滚动栏上
+	oWrap.appendChild(oBigDiv);      //将滚动栏添加到wrap上
+	
+	//鼠标点击滚动块滚动事件
+	oSmallDiv.onmousedown = function(ev){
+		ev = ev || window.event;    //解决event事件兼容
+		var cTop = this.offsetTop;    //获取滚动块的初始定位top值
+		var sTop = ev.clientY;    //获取鼠标初始Y轴位置
+		this.style.cursor = 'pointer';
+		var This = this;
+		document.onmousemove = function(ev){
+			ev = ev || window.event;
+			var eTop = ev.clientY;     //获取鼠标移动后Y轴位置
+			var seTop = eTop - sTop;   //获取鼠标在Y轴方向上位移
+			var mTop = cTop + seTop;    
+
+			//限制滚动块上下滚动的范围
+			mTop = Math.max(0,mTop);
+			mTop = Math.min(mTop,bigHeight-smallHeight);
+			This.style.top = mTop + 'px';
+
+			//左侧cont内容随滚动块滚动而滚动
+			var pop = mTop/(bigHeight-smallHeight);    //获取滚动块滚动的比例
+			oCont.style.marginTop = -pop*(oCont.clientHeight-oBox.clientHeight) + 'px';
+			}
+		}
+
+	//当鼠标离开页面后，清除鼠标在页面移动事件
+	document.onmouseup = function(){
+		this.onmousemove = null;
+		oSmallDiv.style.cursor = '';
+		}
+	
+	//鼠标滚轮事件
+	mouseWheel(oWrap,scrollFn);   //注意在wrap上注册滚轮事件
+
+	function scrollFn(ev){
+		ev = ev || window.event;
+		var delta = ev.wheelDelta/120 || -ev.detail/3;  //判断delta的正负，正为滚轮向上，负为向下
+		//console.log(delta);
+		
+		var smallTop = oSmallDiv.offsetTop;    //获取cont初始定位top值
+		var smallStep = smallHeight/2;    //设置每滚动一次，滚动块垂直方向位移是自身高度一半
+		
+		if (delta>0){      //向上
+			smallStep = - smallStep;	
+			}
+		var sEndTop = smallTop + smallStep;
+
+		//限制鼠标滚动时，右侧滚动块的滚动范围
+		sEndTop = Math.max(0,sEndTop);
+		sEndTop = Math.min(sEndTop,bigHeight-smallHeight);
+		oSmallDiv.style.top = sEndTop + 'px';
+
+		//获取鼠标滚动时，右侧滚动块滚动的比例
+		var pop = oSmallDiv.offsetTop/(bigHeight-smallHeight);
+		oCont.style.marginTop = -pop*(oCont.clientHeight-oBox.clientHeight) + 'px';
+		}
+
+	//获取元素样式函数
+	function getStyle(obj,attr){
+		return document.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+		}
+
+	//鼠标滚轮事件兼容（重要）
+	function mouseWheel(obj,eFn){
+		 document.onmousewheel === null?obj.onmousewheel = eFn:obj.addEventListener('DOMMouseScroll',eFn,false);
+		}
+	
+	})();
+ </script>
+ </body>
+</html>

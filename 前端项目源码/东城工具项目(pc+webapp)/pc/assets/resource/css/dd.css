@@ -1,0 +1,253 @@
+/* 首页中间内容部分 */
+#index-tab{
+    margin-top: 12px;
+}
+
+#index-tab .tab-content{
+    padding: 16px 0;
+}
+
+#myTab>li>a{
+    padding: 8px 16px;
+}
+#myTab>li.active>a{
+    color: #4894B9;
+}
+
+/* 全部订单 */
+#qbdd .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+    color: #787878;
+}
+#qbdd .dd-list{
+    margin: 12px 0;
+}
+#qbdd .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+#qbdd .dd-list>li:last-child{
+    margin-bottom: 20px;
+    padding-top: 6px; 
+    border-bottom: none;
+}
+#qbdd .dd-list>li:last-child>span{
+    padding: 6px 12px;
+    background: #F0F0F0;
+    font-size: 12px;
+    color: #6B6B6B;
+}
+
+#qbdd .dd-list+div h4+div>span:first-child{
+    padding-right: 16px;
+}
+
+#qbdd .dd-header>div:first-child>span.wait{
+    color: #E43330;
+}
+#qbdd .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#qbdd .dd-cont>div{
+    margin: 20px 0;
+}
+#qbdd .dd-cont img{
+    max-width: 180px;
+}
+
+#qbdd .pro-info>h5{
+    margin-top: 0;
+}
+#qbdd .pro-info>ul{
+    margin: 16px 0;
+}
+#qbdd .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}
+
+/* 待确认 */
+#dqr .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+    color: #787878;
+}
+#dqr .dd-list{
+    margin: 12px 0;
+}
+#dqr .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+
+#dqr .dd-list+div h4,
+#dqr .dd-list+div h4+div>span{
+    padding-right: 16px;
+}
+
+#dqr .dd-header>div:first-child>span.wait{
+    color: #E43330;
+}
+#dqr .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#dqr .dd-cont>div{
+    margin: 20px 0;
+}
+#dqr .dd-cont img{
+    max-width: 180px;
+}
+
+#dqr .pro-info>h5{
+    margin-top: 0;
+}
+#dqr .pro-info>ul{
+    margin: 16px 0;
+}
+#dqr .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}
+
+/* 已审核 */
+#ysh .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+    color: #787878;
+}
+#ysh .dd-title>span{
+    padding-right: 2%;
+    color: #787878;
+}
+#ysh .dd-list{
+    margin: 12px 0;
+}
+#ysh .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+#ysh .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#ysh .dd-cont{
+    border: 1px solid #EEE;
+}
+#ysh .dd-cont>div{
+    margin: 20px 0;
+}
+#ysh .dd-cont>div:last-child>p{
+    padding-left:20%;
+}
+#ysh .dd-cont img{
+    max-width: 180px;
+}
+
+#ysh .pro-info>h5{
+    margin-top: 0;
+}
+#ysh .pro-info>ul{
+    margin: 16px 0;
+}
+#ysh .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}
+
+/* 已完成 */
+#ywc .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+    color: #787878;
+}
+#ywc .dd-title>span{
+    padding-right: 2%;
+    color: #787878;
+}
+#ywc .dd-list{
+    margin: 12px 0;
+}
+#ywc .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+#ywc .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#ywc .dd-cont{
+    border: 1px solid #EEE;
+}
+#ywc .dd-cont>div{
+    margin: 20px 0;
+}
+#ywc .dd-cont>div:last-child>p{
+    padding-left:20%;
+}
+#ywc .dd-cont img{
+    max-width: 180px;
+}
+
+#ywc .pro-info>h5{
+    margin-top: 0;
+}
+#ywc .pro-info>ul{
+    margin: 16px 0;
+}
+#ywc .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}
+
+/* 已取消 */
+#yqx .dd-title{
+    padding: 8px 0;
+    background: #FAFAFA;
+    color: #787878;
+}
+
+#yqx .dd-list{
+    margin: 12px 0;
+}
+#yqx .dd-list>li{
+    border-bottom: 1px solid #EEE;
+}
+
+#yqx .dd-list+div h4,
+#yqx .dd-list+div span{
+    padding-right: 16px;
+    color:#787878;
+}
+#yqx .dd-list+div h4{
+    padding-right: 0;
+    font-size: 18px;
+}
+
+#yqx .dd-header>div:first-child>span.wait{
+    color: #E43330;
+}
+#yqx .dd-header>div:first-child>span:nth-child(2){
+    margin: 0 20px;
+}
+
+#yqx .dd-cont>div{
+    margin: 20px 0;
+}
+#yqx .dd-cont img{
+    max-width: 180px;
+}
+
+#yqx .pro-info>h5{
+    margin-top: 0;
+}
+#yqx .pro-info>ul{
+    margin: 16px 0;
+}
+#yqx .pro-info>ul>li{
+    padding: 0 0 4px;
+    color: #787878;
+    font-size: 12px;
+}

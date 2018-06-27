@@ -1,0 +1,64 @@
+/* 主体 */
+.linebg{
+    height: 2px;
+    background: #E9E9E9;
+}
+
+.main>.content{
+    padding: 48px 0 0;
+}
+
+
+
+.content>h4>span:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20%;
+    bottom: -10px; 
+    width: 60%;
+    height: 2px;
+    background: #DDB95A;
+}
+.content>p{
+    margin: 20px 0 40px;
+}
+.content>.introWrap{
+    height: 800px;
+}
+.content>.introWrap>.left{
+    width: 34%;
+    background: #DDB95A;
+}
+.content>.introWrap>.left>.intro{
+    padding: 36px 24px;
+    color: #FFF;
+}
+.content>.introWrap>.left>.intro>p{
+    text-align: justify;
+}
+.content>.introWrap>.right{
+    width: 64%;
+}
+
+
+#myTabs{
+    border-bottom: none;
+}
+#myTabs li{
+    width: 50%;
+    margin: 0;
+}
+#myTabs li>a{
+    margin-right: 0;
+    border: 1px solid #ddd;
+    color: #DDB95A;
+}
+#myTabs li.active>a{
+    background: #DDB95A;
+    color: #FFF;
+}
+
+.tab-content{
+    height: 754px;
+}

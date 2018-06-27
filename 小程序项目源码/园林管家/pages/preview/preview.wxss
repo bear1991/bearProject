@@ -1,0 +1,15 @@
+/* pages/preview/preview.wxss */
+
+.preview-wrap{
+  height: 100vh;
+  background: #000;
+}
+.preview-scroll{
+  height: 100%;
+  white-space: nowrap;
+}
+.preview{
+  display: inline-block;
+  width: 750rpx;
+  height: 100%;
+}

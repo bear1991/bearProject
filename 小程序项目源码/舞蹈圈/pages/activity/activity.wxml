@@ -1,0 +1,48 @@
+<!--pages/activity/activity.wxml-->
+<!-- <text>pages/activity/activity.wxml</text> -->
+
+<wxs src="../common.wxs" module="common" />
+
+<view class="container">
+  <!-- <view class="header">
+    <text class="{{activityStatus?'active':''}}" catchtap="activityCatchtap" data-index="1">比赛</text>
+    <text class="center">|</text>
+    <text class="{{activityStatus?'':'active'}}" catchtap="activityCatchtap" data-index="0">活动</text>
+  </view> -->
+  <!-- <view class="middle"></view> -->
+  <scroll-view>
+    <view class='team_root'>
+      <view class="team_item" catchtap="selectCat" wx:for="{{actCats}}" data-index="{{index}}" wx:key="id">
+        <text class='term_text'>{{item.name}}</text>
+        <view class='team_line' wx:if="{{item.isSelect == 1}}"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="content">
+
+    <!-- 活动列表 -->
+    <scroll-view class="listWrap" scroll-y bindscrolltolower="activityListMore" data-index="0">
+      <!-- 有活动显示 -->
+      <block wx:if="{{activityData[0].length}}" wx:for="{{activityData[0]}}" wx:key="actPic" >
+        <view class="history" catchtap="actCatchtap" data-index="{{item.id}}">
+          <image mode="aspectFill" class='historyImg' src="{{common.delPicture(item.smeta).thumb}}"></image>
+          <text class='historyTitle'>{{item.post_title}}</text>
+        </view>
+      </block>
+      <!-- 有活动显示 -->
+      <block wx:if="{{!activityData[0].length}}"> 
+        <view class="noCont">
+          <image src="../../images/activity/nactivity.png"></image>
+          <view class="intro">
+            <view>活动正在筹备中</view>
+            <view>^_^ 敬请期待~</view>
+          </view>
+          <!-- <view class="backIndex">
+            <button>返回首页</button>
+          </view> -->
+        </view>
+      </block>
+    </scroll-view>
+
+  </view>
+</view>

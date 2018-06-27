@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>产品详情</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="./assets/css/weui.min.css"/>
+        <link rel="stylesheet" href="./assets/css/public.css"/>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">    <!-- 字体图标样式 -->
+        
+		<link rel="stylesheet" href="./assets/resource/css/product-detail.css">
+    </head>
+    <body class="h100">
+        <header class="dis-f">
+            <i class="fas fa-chevron-left size20"></i>
+            <span class="size18">详情</span>
+            <i class="fas fa-home size20"></i>
+        </header>
+
+        <section class="container fya">
+            <div class="weui-panel__bd">
+                <img class="weui-media-box__thumb dis-b w100" src="./assets/images/bear.jpg" alt="">
+            </div>
+            <div class="weui-panel__bd bgw">
+                <div class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">DCJZ05-10(a型)9.6V充电式单速起子电钻</h4>
+                        <div class="weui-media-box__desc size14">
+                            <div>1.7Ah大容量电池，低噪声...</div>
+                            <div>订货编号：00301110021</div>
+                            <div>起订量：10</div>
+                            <div class="price-add clearfix size14">
+                                <div class="fl">￥105.00</div>
+                                <div class="weui-btn weui-btn_default fr">
+                                    <i class="fas fa-shopping-cart"></i>加入购物车
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="weui-panel__bd bgw">
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title">产品介绍：</h4>
+                    <p class="weui-media-box__desc size14">本产品为专用起子机，适用于一般环境条件下，用于旋入和旋出螺丝。</p>
+                </div>
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title">产品特点：</h4>
+                    <p class="weui-media-box__desc size14">本产品为专用起子机，适用于一般环境条件下，用于旋入和旋出螺丝。</p>
+                </div>
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title">产品参数：</h4>
+                    <p class="weui-media-box__desc size14">
+                        <table class="w100">
+                            <tr>
+                                <td>空载转速(r/min):</td>
+                                <td>1档0-270</td>
+                                <td>2档0-1060</td>
+                            </tr>
+                            <tr>
+                                <td>最大扭矩(N*m):</td>
+                                <td>1档16</td>
+                                <td>2档30</td>
+                            </tr>
+                            <tr>
+                                <td>净重(Kg):</td>
+                                <td colspan="2">1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">充电器输入:</td>
+                                <td colspan="2">FFDC12-1 220V-240V~50HZ-60HZ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">FFDC12-1 220V-240V~50HZ-60HZ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">FFDC12-1 220V-240V~50HZ-60HZ</td>
+                            </tr>
+                            <tr>
+                                <td>充电器输出:</td>
+                                <td>12V 3A</td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+            </div>
+
+        </section> 
+
+        <!-- 底部购物车 -->
+        <footer class="dis-f pa">
+            <div class="dis-f h100 pr">
+                <div class="shop-car pa br tc" id="showIOSActionSheet">
+                    <img src="./assets/images/shopcar.png" alt="">
+                    <span class="weui-badge" style="position: absolute;top: -.3em;right: -.2em;">3</span>
+                </div>
+                <span>￥38291.00</span>
+            </div>
+            <div class="dis-f h100">结算</div>
+        </footer>
+
+
+        <!-- 购物车弹窗 -->
+        <div>
+            <div class="weui-mask" id="iosMask" style="display: none"></div>
+            <div class="weui-actionsheet" id="iosActionsheet">
+                <div class="weui-actionsheet__title">
+                    <p class="weui-actionsheet__title-text">提示：可修改数量</p>
+                </div>
+                <div class="weui-actionsheet__menu">
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">DCJZ05-10(a型)9.6V充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">100</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">45</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                合计：<span class="total">145</span>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">0</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">15</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr">
+                                合计：<span class="total">15</span>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="page__bd page__bd_spacing">
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder">DCJZ05-10(a型)9.6V充电式单速起子电钻</div></div>
+                            <div class="weui-flex__item"><div class="placeholder num-action dis-f h100">
+                                <img class="vm reduce" src="./assets/images/reduce.png" alt="">
+                                <span class="vm num">60</span>
+                                <img class="vm increase" src="./assets/images/add.png" alt="">
+                            </div></div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item"><div class="placeholder" style="color: #A0A0A0;">
+                                分销商：<span class="fxNum">0</span>
+                            </div></div>
+                            <div class="weui-flex__item"><div class="placeholder tr ">
+                                合计：<span class="total">60</span>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/zepto.min.js"></script>
+        <script type="text/javascript" src="./assets/resource/js/product-detail.js"></script>
+      
+        
+    </body>
+</html>

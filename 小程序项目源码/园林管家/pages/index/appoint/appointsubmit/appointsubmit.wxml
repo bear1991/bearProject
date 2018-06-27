@@ -1,0 +1,147 @@
+<!--pages/index/appoint/appointsubmit/appointsubmit.wxml-->
+<view class='container'>
+  <view class='.appointsubmit-list-wrap'>
+    <view class='group-list'>
+      <view class='group-title'>
+        <text>基本信息</text>
+      </view>
+      <view class='group-cont'>
+        <view class='group-cont-list'>
+          <text>预约分类</text>
+          
+          <picker class='picker-select' mode='selector' range='{{typePicker}}' bindchange='bindTypeChange'>
+            <view wx:if='{{!typeValue}}'>
+              <text class='picker-text'>请选择</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+            <view wx:else>
+              <text class='picker-text novertical'>{{typeValue}}</text>
+            </view>
+          </picker>
+        </view>
+        <view class='group-cont-list'>
+          <text>预约项目</text>
+
+          <view class='picker-select' bindtap='bindProjectTap'>
+            <view wx:if='{{!projectValue}}'>
+              <text class='picker-text'>请选择</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+            <view wx:else>
+              <text class='picker-text novertical'>{{projectValue}}</text>
+            </view>
+          </view>
+
+        </view>
+        <view class='group-cont-list'>
+          <text>预约服务日期</text>
+
+          <picker class='picker-select' mode='date' value='YYYY/MM/DD' bindchange='bindDateChange'>
+            <view wx:if='{{!dateValue}}'>
+              <text class='picker-text'>请选择</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+            <view wx:else>
+              <text class='picker-text novertical'>{{dateValue}}</text>
+            </view>
+          </picker>
+
+        </view>
+        <!--
+        <view class='group-cont-list'>
+          <text>预约服务时间</text>
+
+          <picker class='picker-select' mode='time' value='hh:mm' bindchange='bindTimeChange'>
+            <view wx:if='{{!timeValue}}'>
+              <text class='picker-text'>请选择</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+            <view wx:else>
+              <text class='picker-text novertical'>{{timeValue}}</text>
+            </view>
+          </picker>
+          
+        </view>
+        -->
+      </view>
+    </view>
+  
+    <view class='group-list'>
+      <view class='group-title'>
+        <text>联系信息</text>
+      </view>
+      <view class='group-cont'>
+        <view class='group-cont-list'>
+          <text>户主姓名</text>
+          <!--
+          <input type='text' bindblur='bindUserNameBlur' placeholder='请填写户主姓名' placeholder-style='color:#BBBBBB;font-size:34rpx;'></input>
+          -->
+          <text>{{userName}}</text>  
+        </view>
+
+        <view class='group-cont-list'>
+          <text>联系电话</text>
+          <!--
+          <input type='number' bindblur='bindTelNumberBlur' placeholder='请输入联系号码' placeholder-style='color:#BBBBBB;font-size:34rpx;'></input>
+          -->
+          <text>{{telNumber}}</text>
+        </view>
+        <view class='group-cont-list'>
+          <text>家庭地址</text>
+          <picker class='picker-select' mode='selector' range='{{regionPicker}}' bindchange='bindRegionChange'>
+            <!--
+            <view wx:if='{{!regionValue}}'>
+              <text class='picker-text'>请选择</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+            <view wx:else>
+              <text class='picker-text novertical'>{{regionValue}}</text>
+            </view>
+            -->
+            <view>
+              <text class='picker-text novertical'>{{regionValue}}</text>
+              <image class='picker-pic' src='../../../image/turn.png'></image>
+            </view>
+          </picker>
+        </view>
+        <!--
+        <view class='group-cont-list'>
+          <text>门牌号码</text>
+          <text>{{familyNumber}}</text>
+        </view>
+        -->
+        <!--
+        <view class='group-cont-list'>
+          <text>门牌号码</text>
+          <input type='text' bindblur='bindFamilyNumberBlur' placeholder='请输入楼号或门牌号' placeholder-style='color:#BBBBBB;font-size:34rpx;'></input>
+        </view>
+        -->
+
+      </view>
+    </view>
+  </view>
+  
+  <view class='submit'>
+    <button type='primary' catchtap='catchAppointInputSubmitTap'>提交</button>
+  </view>
+
+  <!-- 自定义项目选择器 -->
+  <view wx:if='{{projectSelectState}}' class='project-select-wrap' catchtap='catchProjectSelectWrapTap' animation='{{projectSelectWrapAnimation}}'>
+    <view class='project-select' catchtap='catchProjectSelectTap' animation='{{projectSelectAnimation}}'>
+      <view class='cancel-sure'>
+        <text class='select-cancel' catchtap='catchCancelTap'>取消</text>
+        <text class='select-sure' catchtap='catchSureTap'>确定</text>
+      </view>
+      <view class='project-select-cont'>
+        <checkbox-group class='project-checkbox-group' bindchange="bindProjectSelectChange">
+          <label class="project-checkbox" wx:for='{{projectPicker}}' wx:key='projectName'>
+            <checkbox value="{{item.projectName}}" checked="{{item.projectSelectlistState}}"/>
+            <text class='project-checkbox-text'>{{item.projectName}}</text>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+
+</view>
+

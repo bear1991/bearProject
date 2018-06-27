@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="h100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排行榜</title>
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .container{
+            background: #DE0016;
+        }
+        
+        .header{
+            height: 200px;
+            
+        }
+        .header>p{
+            width: 90%;
+            margin: 16px auto 24px;
+            padding: 4px 0;
+            background: #740002;
+            border-radius: 12px;
+            color: #FFF;
+        }
+        .title{
+            width: 64%;
+            height: 100px;
+        }
+        
+        .cont{
+            margin: 0 16px;
+        }
+
+        .type,
+        .content{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .type>li, 
+        .content>li{
+            flex: 1;
+        }
+        .type>li:nth-child(2),
+        .content>li:nth-child(2){
+            flex: 6;
+            margin: 0 12px;
+        }
+
+        .type{
+            margin-top: 16px;
+            padding: 4px 0;
+            background: #E5E5E5;
+        }
+        .content{
+            padding: 4px 0;
+            border-bottom: 1px solid #DCDCDC;
+        }
+        .content>li:first-child>img{
+            width: 14px;
+        }
+        .content>li:nth-child(2)>img{
+            width: 10%;
+            margin: 0 2% 0 0;
+        }
+        .content>li:nth-child(2)>ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 88%;
+            overflow-wrap: break-word;
+            line-height: 1.2;
+        }
+
+        /* 底部切换样式 */
+        .barBtn{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            padding-top: 8px;
+        }
+        .barBtn>li{
+            flex: 1;
+        }
+        .barBtn>li>img{
+            height: 24px;
+        }
+        .barBtn>li>div{
+            margin-top: -4px;
+        }
+
+    </style>
+</head>
+<body class="h100">
+    
+    <div class="container h100">
+        <div class="header fh tc">
+            <p class="tc">投票倒计时：10天10小时23分钟</p>
+            <img class="title" src="./images/phb/title.png" alt="">
+        </div>
+        <div class="cont bgw fh">
+            <ul class="type tc size14">
+                <li>排名</li>
+                <li>参赛选手</li>
+                <li>票数</li>
+            </ul>
+            <div class="list fya size12">
+                <ul class="content">
+                    <li class="tc">
+                        <img src="./images/phb/one.png" alt="">
+                    </li>
+                    <li class="clearfix">
+                        <img class="fl" src="./images/phb/bear.jpg" alt="">
+                        <ul class="fl size12">
+                            <li>江苏斯得福纺织股份有限公司</li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <span>XXXX</span>
+                    </li>
+                </ul>
+                <ul class="content">
+                    <li class="tc">
+                        <img src="./images/phb/two.png" alt="">
+                    </li>
+                    <li class="clearfix">
+                        <img class="fl" src="./images/phb/bear.jpg" alt="">
+                        <ul class="fl size12">
+                            <li>江苏斯得福纺织股份有限公司</li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <span>XXXX</span>
+                    </li>
+                </ul>
+                <ul class="content">
+                    <li class="tc">
+                        <img src="./images/phb/three.png" alt="">
+                    </li>
+                    <li class="clearfix">
+                        <img class="fl" src="./images/phb/bear.jpg" alt="">
+                        <ul class="fl">
+                            <li>江苏斯得福纺织股份有限公司</li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <span>XXXX</span>
+                    </li>
+                </ul>
+                <ul class="content">
+                    <li class="tc">
+                        4
+                    </li>
+                    <li class="clearfix">
+                        <img class="fl" src="./images/phb/bear.jpg" alt="">
+                        <ul class="fl">
+                            <li>江苏斯得福纺织股份有限公司</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>XXXX</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部切换 -->
+    <ul class="barBtn dis-f pf tc bgw size14">
+        <li>
+            <img src="./images/tplist/one.png" alt="">
+            <div>首页</div>
+        </li>
+        <li>
+            <img src="./images/tplist/two.png" alt="">
+            <div>排行榜</div>
+        </li>
+        <li>
+            <img src="./images/tplist/three.png" alt="">
+            <div>抽奖说明</div>
+        </li>
+        <li>
+            <img src="./images/tplist/four.png" alt="">
+            <div>答题抽奖</div>
+        </li>
+    </ul>
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        heightChange.call($('.cont'), 16);
+        heightChange.call($('.list'), 16);
+        window.onresize = function(){
+            heightChange.call($('.cont'), 16);
+            heightChange.call($('.list'), 16);
+        }
+
+        function heightChange(other){
+            this.height(this.parent().height() - this.prev().height() - other);
+        }
+    </script>
+</body>
+</html>

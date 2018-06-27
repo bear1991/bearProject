@@ -1,0 +1,45 @@
+/* pages/person/user/user.wxss */
+
+/****** 用户信息管理 ******/
+.group-list{
+  width: 100%;
+  margin-top: 24rpx; 
+}
+
+.group-cont{
+  background: #FFF;
+}
+.group-cont-list{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #F6F6F6; 
+}
+.group-cont-list>view{
+  align-self: center;
+}
+.picker-text{
+  color: #888888;
+  font-size: 34rpx;
+  vertical-align: middle;
+}
+.picker-pic{
+  width: 24rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+.group-cont-list>text{
+  margin: 30rpx 0;
+  font-size: 34rpx;
+}
+
+
+.picker-select{
+  align-self: center;
+}
+.novertical{
+  vertical-align: none;
+}

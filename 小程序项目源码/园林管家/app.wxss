@@ -1,0 +1,92 @@
+/**app.wxss**/
+/*设置高度满屏*/
+page{
+  background: #F5F5F5;
+}
+
+/****** 页面框架样式 ******/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+
+/****** 模板公共框架样式 ******/
+.type-list{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24rpx;
+  padding: 24rpx 0;
+  background: #FFF;
+}
+.type-lf{
+  margin-left: 30rpx;
+}
+.type-rt{
+  margin-right: 30rpx;
+}
+  
+
+/****** 搜索框 ******/
+.search-wrap{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 138rpx;
+  background: #F5F5F5;
+}
+.search{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 680rpx;
+  height: 90rpx;
+  margin: 24rpx auto;
+  background: #FFF;
+}
+.search>input{
+  width: 560rpx;
+  height: 80rpx;
+}
+.search>icon{
+  align-self: center;
+  margin-right: 30rpx;
+} 
+  
+/****** 等待页面加载完成 ******/
+.dispalyWait{
+  width: 100%;
+  padding: 380rpx 0 0;
+  font-size: 34rpx;
+  color: #87CA87;
+  text-align: center;
+}
+.dispalyWait>view:nth-child(2){
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+
+/****** 下拉刷新样式 ******/
+.refresh{
+  position: fixed;
+  top: 0rpx;
+  font-size: 30rpx;
+  color: #87CA87;
+}
+/****** 上拉加载更多 ******/
+.loadMore{
+  position: fixed;
+  bottom: 0;
+  margin: 10rpx 0;
+  font-size: 30rpx;
+  color: #87CA87;
+}

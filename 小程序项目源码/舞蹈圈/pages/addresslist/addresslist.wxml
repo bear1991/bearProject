@@ -1,0 +1,22 @@
+<!--pages/addresslist/addresslist.wxml-->
+<view class='container'>
+  <view class='addressList'>
+    <view class='a-address' wx:for="{{addressList}}"  wx:key="{{index}}" >
+      <view class='up'>
+        <view class="up-cont {{item.status? 'active':''}}"    style="margin-left:0px">
+          <view class='title' bindtap="setDefault" data-index="{{index}}">默认地址</view>
+          <view class='editBtn btn' bindtap='editBtnClicked' data-index="{{index}}"><image src='../../images/my/ic_edit.png'></image><text>编辑</text></view>
+          <view class='delBtn btn' bindtap='deleteBtnClicked' data-index="{{index}}" data-id="{{item.id}}"><image src='../../images/my/ic_delete.png'></image><text>删除</text></view>
+        </view>
+      </view>
+      <view class='down' bindtap='selectTap' data-index="{{index}}">
+        <view class='text_top'>{{item.username}}    {{item.phone}}</view>
+        <view class='text_bottom'>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-box">
+        <view class="add-btn" bindtap="addAddess">新增收货地址</view>
+    </view>
+</view>

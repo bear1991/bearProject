@@ -1,0 +1,35 @@
+<!--pages/my/my.wxml-->
+<!-- <text>pages/my/my.wxml</text> -->
+
+<view class="container">
+  <view class="header" wx:if="{{wxLogin}}">
+    <image class="mybg" src="../../images/my/mybg.png"></image>
+    <view class="member">
+      <!-- <text wx:if="{{userInfo.phoneNum}}">{{userInfo.nickName}}，您好</text> -->
+      <text wx:if="{{userInfo.phoneNum == undefined}}" catchtap="memberCatchtap">非会员，请注册</text>
+    </view>
+    <view class="picWrap">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="header" wx:else>
+    <button size="min" plain="{{true}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>    <!-- catchtap="scopeCatchtap" -->
+  </view>
+
+  <view class="content">
+
+    <block wx:for="{{list}}" wx:key="{{index}}">
+       <view class="listWrap">
+        <block wx:for="{{item}}" wx:for-index="itemIndex" wx:for-item="itemItem" wx:key="name">
+          <view class="list" catchtap="myCatchtap" data-index="{{index}}-{{itemIndex}}" data-path="{{itemItem.path}}" data-title="{{itemItem.title}}">
+            <image class="icon" src="../../images/my/my{{index*2+itemIndex+1}}.png"></image>
+            <text>{{itemItem.title}}</text>
+            <image class="turnRt" src='../../images/my/turnrt.png'></image>
+          </view>
+        </block>
+      </view>
+    </block>
+
+  </view>
+</view>
