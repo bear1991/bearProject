@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul>li{
+    list-style: none;
+}
+html,body{
+    height: 100%;
+}
+
+
+#app{
+    height: 100%;
+}
+
+/* 头部样式 */
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background: #3879D9;
+    
+}
+#header>li>a{
+    color: #FFF;
+    text-decoration: none;
+}

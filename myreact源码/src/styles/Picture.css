@@ -1,0 +1,117 @@
+.filterType{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 8%;
+}
+.filterType>li{
+    padding: 4px 8px;
+    border-radius: 4px; 
+    font-size: 12px;
+}
+
+.filterType>li.active{
+    background: #3879D9;
+    color: #FFF;
+}
+
+
+.picList{
+    height: 92%;
+    background: lightblue;
+    overflow-y: auto;
+}
+.picList>div{
+    margin: 10px;
+    padding: 2%;
+    background: #FFF;
+    border:1px solid #CCC;
+    border-radius: 8px;
+}
+
+
+.picList>div>.cont>li:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 4px 0;
+}
+.picList>div>.cont>li:first-child>div{
+    margin-right: 16px;
+    padding: 3px 6px;
+    background: #3879D9;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.picList>div>.picCont>li:last-child{
+    height: 100px;
+    overflow: hidden;
+}
+.picList>div>.picCont>li:last-child>img{
+    display: block;
+    width: 20%;
+    margin: 0 10px;
+}
+
+.picList>div>.voiceCont>li:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.picList>div>.voiceCont>li:last-child>img{
+    display: block;
+    width: 18%;
+    border-radius: 8px; 
+}
+.picList>div>.voiceCont>li:last-child>audio{
+    width: 80%;
+}
+
+.picList>div>.videoCont>li:last-child>video{
+    width: 100%;
+}
+
+.picList>div>.cont a{
+    display: block;
+    margin: 10px;
+    color: blue;
+    text-align: justify;
+}
+
+
+.picnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.picnt>li:first-child{
+    width: 12%;
+    padding: 1%;
+}
+.picnt>li:first-child>img{
+    display: block;
+    width: 100%;
+    border-radius: 50%; 
+}
+.picnt>li:last-child{
+    width: 84%;
+}
+.picnt>li:last-child>div:first-child{
+    font-weight: bold;
+}
+.picnt>li:last-child>div:last-child{
+    font-size: 12px;
+}
+
+
+.more{
+    height: 4%;
+    margin:10px 0;
+    text-align: center;
+}

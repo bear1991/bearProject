@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul>li{
+    list-style: none;
+}
+html,body{
+    height: 100%;
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+#app{
+    height: 100%;
+}
+
+
+#nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #3879D9;
+}
+
+#nav+div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92%;
+}
+
+.current{
+    color: red;
+}

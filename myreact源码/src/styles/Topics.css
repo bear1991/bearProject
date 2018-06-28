@@ -1,0 +1,33 @@
+#intro{
+    text-align: center;
+}
+
+#listCont>h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    background: #3879D9;
+    color: #FFF;
+}
+#listCont>ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6%;
+    background: #888;
+    color: #FFF;
+}
+#listCont>ul>li{
+    flex: 1;
+    text-align: center;
+}
+
+#listCont>div{
+    height: 86%;
+    overflow-y: auto;
+}
+
+.newspicture{
+    color: greenyellow;
+}

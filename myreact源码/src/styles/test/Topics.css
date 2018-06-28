@@ -1,0 +1,39 @@
+#listCont{
+    height: 90%;
+}
+
+#listCont>h2{
+    height: 8%;
+    padding: 0 0 0 20px;
+}
+
+#listCont:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+#listCont>ul{
+    float: left;
+    width: 24%;
+    height: 92%;
+    background: #3879D9;
+    color: #FFF;
+}
+#listCont>ul>li{
+    padding: 10px 16px;
+}
+#listCont>ul>li>a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+#listCont>div{
+    float: right;
+    width: 75%;
+    height: 92%;
+    background: #3879D9;
+}
+#listCont>div>h3{
+    text-align: center;
+}
